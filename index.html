@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DDH Consulting — Business Intelligence & Data Architecture | Miami</title>
+<meta name="description" content="DDH Consulting delivers tailored business intelligence platforms for healthcare organizations and mid-market companies. Power BI, data architecture, revenue cycle analytics. Miami, FL.">
+<meta property="og:title" content="DDH Consulting — BI & Data Architecture | Miami">
+<meta property="og:description" content="Tailored BI platforms for organizations that have outgrown spreadsheets but don't need seven-figure deployments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#090B0F;--ink-warm:#10131A;--ink-mid:#171B24;--cream:#F4F1EB;--white:#FEFDFB;--gold:#B8963E;--gold-soft:rgba(184,150,62,.05);--gold-line:rgba(184,150,62,.16);--muted:#7A7E87;--muted-warm:#908B84;--border:#DDD9D1;--serif:'Instrument Serif',Georgia,serif;--sans:'Satoshi',-apple-system,sans-serif;--r:3px;--r-lg:6px}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1140px;margin:0 auto;padding:0 56px}
+.reveal{opacity:0;transform:translateY(20px);filter:blur(4px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:none;filter:blur(0)}
+.stagger>*{opacity:0;transform:translateY(16px);filter:blur(3px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1),filter .7s cubic-bezier(.22,1,.36,1)}
+.stagger.visible>*{opacity:1;transform:none;filter:blur(0)}
+.stagger.visible>*:nth-child(1){transition-delay:.05s}
+.stagger.visible>*:nth-child(2){transition-delay:.12s}
+.stagger.visible>*:nth-child(3){transition-delay:.19s}
+.stagger.visible>*:nth-child(4){transition-delay:.26s}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 56px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,11,15,.95);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.03);transition:padding .35s}
+nav.scrolled{padding:12px 56px}
+.nav-brand{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.nav-brand span{color:var(--gold);font-weight:400}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.05em;color:rgba(255,255,255,.3);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:rgba(255,255,255,.8)}
+.nav-cta{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:9px 22px;border-radius:var(--r);text-decoration:none;transition:all .3s}
+.nav-cta:hover{background:#C9A44A}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--ink);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:150px 56px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.013) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.013) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,black,transparent);transition:transform .1s linear;will-change:transform}
+.hero::after{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,62,.03) 0%,transparent 50%);animation:breathe 8s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.6;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.08)}}
+.hero-inner{position:relative;z-index:1;max-width:780px}
+.hero-tag{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:inline-flex;align-items:center;gap:10px;opacity:0;animation:fadeUp .6s .1s forwards}
+.hero-tag::before,.hero-tag::after{content:'';width:20px;height:1px;background:var(--gold);opacity:.35;transform:scaleX(0);animation:lineGrow .6s .5s cubic-bezier(.22,1,.36,1) forwards}
+.hero-tag::after{animation-delay:.55s}
+@keyframes lineGrow{to{transform:scaleX(1)}}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,5.5vw,70px);font-weight:400;color:var(--white);line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;opacity:0;animation:fadeUpScale .8s .15s forwards}
+@keyframes fadeUpScale{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+.hero h1 em{font-style:italic;color:rgba(255,255,255,.25)}
+.hero-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.85;max-width:580px;margin:0 auto 40px;opacity:0;animation:fadeUp .7s .3s forwards}
+.hero-cta{opacity:0;animation:fadeUp .7s .4s forwards}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:15px 32px;border-radius:var(--r);text-decoration:none;transition:all .3s}
+.btn-gold:hover{background:#C9A44A;transform:translateY(-2px);box-shadow:0 10px 30px rgba(184,150,62,.2)}
+.btn-ghost{color:rgba(255,255,255,.4);font-size:11px;font-weight:500;letter-spacing:.06em;padding:15px 32px;border-radius:var(--r);text-decoration:none;border:1px solid rgba(255,255,255,.08);transition:all .3s;margin-left:12px}
+.btn-ghost:hover{border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
+
+/* ── OUTCOMES BAR ── */
+.outcomes{background:var(--ink-warm);border-top:1px solid rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03);display:flex}
+.o-item{flex:1;padding:36px 24px;border-right:1px solid rgba(255,255,255,.03);text-align:center}
+.o-item:last-child{border-right:none}
+.o-num{font-family:var(--serif);font-size:34px;color:var(--white);line-height:1;margin-bottom:6px}
+.o-num span{color:var(--gold)}
+.o-label{font-size:11px;color:rgba(255,255,255,.22);line-height:1.5}
+
+/* ── SECTION LABELS ── */
+.sl{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.sl::before{content:'';width:16px;height:1px;background:var(--gold)}
+.sl.c{justify-content:center}
+.sl.d{color:rgba(255,255,255,.18)}.sl.d::before{background:rgba(255,255,255,.1)}
+h2.h{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);font-weight:400;line-height:1.1;letter-spacing:-.01em}
+h2.h em{font-style:italic;color:var(--muted-warm)}
+h2.hw{color:var(--white)}
+h2.hw em{color:rgba(255,255,255,.22)}
+
+/* ── CAPABILITIES ── */
+.cap{background:var(--cream);padding:100px 0}
+.cap-head{text-align:center;margin-bottom:56px}
+.cap-head p{font-size:14px;color:var(--muted);line-height:1.8;max-width:540px;margin:12px auto 0}
+.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cap-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:36px 24px;text-align:center;transition:all .3s}
+.cap-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.05);border-color:transparent}
+.cap-icon{width:48px;height:48px;margin:0 auto 16px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cap-icon svg{width:22px;height:22px}
+.ci1{background:#EEF3FF}.ci2{background:#FDF3C7}.ci3{background:#ECFDF4}.ci4{background:#F0ECFF}
+.cap-card h3{font-size:15px;font-weight:600;margin-bottom:8px}
+.cap-card p{font-size:12px;color:var(--muted);line-height:1.7}
+
+/* ── RESULTS + CASE STUDY ── */
+.results{background:var(--ink);padding:100px 0;position:relative;overflow:hidden}
+.results::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.01) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.01) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 45% 45% at 50% 50%,black,transparent)}
+.results-in{position:relative;z-index:1}
+.r-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:48px}
+.r-header-right{text-align:right}
+.r-header-right a{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--gold);text-decoration:none}
+
+/* Metrics row */
+.r-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04);border-radius:var(--r-lg);overflow:hidden;margin-bottom:48px}
+.r-cell{background:var(--ink);padding:32px 24px;text-align:center}
+.r-cell:hover{background:rgba(255,255,255,.015)}
+.r-big{font-family:var(--serif);font-size:40px;color:var(--white);line-height:1;margin-bottom:6px}
+.r-big span{color:var(--gold)}
+.r-sub{font-size:11px;color:rgba(255,255,255,.24);line-height:1.5}
+
+/* Case study — compact horizontal */
+.cs{display:grid;grid-template-columns:auto 1fr;gap:0;border:1px solid rgba(255,255,255,.06);border-radius:var(--r-lg);overflow:hidden}
+.cs-left{background:linear-gradient(135deg,var(--ink-mid),var(--ink));padding:40px 44px;display:flex;flex-direction:column;justify-content:center;min-width:280px;position:relative}
+.cs-left::before{content:'';position:absolute;top:-30%;right:-30%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.06),transparent)}
+.cs-tag{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;position:relative;z-index:1}
+.cs-num{font-family:var(--serif);font-size:56px;color:var(--white);line-height:1;margin-bottom:4px;position:relative;z-index:1}
+.cs-num span{color:var(--gold);font-size:28px}
+.cs-caption{font-size:12px;color:rgba(255,255,255,.35);position:relative;z-index:1}
+.cs-right{background:rgba(255,255,255,.015);padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.cs-right h3{font-family:var(--serif);font-size:20px;color:var(--white);line-height:1.25;margin-bottom:12px}
+.cs-right p{font-size:12.5px;color:rgba(255,255,255,.28);line-height:1.75;margin-bottom:16px}
+.cs-right a{font-size:11px;font-weight:600;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
+.cs-right a:hover{gap:10px}
+
+/* ── ENGAGEMENT — ELEVATED CARDS ── */
+.eng{background:var(--cream);padding:100px 0}
+.eng-top{text-align:center;margin-bottom:56px}
+.eng-top p{font-size:13px;color:var(--muted);max-width:500px;line-height:1.75;margin:12px auto 0}
+.eng-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:end;margin-bottom:36px}
+.eb{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px 32px;text-align:center;position:relative;transition:all .35s;box-shadow:0 4px 20px rgba(0,0,0,.03)}
+.eb:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.07)}
+.eb.featured{background:var(--ink);border-color:transparent;padding:52px 32px;box-shadow:0 12px 48px rgba(0,0,0,.18);z-index:2;transform:scale(1.04)}
+.eb.featured:hover{transform:scale(1.04) translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.22)}
+.eb-badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:2px;margin-bottom:20px}
+.eb-tier{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+.eb.featured .eb-tier{color:rgba(255,255,255,.2)}
+.eb-price{font-family:var(--serif);font-size:52px;color:var(--ink);line-height:1;margin-bottom:4px}
+.eb.featured .eb-price{color:var(--white)}
+.eb-cadence{font-size:11px;color:var(--muted);margin-bottom:24px}
+.eb.featured .eb-cadence{color:rgba(255,255,255,.2)}
+.eb-divider{width:40px;height:1px;background:var(--border);margin:0 auto 24px}
+.eb.featured .eb-divider{background:rgba(255,255,255,.08)}
+.eb h3{font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:8px}
+.eb.featured h3{color:var(--white)}
+.eb-desc{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+.eb.featured .eb-desc{color:rgba(255,255,255,.25)}
+.eb-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:28px;text-align:left}
+.eb-list li{font-size:11.5px;color:var(--muted);display:flex;gap:8px;line-height:1.45}
+.eb.featured .eb-list li{color:rgba(255,255,255,.3)}
+.eb-list li::before{content:'✓';color:var(--gold);flex-shrink:0;font-size:11px;font-weight:700}
+.eb-btn{display:block;text-align:center;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px;border-radius:var(--r);text-decoration:none;transition:all .3s;border:1px solid var(--border);color:var(--ink)}
+.eb-btn:hover{border-color:var(--ink);background:var(--ink);color:var(--white)}
+.eb.featured .eb-btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.eb.featured .eb-btn:hover{background:#C9A44A}
+
+/* Infra strip */
+.infra{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;padding:16px 28px}
+.infra-label{font-size:10px;font-weight:600;color:var(--muted-warm);white-space:nowrap}
+.infra-items{display:flex;gap:16px;flex-wrap:wrap}
+.infra-i{font-size:10px;color:var(--muted)}
+.infra-i strong{color:var(--ink);font-weight:600}
+
+/* ── CTA ── */
+.cta{background:var(--ink);padding:100px 56px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,62,.025) 0%,transparent 50%)}
+.cta-in{position:relative;z-index:1;max-width:520px;margin:0 auto}
+.cta h2{font-family:var(--serif);font-size:clamp(26px,3vw,38px);color:var(--white);line-height:1.12;margin-bottom:14px}
+.cta h2 em{font-style:italic;color:rgba(255,255,255,.22)}
+.cta p{font-size:13px;color:rgba(255,255,255,.28);line-height:1.8;margin-bottom:32px}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-note{margin-top:28px;font-size:10px;color:rgba(255,255,255,.12)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.03);padding:32px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.f-brand{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.18)}
+.f-brand span{color:var(--gold);opacity:.35;font-weight:400}
+.f-links{display:flex;gap:20px;list-style:none}
+.f-links a{font-size:10px;color:rgba(255,255,255,.12);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:rgba(255,255,255,.35)}
+.f-copy{font-size:9px;color:rgba(255,255,255,.08)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:1024px){
+nav{padding:14px 24px}.nav-links{display:none}.container{padding:0 24px}
+.hero{padding:120px 24px 72px}
+.outcomes{flex-wrap:wrap}.o-item{flex:1 1 50%}
+.cap-grid{grid-template-columns:1fr 1fr}
+.r-row{grid-template-columns:1fr 1fr}
+.cs{grid-template-columns:1fr}
+.r-header{flex-direction:column;align-items:flex-start;gap:12px}.r-header-right{text-align:left}
+.eng-top{text-align:left}.eng-top p{text-align:left;margin:12px 0 0}
+.eng-cards{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto;align-items:stretch}
+.eb.featured{transform:none;padding:40px 32px}.eb.featured:hover{transform:translateY(-4px)}
+.process-timeline{grid-template-columns:1fr 1fr;gap:24px}.process-timeline::before{display:none}
+.cta{padding:72px 24px}footer{padding:28px 24px}
+.infra{flex-direction:column;align-items:flex-start;gap:10px}
+}
+@media(max-width:640px){
+.hero h1{font-size:34px}h2.h{font-size:26px}
+.hero-cta{display:flex;flex-direction:column;align-items:center;gap:10px}
+.btn-ghost{margin-left:0}
+.outcomes{flex-direction:column}.o-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.03)}
+.cap-grid{grid-template-columns:1fr}
+.r-row{grid-template-columns:1fr}.r-cell{border-bottom:1px solid rgba(255,255,255,.04)}
+.infra-items{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">DDH <span>Consulting</span></a>
+  <ul class="nav-links">
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#engagement">Engagement</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Speak to an Expert</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Business Intelligence & Data Architecture</div>
+    <h1>Intelligent data systems<br>for organizations that<br><em>refuse to fly blind.</em></h1>
+    <p class="hero-sub">We build the data pipelines, dashboards, and documentation that give your finance and revenue cycle teams a single, consumable source of truth — so they can act on insights instead of chasing spreadsheets.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-gold">Speak to an Expert</a>
+      <a href="#capabilities" class="btn-ghost">Explore capabilities</a>
+    </div>
+  </div>
+</section>
+
+<div class="outcomes reveal stagger">
+  <div class="o-item"><div class="o-num" data-target="130" data-prefix="$" data-suffix="K+">$0</div><div class="o-label">Annual cost of disconnected data systems</div></div>
+  <div class="o-item"><div class="o-num" data-target="80" data-suffix="%">0</div><div class="o-label">Less time spent assembling reports</div></div>
+  <div class="o-item"><div class="o-num" data-target="5" data-suffix=" wks">0</div><div class="o-label">Kickoff to production dashboards</div></div>
+  <div class="o-item"><div class="o-num" data-target="100" data-suffix="%">0</div><div class="o-label">Client-owned, documented, auditable</div></div>
+</div>
+
+<section class="cap" id="capabilities">
+<div class="container">
+  <div class="cap-head reveal">
+    <div class="sl c">Capabilities</div>
+    <h2 class="h" style="text-align:center">We build the infrastructure.<br><em>You own the insights.</em></h2>
+    <p>We speak 835, CARC, ASC 606, and payer contracts fluently — but our scope is the data layer: pipelines, integrations, dashboards, and documentation that make your data consumable and actionable.</p>
+  </div>
+  <div class="cap-grid reveal stagger">
+    <div class="cap-card"><div class="cap-icon ci1"><svg viewBox="0 0 28 28" fill="none"><path d="M4 14h6M18 14h6M14 4v6M14 18v6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="3" stroke="#2563EB" stroke-width="1.5"/></svg></div><h3>Data Pipelines</h3><p>We connect your EHR, PM system, 835 remittance files, clearinghouse, and accounting platform into automated, documented ETL pipelines — no more manual exports.</p></div>
+    <div class="cap-card"><div class="cap-icon ci2"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="8" width="5" height="16" rx="1" stroke="#B8963E" stroke-width="1.5"/><rect x="11.5" y="4" width="5" height="20" rx="1" stroke="#B8963E" stroke-width="1.5"/><rect x="20" y="11" width="5" height="13" rx="1" stroke="#B8963E" stroke-width="1.5"/></svg></div><h3>Integrated Dashboards</h3><p>Role-based Power BI dashboards that surface claim-level reimbursement data, denial patterns, AR aging, and financial KPIs — ready for your team to act on.</p></div>
+    <div class="cap-card"><div class="cap-icon ci3"><svg viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="#16A34A" stroke-width="1" opacity=".2"/><path d="M7 17l4-4 3 3 7-7" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Revenue Cycle Data Layer</h3><p>We parse 835s, map CO/PR adjustments, trend CARC/RARC codes, and model contract variance — delivering structured, consumable data your billing and finance teams can trust.</p></div>
+    <div class="cap-card"><div class="cap-icon ci4"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#7C3AED" stroke-width="1.5"/><path d="M14 4v10l6 6" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Documentation & Governance</h3><p>Full pipeline documentation, data dictionaries, refresh schedules, and ongoing quality monitoring — so your data infrastructure is maintainable, auditable, and yours.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="results" id="results">
+<div class="container results-in">
+  <div class="r-header reveal">
+    <div><div class="sl d">Client Results</div><h2 class="h hw">We build the data layer. <em>They take action.</em></h2></div>
+  </div>
+  <div class="r-row reveal stagger">
+    <div class="r-cell"><div class="r-big">$38K</div><div class="r-sub">Recoverable claims surfaced by our data layer in week one</div></div>
+    <div class="r-cell"><div class="r-big">80<span>%</span></div><div class="r-sub">Less time assembling reports — data is live and integrated</div></div>
+    <div class="r-cell"><div class="r-big">14→1<span> day</span></div><div class="r-sub">Manual close cycle replaced with real-time dashboards</div></div>
+    <div class="r-cell"><div class="r-big">100<span>%</span></div><div class="r-sub">Documented, auditable pipelines the client fully owns</div></div>
+  </div>
+  <div class="cs reveal">
+    <div class="cs-left"><div class="cs-tag">Case Study · Data Pipeline</div><div class="cs-num">$38K<span> surfaced</span></div><div class="cs-caption">in unbilled claims the billing team recovered</div></div>
+    <div class="cs-right"><h3>Data consolidation surfaces $38K — billing team recovers it in days</h3><p>A surgical group's remittance and billing data lived in three disconnected systems. DDH built an automated pipeline parsing 835 files at the claim line level — mapping CO adjustments, denial codes, and payer variances into a live Power BI dashboard. The billing team used it to identify and recover $38K in unbilled claims within the first week.</p><a href="#contact">Discuss a similar engagement →</a></div>
+  </div>
+</div>
+</section>
+
+<section class="eng" id="engagement">
+<div class="container">
+  <div class="eng-top reveal">
+    <div class="sl c">Engagement</div>
+    <h2 class="h" style="text-align:center">Three ways to <em>engage.</em></h2>
+    <p>We handle the data engineering. You keep running your business. Every engagement delivers documented, production-ready infrastructure your team fully owns.</p>
+  </div>
+  <div class="eng-cards reveal stagger">
+    <div class="eb">
+      <div class="eb-tier">Assessment</div>
+      <div class="eb-price">$5,500</div>
+      <div class="eb-cadence">one-time</div>
+      <div class="eb-divider"></div>
+      <h3>Data Assessment</h3>
+      <p class="eb-desc">We inventory your systems, map your data flows, and deliver an architecture roadmap in two weeks.</p>
+      <ul class="eb-list"><li>Source inventory (EHR, PM, 835s, GL)</li><li>Data flow mapping & gap analysis</li><li>Pipeline architecture recommendation</li><li>Implementation roadmap</li></ul>
+      <a href="#contact" class="eb-btn">Schedule Consultation</a>
+    </div>
+    <div class="eb featured">
+      <div class="eb-badge">Most Engaged</div>
+      <div class="eb-tier">Implementation</div>
+      <div class="eb-price">$15,000</div>
+      <div class="eb-cadence">one-time</div>
+      <div class="eb-divider"></div>
+      <h3>Full Platform Build</h3>
+      <p class="eb-desc">We build the pipelines, integrate your sources, deploy dashboards, and document everything — your team takes it from there.</p>
+      <ul class="eb-list"><li>Up to 5 system integrations</li><li>Automated ETL with 835 parsing</li><li>4–6 role-based Power BI dashboards</li><li>Full pipeline documentation</li><li>Data dictionary & refresh schedules</li><li>Team training & 30-day support</li></ul>
+      <a href="#contact" class="eb-btn">Schedule Consultation</a>
+    </div>
+    <div class="eb">
+      <div class="eb-tier">Partnership</div>
+      <div class="eb-price">$2,500</div>
+      <div class="eb-cadence">per month</div>
+      <div class="eb-divider"></div>
+      <h3>Ongoing Data Operations</h3>
+      <p class="eb-desc">We maintain your pipelines, build new dashboards, and keep your data layer healthy as your business evolves.</p>
+      <ul class="eb-list"><li>Weekly alignment & review meetings</li><li>Continuous dashboard development</li><li>Pipeline monitoring & maintenance</li><li>Data quality governance</li><li>Quarterly architecture review</li></ul>
+      <a href="#contact" class="eb-btn">Schedule Consultation</a>
+    </div>
+  </div>
+  <div class="infra reveal">
+    <div class="infra-label">Microsoft licensing (billed separately to your org):</div>
+    <div class="infra-items">
+      <span class="infra-i"><strong>Power BI Pro</strong> $10/user/mo</span>
+      <span class="infra-i"><strong>Azure SQL</strong> ~$30–60/mo</span>
+      <span class="infra-i"><strong>PBI Desktop</strong> Free</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-in">
+    <div class="sl d c">Begin</div>
+    <h2>Let's determine if<br>there's <em>a fit.</em></h2>
+    <p>Complimentary 30-minute consultation. We assess your data landscape, discuss objectives, and give you an honest answer — no obligation.</p>
+    <div class="cta-actions">
+      <a href="YOUR_CALENDLY_LINK" class="btn-gold">Speak to an Expert</a>
+      <a href="mailto:YOUR_EMAIL" class="btn-ghost">Send a message</a>
+    </div>
+    <p class="cta-note">DDH Consulting · Miami, FL · Data Pipelines · BI Dashboards · Healthcare Revenue Cycle Data · Microsoft Stack · Q2 2026</p>
+  </div>
+</section>
+
+<footer>
+  <span class="f-brand">DDH <span>Consulting</span></span>
+  <ul class="f-links"><li><a href="#capabilities">Capabilities</a></li><li><a href="#results">Results</a></li><li><a href="#engagement">Engagement</a></li><li><a href="#contact">Contact</a></li></ul>
+  <span class="f-copy">© 2026 DDH Consulting LLC · Miami, FL</span>
+</footer>
+
+<script>
+// Scroll reveal + stagger
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      // Trigger counters if present
+      if (e.target.querySelectorAll('[data-target]').length) animateCounters(e.target);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Hero parallax — subtle grid movement
+const heroGrid = document.querySelector('.hero::before');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    const hero = document.querySelector('.hero');
+    hero.style.setProperty('--grid-y', (y * 0.15) + 'px');
+  }
+}, { passive: true });
+// Apply via CSS custom property
+const style = document.createElement('style');
+style.textContent = '.hero::before{transform:translateY(var(--grid-y,0))}';
+document.head.appendChild(style);
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Counter animation
+function animateCounters(container) {
+  container.querySelectorAll('[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = 1600;
+    const start = performance.now();
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * ease);
+      el.textContent = prefix + current + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+</script>
+</body>
+</html>
