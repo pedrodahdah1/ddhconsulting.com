@@ -3,401 +3,1578 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DDH Consulting — Business Intelligence & Data Architecture | Miami</title>
-<meta name="description" content="DDH Consulting delivers tailored business intelligence platforms for healthcare organizations and mid-market companies. Power BI, data architecture, revenue cycle analytics. Miami, FL.">
-<meta property="og:title" content="DDH Consulting — BI & Data Architecture | Miami">
-<meta property="og:description" content="Tailored BI platforms for organizations that have outgrown spreadsheets but don't need seven-figure deployments.">
+<title>DDH BI Consulting — Tailored Business Intelligence Systems | Miami</title>
+<meta name="description" content="DDH BI Consulting builds tailored reporting and data infrastructure for healthcare organizations and mid-market companies. Power BI, SQL Server, Azure. Miami, FL.">
+<meta property="og:title" content="DDH BI Consulting — Tailored Business Intelligence Systems">
+<meta property="og:description" content="Custom-built data platforms for healthcare finance and operations teams. One client at a time.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--ink:#090B0F;--ink-warm:#10131A;--ink-mid:#171B24;--cream:#F4F1EB;--white:#FEFDFB;--gold:#B8963E;--gold-soft:rgba(184,150,62,.05);--gold-line:rgba(184,150,62,.16);--muted:#7A7E87;--muted-warm:#908B84;--border:#DDD9D1;--serif:'Instrument Serif',Georgia,serif;--sans:'Satoshi',-apple-system,sans-serif;--r:3px;--r-lg:6px}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--white);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
-.container{max-width:1140px;margin:0 auto;padding:0 56px}
-.reveal{opacity:0;transform:translateY(20px);filter:blur(4px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1)}
-.reveal.visible{opacity:1;transform:none;filter:blur(0)}
-.stagger>*{opacity:0;transform:translateY(16px);filter:blur(3px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1),filter .7s cubic-bezier(.22,1,.36,1)}
-.stagger.visible>*{opacity:1;transform:none;filter:blur(0)}
-.stagger.visible>*:nth-child(1){transition-delay:.05s}
-.stagger.visible>*:nth-child(2){transition-delay:.12s}
-.stagger.visible>*:nth-child(3){transition-delay:.19s}
-.stagger.visible>*:nth-child(4){transition-delay:.26s}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 56px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,11,15,.95);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.03);transition:padding .35s}
-nav.scrolled{padding:12px 56px}
-.nav-brand{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--white);text-decoration:none}
-.nav-brand span{color:var(--gold);font-weight:400}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-size:11px;font-weight:500;letter-spacing:.05em;color:rgba(255,255,255,.3);text-decoration:none;transition:color .3s}
-.nav-links a:hover{color:rgba(255,255,255,.8)}
-.nav-cta{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:9px 22px;border-radius:var(--r);text-decoration:none;transition:all .3s}
-.nav-cta:hover{background:#C9A44A}
-
-/* ── HERO ── */
-.hero{min-height:100vh;background:var(--ink);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:150px 56px 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.013) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.013) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,black,transparent);transition:transform .1s linear;will-change:transform}
-.hero::after{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,62,.03) 0%,transparent 50%);animation:breathe 8s ease-in-out infinite}
-@keyframes breathe{0%,100%{opacity:.6;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.08)}}
-.hero-inner{position:relative;z-index:1;max-width:780px}
-.hero-tag{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:inline-flex;align-items:center;gap:10px;opacity:0;animation:fadeUp .6s .1s forwards}
-.hero-tag::before,.hero-tag::after{content:'';width:20px;height:1px;background:var(--gold);opacity:.35;transform:scaleX(0);animation:lineGrow .6s .5s cubic-bezier(.22,1,.36,1) forwards}
-.hero-tag::after{animation-delay:.55s}
-@keyframes lineGrow{to{transform:scaleX(1)}}
-.hero h1{font-family:var(--serif);font-size:clamp(40px,5.5vw,70px);font-weight:400;color:var(--white);line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;opacity:0;animation:fadeUpScale .8s .15s forwards}
-@keyframes fadeUpScale{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
-.hero h1 em{font-style:italic;color:rgba(255,255,255,.25)}
-.hero-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.85;max-width:580px;margin:0 auto 40px;opacity:0;animation:fadeUp .7s .3s forwards}
-.hero-cta{opacity:0;animation:fadeUp .7s .4s forwards}
-.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:15px 32px;border-radius:var(--r);text-decoration:none;transition:all .3s}
-.btn-gold:hover{background:#C9A44A;transform:translateY(-2px);box-shadow:0 10px 30px rgba(184,150,62,.2)}
-.btn-ghost{color:rgba(255,255,255,.4);font-size:11px;font-weight:500;letter-spacing:.06em;padding:15px 32px;border-radius:var(--r);text-decoration:none;border:1px solid rgba(255,255,255,.08);transition:all .3s;margin-left:12px}
-.btn-ghost:hover{border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
-
-/* ── OUTCOMES BAR ── */
-.outcomes{background:var(--ink-warm);border-top:1px solid rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03);display:flex}
-.o-item{flex:1;padding:36px 24px;border-right:1px solid rgba(255,255,255,.03);text-align:center}
-.o-item:last-child{border-right:none}
-.o-num{font-family:var(--serif);font-size:34px;color:var(--white);line-height:1;margin-bottom:6px}
-.o-num span{color:var(--gold)}
-.o-label{font-size:11px;color:rgba(255,255,255,.22);line-height:1.5}
-
-/* ── SECTION LABELS ── */
-.sl{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.sl::before{content:'';width:16px;height:1px;background:var(--gold)}
-.sl.c{justify-content:center}
-.sl.d{color:rgba(255,255,255,.18)}.sl.d::before{background:rgba(255,255,255,.1)}
-h2.h{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);font-weight:400;line-height:1.1;letter-spacing:-.01em}
-h2.h em{font-style:italic;color:var(--muted-warm)}
-h2.hw{color:var(--white)}
-h2.hw em{color:rgba(255,255,255,.22)}
-
-/* ── CAPABILITIES ── */
-.cap{background:var(--cream);padding:100px 0}
-.cap-head{text-align:center;margin-bottom:56px}
-.cap-head p{font-size:14px;color:var(--muted);line-height:1.8;max-width:540px;margin:12px auto 0}
-.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.cap-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:36px 24px;text-align:center;transition:all .3s}
-.cap-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.05);border-color:transparent}
-.cap-icon{width:48px;height:48px;margin:0 auto 16px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.cap-icon svg{width:22px;height:22px}
-.ci1{background:#EEF3FF}.ci2{background:#FDF3C7}.ci3{background:#ECFDF4}.ci4{background:#F0ECFF}
-.cap-card h3{font-size:15px;font-weight:600;margin-bottom:8px}
-.cap-card p{font-size:12px;color:var(--muted);line-height:1.7}
-
-/* ── RESULTS + CASE STUDY ── */
-.results{background:var(--ink);padding:100px 0;position:relative;overflow:hidden}
-.results::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.01) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.01) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 45% 45% at 50% 50%,black,transparent)}
-.results-in{position:relative;z-index:1}
-.r-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:48px}
-.r-header-right{text-align:right}
-.r-header-right a{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--gold);text-decoration:none}
-
-/* Metrics row */
-.r-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04);border-radius:var(--r-lg);overflow:hidden;margin-bottom:48px}
-.r-cell{background:var(--ink);padding:32px 24px;text-align:center}
-.r-cell:hover{background:rgba(255,255,255,.015)}
-.r-big{font-family:var(--serif);font-size:40px;color:var(--white);line-height:1;margin-bottom:6px}
-.r-big span{color:var(--gold)}
-.r-sub{font-size:11px;color:rgba(255,255,255,.24);line-height:1.5}
-
-/* Case study — compact horizontal */
-.cs{display:grid;grid-template-columns:auto 1fr;gap:0;border:1px solid rgba(255,255,255,.06);border-radius:var(--r-lg);overflow:hidden}
-.cs-left{background:linear-gradient(135deg,var(--ink-mid),var(--ink));padding:40px 44px;display:flex;flex-direction:column;justify-content:center;min-width:280px;position:relative}
-.cs-left::before{content:'';position:absolute;top:-30%;right:-30%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.06),transparent)}
-.cs-tag{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;position:relative;z-index:1}
-.cs-num{font-family:var(--serif);font-size:56px;color:var(--white);line-height:1;margin-bottom:4px;position:relative;z-index:1}
-.cs-num span{color:var(--gold);font-size:28px}
-.cs-caption{font-size:12px;color:rgba(255,255,255,.35);position:relative;z-index:1}
-.cs-right{background:rgba(255,255,255,.015);padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
-.cs-right h3{font-family:var(--serif);font-size:20px;color:var(--white);line-height:1.25;margin-bottom:12px}
-.cs-right p{font-size:12.5px;color:rgba(255,255,255,.28);line-height:1.75;margin-bottom:16px}
-.cs-right a{font-size:11px;font-weight:600;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
-.cs-right a:hover{gap:10px}
-
-/* ── ENGAGEMENT — ELEVATED CARDS ── */
-.eng{background:var(--cream);padding:100px 0}
-.eng-top{text-align:center;margin-bottom:56px}
-.eng-top p{font-size:13px;color:var(--muted);max-width:500px;line-height:1.75;margin:12px auto 0}
-.eng-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:end;margin-bottom:36px}
-.eb{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px 32px;text-align:center;position:relative;transition:all .35s;box-shadow:0 4px 20px rgba(0,0,0,.03)}
-.eb:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.07)}
-.eb.featured{background:var(--ink);border-color:transparent;padding:52px 32px;box-shadow:0 12px 48px rgba(0,0,0,.18);z-index:2;transform:scale(1.04)}
-.eb.featured:hover{transform:scale(1.04) translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.22)}
-.eb-badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:4px 14px;border-radius:2px;margin-bottom:20px}
-.eb-tier{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
-.eb.featured .eb-tier{color:rgba(255,255,255,.2)}
-.eb-price{font-family:var(--serif);font-size:52px;color:var(--ink);line-height:1;margin-bottom:4px}
-.eb.featured .eb-price{color:var(--white)}
-.eb-cadence{font-size:11px;color:var(--muted);margin-bottom:24px}
-.eb.featured .eb-cadence{color:rgba(255,255,255,.2)}
-.eb-divider{width:40px;height:1px;background:var(--border);margin:0 auto 24px}
-.eb.featured .eb-divider{background:rgba(255,255,255,.08)}
-.eb h3{font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:8px}
-.eb.featured h3{color:var(--white)}
-.eb-desc{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:24px}
-.eb.featured .eb-desc{color:rgba(255,255,255,.25)}
-.eb-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:28px;text-align:left}
-.eb-list li{font-size:11.5px;color:var(--muted);display:flex;gap:8px;line-height:1.45}
-.eb.featured .eb-list li{color:rgba(255,255,255,.3)}
-.eb-list li::before{content:'✓';color:var(--gold);flex-shrink:0;font-size:11px;font-weight:700}
-.eb-btn{display:block;text-align:center;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px;border-radius:var(--r);text-decoration:none;transition:all .3s;border:1px solid var(--border);color:var(--ink)}
-.eb-btn:hover{border-color:var(--ink);background:var(--ink);color:var(--white)}
-.eb.featured .eb-btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-.eb.featured .eb-btn:hover{background:#C9A44A}
-
-/* Infra strip */
-.infra{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;padding:16px 28px}
-.infra-label{font-size:10px;font-weight:600;color:var(--muted-warm);white-space:nowrap}
-.infra-items{display:flex;gap:16px;flex-wrap:wrap}
-.infra-i{font-size:10px;color:var(--muted)}
-.infra-i strong{color:var(--ink);font-weight:600}
-
-/* ── CTA ── */
-.cta{background:var(--ink);padding:100px 56px;text-align:center;position:relative;overflow:hidden}
-.cta::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,62,.025) 0%,transparent 50%)}
-.cta-in{position:relative;z-index:1;max-width:520px;margin:0 auto}
-.cta h2{font-family:var(--serif);font-size:clamp(26px,3vw,38px);color:var(--white);line-height:1.12;margin-bottom:14px}
-.cta h2 em{font-style:italic;color:rgba(255,255,255,.22)}
-.cta p{font-size:13px;color:rgba(255,255,255,.28);line-height:1.8;margin-bottom:32px}
-.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.cta-note{margin-top:28px;font-size:10px;color:rgba(255,255,255,.12)}
-
-/* ── FOOTER ── */
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.03);padding:32px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-.f-brand{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.18)}
-.f-brand span{color:var(--gold);opacity:.35;font-weight:400}
-.f-links{display:flex;gap:20px;list-style:none}
-.f-links a{font-size:10px;color:rgba(255,255,255,.12);text-decoration:none;transition:color .2s}
-.f-links a:hover{color:rgba(255,255,255,.35)}
-.f-copy{font-size:9px;color:rgba(255,255,255,.08)}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-
-@media(max-width:1024px){
-nav{padding:14px 24px}.nav-links{display:none}.container{padding:0 24px}
-.hero{padding:120px 24px 72px}
-.outcomes{flex-wrap:wrap}.o-item{flex:1 1 50%}
-.cap-grid{grid-template-columns:1fr 1fr}
-.r-row{grid-template-columns:1fr 1fr}
-.cs{grid-template-columns:1fr}
-.r-header{flex-direction:column;align-items:flex-start;gap:12px}.r-header-right{text-align:left}
-.eng-top{text-align:left}.eng-top p{text-align:left;margin:12px 0 0}
-.eng-cards{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto;align-items:stretch}
-.eb.featured{transform:none;padding:40px 32px}.eb.featured:hover{transform:translateY(-4px)}
-.process-timeline{grid-template-columns:1fr 1fr;gap:24px}.process-timeline::before{display:none}
-.cta{padding:72px 24px}footer{padding:28px 24px}
-.infra{flex-direction:column;align-items:flex-start;gap:10px}
+:root {
+  --ink: #0a0c10;
+  --ink-light: #13161d;
+  --ink-mid: #1c2029;
+  --gold: #c9a84c;
+  --gold-light: #dfc06a;
+  --gold-dim: rgba(201,168,76,0.12);
+  --cream: #f4f0e8;
+  --cream-mid: #d8d2c4;
+  --gray: #8a8d96;
+  --white: #ffffff;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
 }
-@media(max-width:640px){
-.hero h1{font-size:34px}h2.h{font-size:26px}
-.hero-cta{display:flex;flex-direction:column;align-items:center;gap:10px}
-.btn-ghost{margin-left:0}
-.outcomes{flex-direction:column}.o-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.03)}
-.cap-grid{grid-template-columns:1fr}
-.r-row{grid-template-columns:1fr}.r-cell{border-bottom:1px solid rgba(255,255,255,.04)}
-.infra-items{flex-direction:column;gap:4px}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--ink);
+  color: var(--cream);
+  line-height: 1.65;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 4vw;
+  transition: all 0.4s ease;
+}
+nav.scrolled {
+  background: rgba(10,12,16,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 1rem 4vw;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.nav-brand {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.nav-brand span { color: var(--gold); }
+.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+.nav-links a {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  transition: all 0.3s !important;
+}
+.nav-cta:hover { background: var(--gold); color: var(--ink) !important; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  nav { padding: 1.2rem 5vw; }
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+
+/* SECTION LABEL */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4vw;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -20%;
+  width: 70vw; height: 70vw;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-content { max-width: 800px; position: relative; z-index: 2; }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  line-height: 1.12;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 1.8rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--gray);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* BUTTONS */
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 0.9rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex; align-items: center;
+  background: transparent;
+  border: 1px solid var(--cream-mid);
+  color: var(--cream);
+  padding: 0.9rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.92rem;
+  transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ─── OUTCOMES BAR ─── */
+.outcomes {
+  border-top: 1px solid rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  padding: 3.5rem 4vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.outcome-item { text-align: center; }
+.outcome-num {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.outcome-label {
+  font-size: 0.82rem;
+  color: var(--gray);
+  letter-spacing: 0.04em;
+}
+
+/* ─── CHALLENGES STRIP ─── */
+.challenges {
+  padding: 4.5rem 4vw;
+  background: var(--ink-light);
+}
+.challenges-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.challenges h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.challenges h3 em { color: var(--gold); font-style: italic; }
+.challenge-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+.challenge-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.06);
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+.challenge-item:hover { border-color: rgba(201,168,76,0.15); }
+.challenge-check {
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+.challenge-item p {
+  color: var(--cream-mid);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* ─── PROBLEM SECTION ─── */
+.problem {
+  padding: 7rem 4vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.problem h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.problem h2 em { color: var(--gold); font-style: italic; }
+.problem p {
+  color: var(--gray);
+  font-size: 1.05rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.75;
+}
+.problem .highlight-line {
+  color: var(--cream);
+  font-weight: 400;
+  border-left: 2px solid var(--gold);
+  padding-left: 1.2rem;
+  margin: 2.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+/* ─── CAPABILITIES ─── */
+.capabilities {
+  padding: 7rem 4vw;
+  background: var(--ink-light);
+}
+.cap-header {
+  max-width: 640px;
+  margin-bottom: 4rem;
+}
+.cap-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+.cap-header p { color: var(--gray); font-size: 1rem; }
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+}
+.cap-card {
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 8px;
+  padding: 2.2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cap-card:hover {
+  border-color: rgba(201,168,76,0.25);
+  transform: translateY(-3px);
+}
+.cap-icon {
+  width: 40px; height: 40px;
+  background: var(--gold-dim);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.4rem;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.cap-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+}
+.cap-card p {
+  color: var(--gray);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+/* ─── STACK ─── */
+.stack {
+  padding: 5rem 4vw;
+  text-align: center;
+}
+.stack h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.stack-sub {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+.stack-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.stack-item {
+  background: var(--ink-light);
+  border: 1px solid rgba(201,168,76,0.06);
+  border-radius: 8px;
+  padding: 1rem 1.8rem;
+  font-size: 0.85rem;
+  color: var(--cream-mid);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* ─── CASE STUDY ─── */
+.case-study {
+  padding: 7rem 4vw;
+  background: var(--ink-light);
+}
+.case-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.case-study h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+.case-study h2 em { color: var(--gold); font-style: italic; }
+.case-context {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
+.case-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.case-result {
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px;
+  padding: 1.8rem;
+}
+.case-result .num {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.case-result .label {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+/* ─── PROCESS ─── */
+.process {
+  padding: 7rem 4vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.process h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+.process-steps { display: flex; flex-direction: column; gap: 2.5rem; }
+.process-step {
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+}
+.step-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--gold);
+  opacity: 0.5;
+  min-width: 48px;
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+.step-content h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.step-content p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ─── ENGAGEMENT ─── */
+.engagement {
+  padding: 7rem 4vw;
+  background: var(--ink-light);
+}
+.eng-inner { max-width: 900px; margin: 0 auto; }
+.engagement h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.engagement .eng-intro {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+.eng-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.eng-tier {
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  transition: border-color 0.3s;
+}
+.eng-tier:hover { border-color: rgba(201,168,76,0.2); }
+.eng-tier.featured { border-color: var(--gold); }
+.tier-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.tier-name {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+.tier-price {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.tier-price span { font-size: 0.85rem; color: var(--gray); font-family: var(--sans); }
+.tier-desc {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ─── FAQ ─── */
+.faq {
+  padding: 7rem 4vw;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+  padding: 1.6rem 0;
+}
+.faq-q {
+  font-size: 1rem;
+  color: var(--cream);
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-q::after {
+  content: '+';
+  color: var(--gold);
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  color: var(--gray);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-item.open .faq-a {
+  max-height: 300px;
+  padding-top: 1rem;
+}
+
+/* ─── APPROACH ─── */
+.approach {
+  padding: 7rem 4vw;
+  background: var(--ink-light);
+}
+.approach-inner { max-width: 1000px; margin: 0 auto; }
+.approach h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+.approach h2 em { color: var(--gold); font-style: italic; }
+.approach-intro {
+  color: var(--gray);
+  font-size: 1.05rem;
+  margin-bottom: 3.5rem;
+  max-width: 650px;
+  line-height: 1.75;
+}
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+.pillar {
+  position: relative;
+  padding: 2rem;
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+.pillar:hover { border-color: rgba(201,168,76,0.2); }
+.pillar-num {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--gold);
+  opacity: 0.2;
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  line-height: 1;
+}
+.pillar h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+.pillar p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.methodology {
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 10px;
+  padding: 2.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+.method-badge {
+  min-width: 80px;
+  text-align: center;
+}
+.method-badge-inner {
+  width: 64px;
+  height: 64px;
+  background: var(--gold-dim);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+}
+.method-badge-inner span {
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.method-content h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+}
+.method-content p {
+  color: var(--gray);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.method-tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.method-tag {
+  background: var(--gold-dim);
+  color: var(--gold);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 768px) {
+  .pillars { grid-template-columns: 1fr; }
+  .methodology { flex-direction: column; gap: 1.5rem; }
+}
+
+/* ─── TRUST STRIP ─── */
+.trust {
+  padding: 4rem 4vw;
+  border-top: 1px solid rgba(201,168,76,0.06);
+  border-bottom: 1px solid rgba(201,168,76,0.06);
+}
+.trust-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.trust h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--cream-mid);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.trust-systems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.trust-tag {
+  background: var(--ink-light);
+  border: 1px solid rgba(201,168,76,0.06);
+  border-radius: 100px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.78rem;
+  color: var(--gray);
+  letter-spacing: 0.03em;
+}
+
+/* ─── INSIGHTS TEASER ─── */
+.insights {
+  padding: 5rem 4vw;
+}
+.insights-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.insights h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.insights h2 em { color: var(--gold); font-style: italic; }
+.insights p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.7;
+}
+.insights-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: gap 0.3s;
+}
+.insights-link:hover { gap: 0.8rem; }
+
+/* ─── WHO WE SERVE ─── */
+.serve {
+  padding: 7rem 4vw;
+}
+.serve-inner { max-width: 900px; margin: 0 auto; }
+.serve h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.serve h2 em { color: var(--gold); font-style: italic; }
+.serve-intro {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.7;
+}
+.serve-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.serve-item {
+  background: var(--ink-light);
+  border: 1px solid rgba(201,168,76,0.06);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.serve-item:hover {
+  border-color: rgba(201,168,76,0.2);
+  transform: translateY(-2px);
+}
+.serve-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+}
+.serve-item h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+.serve-item p {
+  color: var(--gray);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+/* ─── CONTACT FORM ─── */
+.contact-form-section {
+  padding: 7rem 4vw;
+  background: var(--ink-light);
+}
+.contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.contact-form-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.contact-form-section h2 em { color: var(--gold); font-style: italic; }
+.contact-intro {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group.full { grid-column: 1 / -1; }
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-mid);
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--ink);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  transition: border-color 0.3s;
+  outline: none;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray);
+  opacity: 0.6;
+}
+.form-group select {
+  color: var(--gray);
+  cursor: pointer;
+}
+.form-group select option {
+  background: var(--ink);
+  color: var(--cream);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form-submit {
+  margin-top: 1.5rem;
+}
+.form-submit .btn-gold {
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  width: 100%;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding: 1rem;
+}
+.form-note {
+  color: var(--gray);
+  font-size: 0.78rem;
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0.7;
+}
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.form-success h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.form-success p {
+  color: var(--gray);
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .serve-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─── CTA ─── */
+.cta-section {
+  padding: 8rem 4vw;
+  text-align: center;
+  position: relative;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 60vw; height: 60vw;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cta-inner { position: relative; z-index: 2; }
+.cta-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--white);
+  margin-bottom: 1.4rem;
+}
+.cta-section h2 em { color: var(--gold); font-style: italic; }
+.cta-text {
+  color: var(--gray);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+.cta-actions {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.cta-note {
+  color: var(--gray);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(201,168,76,0.08);
+  padding: 2.5rem 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--cream);
+}
+.footer-brand span { color: var(--gold); }
+.footer-links {
+  display: flex; gap: 1.5rem; list-style: none;
+}
+.footer-links a {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-copy {
+  color: var(--gray);
+  font-size: 0.75rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero { padding: 0 6vw; min-height: 90vh; }
+  .outcomes { grid-template-columns: repeat(2, 1fr); padding: 2.5rem 6vw; }
+  .cap-grid { grid-template-columns: 1fr; }
+  .eng-tiers { grid-template-columns: 1fr; }
+  .case-results { grid-template-columns: 1fr; }
+  .process-step { flex-direction: column; gap: 0.6rem; }
+  footer { flex-direction: column; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#" class="nav-brand">DDH <span>Consulting</span></a>
+  <a href="#" class="nav-brand">DDH <span>BI</span></a>
   <ul class="nav-links">
-    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#approach">Our Edge</a></li>
+    <li><a href="#capabilities">Solutions</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#engagement">Engagement</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Speak to an Expert</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-tag">Business Intelligence & Data Architecture</div>
-    <h1>Intelligent data systems<br>for organizations that<br><em>refuse to fly blind.</em></h1>
-    <p class="hero-sub">We build the data pipelines, dashboards, and documentation that give your finance and revenue cycle teams a single, consumable source of truth — so they can act on insights instead of chasing spreadsheets.</p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn-gold">Speak to an Expert</a>
-      <a href="#capabilities" class="btn-ghost">Explore capabilities</a>
+  <div class="hero-content">
+    <div class="section-label reveal">DDH BI Consulting · Miami</div>
+    <h1 class="reveal reveal-d1">Data infrastructure for<br>healthcare <em>financial performance.</em></h1>
+    <p class="hero-sub reveal reveal-d2">We design, build, and deploy the reporting architecture that transforms disconnected healthcare data into operational intelligence — enabling leaders to act on what they couldn't see before.</p>
+    <div class="hero-actions reveal reveal-d3">
+      <a href="YOUR_CALENDLY_LINK" class="btn-gold">Speak With Our Team →</a>
+      <a href="#approach" class="btn-outline">Our Approach</a>
     </div>
   </div>
 </section>
 
-<div class="outcomes reveal stagger">
-  <div class="o-item"><div class="o-num" data-target="130" data-prefix="$" data-suffix="K+">$0</div><div class="o-label">Annual cost of disconnected data systems</div></div>
-  <div class="o-item"><div class="o-num" data-target="80" data-suffix="%">0</div><div class="o-label">Less time spent assembling reports</div></div>
-  <div class="o-item"><div class="o-num" data-target="5" data-suffix=" wks">0</div><div class="o-label">Kickoff to production dashboards</div></div>
-  <div class="o-item"><div class="o-num" data-target="100" data-suffix="%">0</div><div class="o-label">Client-owned, documented, auditable</div></div>
+<!-- OUTCOMES -->
+<div class="outcomes">
+  <div class="outcome-item reveal">
+    <div class="outcome-num">$340K+</div>
+    <div class="outcome-label">Revenue leakage surfaced in first 90 days</div>
+  </div>
+  <div class="outcome-item reveal reveal-d1">
+    <div class="outcome-num">3-in-1</div>
+    <div class="outcome-label">Finance · Healthcare · Data Engineering</div>
+  </div>
+  <div class="outcome-item reveal reveal-d2">
+    <div class="outcome-num">Agile</div>
+    <div class="outcome-label">Two-week delivery cycles with stakeholder demos</div>
+  </div>
+  <div class="outcome-item reveal reveal-d3">
+    <div class="outcome-num">Full</div>
+    <div class="outcome-label">Ownership — no vendor lock-in, no recurring licenses</div>
+  </div>
 </div>
 
-<section class="cap" id="capabilities">
-<div class="container">
-  <div class="cap-head reveal">
-    <div class="sl c">Capabilities</div>
-    <h2 class="h" style="text-align:center">We build the infrastructure.<br><em>You own the insights.</em></h2>
-    <p>We speak 835, CARC, ASC 606, and payer contracts fluently — but our scope is the data layer: pipelines, integrations, dashboards, and documentation that make your data consumable and actionable.</p>
-  </div>
-  <div class="cap-grid reveal stagger">
-    <div class="cap-card"><div class="cap-icon ci1"><svg viewBox="0 0 28 28" fill="none"><path d="M4 14h6M18 14h6M14 4v6M14 18v6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="3" stroke="#2563EB" stroke-width="1.5"/></svg></div><h3>Data Pipelines</h3><p>We connect your EHR, PM system, 835 remittance files, clearinghouse, and accounting platform into automated, documented ETL pipelines — no more manual exports.</p></div>
-    <div class="cap-card"><div class="cap-icon ci2"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="8" width="5" height="16" rx="1" stroke="#B8963E" stroke-width="1.5"/><rect x="11.5" y="4" width="5" height="20" rx="1" stroke="#B8963E" stroke-width="1.5"/><rect x="20" y="11" width="5" height="13" rx="1" stroke="#B8963E" stroke-width="1.5"/></svg></div><h3>Integrated Dashboards</h3><p>Role-based Power BI dashboards that surface claim-level reimbursement data, denial patterns, AR aging, and financial KPIs — ready for your team to act on.</p></div>
-    <div class="cap-card"><div class="cap-icon ci3"><svg viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="#16A34A" stroke-width="1" opacity=".2"/><path d="M7 17l4-4 3 3 7-7" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Revenue Cycle Data Layer</h3><p>We parse 835s, map CO/PR adjustments, trend CARC/RARC codes, and model contract variance — delivering structured, consumable data your billing and finance teams can trust.</p></div>
-    <div class="cap-card"><div class="cap-icon ci4"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#7C3AED" stroke-width="1.5"/><path d="M14 4v10l6 6" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round"/></svg></div><h3>Documentation & Governance</h3><p>Full pipeline documentation, data dictionaries, refresh schedules, and ongoing quality monitoring — so your data infrastructure is maintainable, auditable, and yours.</p></div>
-  </div>
-</div>
-</section>
-
-<section class="results" id="results">
-<div class="container results-in">
-  <div class="r-header reveal">
-    <div><div class="sl d">Client Results</div><h2 class="h hw">We build the data layer. <em>They take action.</em></h2></div>
-  </div>
-  <div class="r-row reveal stagger">
-    <div class="r-cell"><div class="r-big">$38K</div><div class="r-sub">Recoverable claims surfaced by our data layer in week one</div></div>
-    <div class="r-cell"><div class="r-big">80<span>%</span></div><div class="r-sub">Less time assembling reports — data is live and integrated</div></div>
-    <div class="r-cell"><div class="r-big">14→1<span> day</span></div><div class="r-sub">Manual close cycle replaced with real-time dashboards</div></div>
-    <div class="r-cell"><div class="r-big">100<span>%</span></div><div class="r-sub">Documented, auditable pipelines the client fully owns</div></div>
-  </div>
-  <div class="cs reveal">
-    <div class="cs-left"><div class="cs-tag">Case Study · Data Pipeline</div><div class="cs-num">$38K<span> surfaced</span></div><div class="cs-caption">in unbilled claims the billing team recovered</div></div>
-    <div class="cs-right"><h3>Data consolidation surfaces $38K — billing team recovers it in days</h3><p>A surgical group's remittance and billing data lived in three disconnected systems. DDH built an automated pipeline parsing 835 files at the claim line level — mapping CO adjustments, denial codes, and payer variances into a live Power BI dashboard. The billing team used it to identify and recover $38K in unbilled claims within the first week.</p><a href="#contact">Discuss a similar engagement →</a></div>
-  </div>
-</div>
-</section>
-
-<section class="eng" id="engagement">
-<div class="container">
-  <div class="eng-top reveal">
-    <div class="sl c">Engagement</div>
-    <h2 class="h" style="text-align:center">Three ways to <em>engage.</em></h2>
-    <p>We handle the data engineering. You keep running your business. Every engagement delivers documented, production-ready infrastructure your team fully owns.</p>
-  </div>
-  <div class="eng-cards reveal stagger">
-    <div class="eb">
-      <div class="eb-tier">Assessment</div>
-      <div class="eb-price">$5,500</div>
-      <div class="eb-cadence">one-time</div>
-      <div class="eb-divider"></div>
-      <h3>Data Assessment</h3>
-      <p class="eb-desc">We inventory your systems, map your data flows, and deliver an architecture roadmap in two weeks.</p>
-      <ul class="eb-list"><li>Source inventory (EHR, PM, 835s, GL)</li><li>Data flow mapping & gap analysis</li><li>Pipeline architecture recommendation</li><li>Implementation roadmap</li></ul>
-      <a href="#contact" class="eb-btn">Schedule Consultation</a>
+<!-- CHALLENGES -->
+<section class="challenges">
+  <div class="challenges-inner">
+    <h3 class="reveal">Challenges we solve<em>.</em></h3>
+    <div class="challenge-list">
+      <div class="challenge-item reveal">
+        <span class="challenge-check">→</span>
+        <p>Fragmented data across clinical, billing, and financial systems with no unified reporting layer</p>
+      </div>
+      <div class="challenge-item reveal reveal-d1">
+        <span class="challenge-check">→</span>
+        <p>Ad-hoc reporting that absorbs finance team capacity and delays strategic decision-making</p>
+      </div>
+      <div class="challenge-item reveal reveal-d2">
+        <span class="challenge-check">→</span>
+        <p>Audit and compliance readiness that depends on manual data assembly across multiple platforms</p>
+      </div>
+      <div class="challenge-item reveal reveal-d3">
+        <span class="challenge-check">→</span>
+        <p>Board packages, bank covenant reports, and lender deliverables built in spreadsheets without a repeatable process</p>
+      </div>
+      <div class="challenge-item reveal">
+        <span class="challenge-check">→</span>
+        <p>Inconsistent reporting — leadership receives different figures depending on who pulls the data</p>
+      </div>
+      <div class="challenge-item reveal reveal-d1">
+        <span class="challenge-check">→</span>
+        <p>Reporting infrastructure that hasn't scaled with the organization's growth and complexity</p>
+      </div>
     </div>
-    <div class="eb featured">
-      <div class="eb-badge">Most Engaged</div>
-      <div class="eb-tier">Implementation</div>
-      <div class="eb-price">$15,000</div>
-      <div class="eb-cadence">one-time</div>
-      <div class="eb-divider"></div>
-      <h3>Full Platform Build</h3>
-      <p class="eb-desc">We build the pipelines, integrate your sources, deploy dashboards, and document everything — your team takes it from there.</p>
-      <ul class="eb-list"><li>Up to 5 system integrations</li><li>Automated ETL with 835 parsing</li><li>4–6 role-based Power BI dashboards</li><li>Full pipeline documentation</li><li>Data dictionary & refresh schedules</li><li>Team training & 30-day support</li></ul>
-      <a href="#contact" class="eb-btn">Schedule Consultation</a>
-    </div>
-    <div class="eb">
-      <div class="eb-tier">Partnership</div>
-      <div class="eb-price">$2,500</div>
-      <div class="eb-cadence">per month</div>
-      <div class="eb-divider"></div>
-      <h3>Ongoing Data Operations</h3>
-      <p class="eb-desc">We maintain your pipelines, build new dashboards, and keep your data layer healthy as your business evolves.</p>
-      <ul class="eb-list"><li>Weekly alignment & review meetings</li><li>Continuous dashboard development</li><li>Pipeline monitoring & maintenance</li><li>Data quality governance</li><li>Quarterly architecture review</li></ul>
-      <a href="#contact" class="eb-btn">Schedule Consultation</a>
-    </div>
-  </div>
-  <div class="infra reveal">
-    <div class="infra-label">Microsoft licensing (billed separately to your org):</div>
-    <div class="infra-items">
-      <span class="infra-i"><strong>Power BI Pro</strong> $10/user/mo</span>
-      <span class="infra-i"><strong>Azure SQL</strong> ~$30–60/mo</span>
-      <span class="infra-i"><strong>PBI Desktop</strong> Free</span>
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="cta" id="contact">
-  <div class="cta-in">
-    <div class="sl d c">Begin</div>
-    <h2>Let's determine if<br>there's <em>a fit.</em></h2>
-    <p>Complimentary 30-minute consultation. We assess your data landscape, discuss objectives, and give you an honest answer — no obligation.</p>
-    <div class="cta-actions">
-      <a href="YOUR_CALENDLY_LINK" class="btn-gold">Speak to an Expert</a>
-      <a href="mailto:YOUR_EMAIL" class="btn-ghost">Send a message</a>
-    </div>
-    <p class="cta-note">DDH Consulting · Miami, FL · Data Pipelines · BI Dashboards · Healthcare Revenue Cycle Data · Microsoft Stack · Q2 2026</p>
   </div>
 </section>
 
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="section-label reveal">The Reality</div>
+  <h2 class="reveal">$48 billion in preventable losses.<br>The root cause is <em>infrastructure.</em></h2>
+  <p class="reveal">Healthcare organizations don't lack data — they lack the architecture to operationalize it. Clinical systems capture what was billed. Clearinghouses record what was adjudicated. Accounting platforms reflect what was collected. But in most organizations, these data sources remain siloed — creating blind spots that drive revenue leakage, delayed decision-making, and compliance exposure.</p>
+  <p class="reveal">The consequence is measurable: finance teams spend more time assembling information than analyzing it. Audit readiness depends on institutional knowledge rather than repeatable systems. And leadership decisions are informed by lagging, manually compiled reports rather than real-time intelligence.</p>
+  <div class="highlight-line reveal">We build the data architecture, automated pipelines, and reporting infrastructure that unifies these systems into a single source of truth — purpose-built for healthcare financial performance.</div>
+</section>
+
+<!-- OUR APPROACH -->
+<section class="approach" id="approach">
+  <div class="approach-inner">
+    <div class="section-label reveal">Our Differentiation</div>
+    <h2 class="reveal">Financial acumen meets<br><em>data engineering.</em></h2>
+    <p class="approach-intro reveal">Most BI firms deploy technically sound dashboards without understanding the financial context underneath. We bring domain expertise in healthcare finance and revenue cycle operations alongside enterprise data architecture — delivering systems that surface actionable intelligence, not just visualizations.</p>
+
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="pillar-num">01</div>
+        <h3>Finance &amp; Accounting</h3>
+        <p>Revenue recognition (ASC 606), contractual allowance modeling, AR analysis, cash flow forecasting, variance analysis, and audit-ready financial architecture. We speak the language of CFOs, controllers, and external auditors.</p>
+      </div>
+      <div class="pillar reveal reveal-d1">
+        <div class="pillar-num">02</div>
+        <h3>Healthcare Revenue Cycle</h3>
+        <p>835 remittance file processing, CARC/RARC denial classification, payer contract compliance monitoring, underpayment detection frameworks, and reimbursement trend analysis. Domain fluency in where healthcare revenue erodes.</p>
+      </div>
+      <div class="pillar reveal reveal-d2">
+        <div class="pillar-num">03</div>
+        <h3>Data Architecture &amp; Engineering</h3>
+        <p>SQL Server, Power BI, Azure, SSIS, SSAS, OLAP cubes, ETL pipelines, and semantic data models. Enterprise-grade infrastructure designed for reliability, scalability, and full organizational ownership.</p>
+      </div>
+    </div>
+
+    <div class="methodology reveal">
+      <div class="method-badge">
+        <div class="method-badge-inner"><span>Agile</span></div>
+      </div>
+      <div class="method-content">
+        <h3>Agile delivery methodology. Working systems every two weeks.</h3>
+        <p>Every engagement follows a structured Agile framework with two-week sprints, stakeholder demos, and direct access to the architect leading the build. Deliverables include audit-ready documentation, standard operating procedures, and comprehensive knowledge transfer — ensuring your organization maintains full autonomy over every system we deploy.</p>
+        <div class="method-tags">
+          <span class="method-tag">2-Week Sprints</span>
+          <span class="method-tag">Working Prototypes</span>
+          <span class="method-tag">Audit-Ready Architecture</span>
+          <span class="method-tag">Stakeholder Demos</span>
+          <span class="method-tag">Full Documentation &amp; SOPs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="capabilities" id="capabilities">
+  <div class="cap-header">
+    <div class="section-label reveal">Solutions</div>
+    <h2 class="reveal">What we build.</h2>
+    <p class="reveal">Purpose-built data infrastructure for healthcare finance and operations — architected for your environment, owned by your organization.</p>
+  </div>
+  <div class="cap-grid">
+    <div class="cap-card reveal">
+      <div class="cap-icon">⊞</div>
+      <h3>Revenue Visibility Systems</h3>
+      <p>Automated pipelines that consolidate billing, remittance, and collections data into unified reporting — surfacing underpayments, reimbursement variances, and revenue trends in real time.</p>
+    </div>
+    <div class="cap-card reveal reveal-d1">
+      <div class="cap-icon">⇌</div>
+      <h3>Denial Analytics Infrastructure</h3>
+      <p>Classification engines that organize denials by CARC/RARC code, payer, and procedure — enabling your team to identify root cause patterns, prioritize appeals, and quantify recoverable revenue.</p>
+    </div>
+    <div class="cap-card reveal reveal-d2">
+      <div class="cap-icon">◎</div>
+      <h3>Audit-Ready Reporting Architecture</h3>
+      <p>Automated financial packages including month-end close, ASC 606 compliance, AR aging, cash flow analysis, and variance reporting. Designed for on-demand delivery to auditors, lenders, and boards.</p>
+    </div>
+    <div class="cap-card reveal reveal-d3">
+      <div class="cap-icon">⬡</div>
+      <h3>Payer Performance Monitoring</h3>
+      <p>Reporting infrastructure that tracks contractual allowance accuracy, reimbursement rates, and 835 remittance data by payer — providing continuous visibility into contract compliance.</p>
+    </div>
+    <div class="cap-card reveal">
+      <div class="cap-icon">⊡</div>
+      <h3>Data Integration &amp; Warehousing</h3>
+      <p>Enterprise data pipelines connecting EHR, billing, and accounting systems into a single, governed data warehouse. SQL Server, Azure, SSIS — documented and maintainable by your IT team.</p>
+    </div>
+    <div class="cap-card reveal reveal-d1">
+      <div class="cap-icon">⟐</div>
+      <h3>Executive Intelligence Dashboards</h3>
+      <p>Power BI reporting platforms that deliver real-time visibility into revenue performance, operational KPIs, and financial metrics — replacing ad-hoc requests with self-service intelligence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="stack reveal">
+  <div class="section-label">Technology</div>
+  <h2>Built on the Microsoft ecosystem.</h2>
+  <p class="stack-sub">We work exclusively within the stack your IT team already supports.</p>
+  <div class="stack-logos">
+    <div class="stack-item">Power BI</div>
+    <div class="stack-item">SQL Server</div>
+    <div class="stack-item">Azure SQL</div>
+    <div class="stack-item">SSIS / ADF</div>
+    <div class="stack-item">Power Automate</div>
+    <div class="stack-item">SSAS / OLAP</div>
+    <div class="stack-item">Excel &amp; Power Query</div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust reveal">
+  <div class="trust-inner">
+    <h3>We integrate with the systems you're already running.</h3>
+    <div class="trust-systems">
+      <span class="trust-tag">Epic / Clarity</span>
+      <span class="trust-tag">Athena Health</span>
+      <span class="trust-tag">Cerner</span>
+      <span class="trust-tag">eClinicalWorks</span>
+      <span class="trust-tag">McKesson</span>
+      <span class="trust-tag">QuickBooks</span>
+      <span class="trust-tag">NetSuite</span>
+      <span class="trust-tag">Sage</span>
+      <span class="trust-tag">Pioneer Rx</span>
+      <span class="trust-tag">BestRx</span>
+      <span class="trust-tag">Custom Billing Systems</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="serve" id="industries">
+  <div class="serve-inner">
+    <div class="section-label reveal">Industries</div>
+    <h2 class="reveal">Purpose-built for healthcare<br><em>and high-growth organizations.</em></h2>
+    <p class="serve-intro reveal">We serve organizations where financial and operational complexity has outpaced reporting infrastructure — and where a dedicated BI team isn't yet feasible or justified.</p>
+    <div class="serve-grid">
+      <div class="serve-item reveal">
+        <div class="serve-icon">⚕</div>
+        <h4>Specialty Pharmacies</h4>
+        <p>Payer performance monitoring, 835 remittance analytics, AR visibility, and reimbursement compliance infrastructure.</p>
+      </div>
+      <div class="serve-item reveal reveal-d1">
+        <div class="serve-icon">🏥</div>
+        <h4>Health Systems &amp; Clinics</h4>
+        <p>Revenue cycle reporting architecture, denial analytics pipelines, contractual allowance monitoring, and operational dashboards.</p>
+      </div>
+      <div class="serve-item reveal reveal-d2">
+        <div class="serve-icon">🧠</div>
+        <h4>Behavioral Health</h4>
+        <p>Census and authorization tracking systems, payer mix analytics, outcome reporting, and financial performance infrastructure.</p>
+      </div>
+      <div class="serve-item reveal reveal-d3">
+        <div class="serve-icon">🏢</div>
+        <h4>Mid-Market Organizations</h4>
+        <p>Financial consolidation architecture, multi-entity reporting, cash flow intelligence, and executive dashboards for $20M–$150M+ enterprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case-study" id="results">
+  <div class="case-inner">
+    <div class="section-label reveal">Client Impact</div>
+    <h2 class="reveal">Specialty pharmacy — from fragmented reporting<br>to <em>operational intelligence.</em></h2>
+    <p class="case-context reveal">A multi-state specialty pharmacy was managing accounts receivable, payer performance, and revenue reporting through disconnected Excel workbooks maintained across three departments. Underpayments went undetected, denial patterns were invisible, and every audit or bank covenant review required weeks of manual data assembly. We deployed an integrated data warehouse, automated reporting pipelines, and a real-time Power BI analytics layer.</p>
+    <div class="case-results">
+      <div class="case-result reveal">
+        <div class="num">$340K</div>
+        <div class="label">Revenue leakage surfaced in 90 days</div>
+      </div>
+      <div class="case-result reveal reveal-d1">
+        <div class="num">87%</div>
+        <div class="label">Reduction in weekly reporting time</div>
+      </div>
+      <div class="case-result reveal reveal-d2">
+        <div class="num">Real-time</div>
+        <div class="label">AR, denial, and payer performance visibility</div>
+      </div>
+      <div class="case-result reveal reveal-d3">
+        <div class="num">On-demand</div>
+        <div class="label">Audit-ready financial packages</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insights reveal">
+  <div class="insights-inner">
+    <div class="section-label">Insights</div>
+    <h2>Perspectives on healthcare<br><em>data strategy.</em></h2>
+    <p>Analysis and frameworks on financial data architecture, revenue cycle intelligence, and operational reporting — informed by real engagements.</p>
+    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" class="insights-link" target="_blank">Follow on LinkedIn →</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-label reveal">Engagement Process</div>
+  <h2 class="reveal">Structured delivery.<br>Predictable outcomes.</h2>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3>Discovery &amp; Assessment</h3>
+        <p>Comprehensive mapping of your current data environment — systems, workflows, and infrastructure gaps. Deliverable: written assessment with architecture recommendation and fixed-scope implementation proposal.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3>Architecture &amp; Build</h3>
+        <p>Data model design, pipeline development, and reporting layer deployment. Working systems demonstrated every two weeks with direct access to the lead architect throughout.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3>Deployment &amp; Knowledge Transfer</h3>
+        <p>Production deployment, comprehensive documentation, and hands-on training for both technical and end-user teams. Full organizational ownership upon completion.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3>Continuous Development</h3>
+        <p>Optional retainer for ongoing architecture expansion, new reporting requirements, pipeline monitoring, and quarterly strategic reviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT -->
+<section class="engagement" id="engagement">
+  <div class="eng-inner">
+    <div class="section-label reveal">Engagement Structure</div>
+    <h2 class="reveal">Defined scope. Fixed investment.</h2>
+    <p class="eng-intro reveal">Every engagement begins with a paid assessment. If alignment exists, we proceed to implementation. If not, the assessment and roadmap are yours to keep.</p>
+    <div class="eng-tiers">
+      <div class="eng-tier reveal">
+        <div class="tier-label">Phase 1</div>
+        <div class="tier-name">Assessment</div>
+        <div class="tier-price">$5,500</div>
+        <p class="tier-desc">Two-week deep dive into your data environment. Deliverable: written assessment with data flow map, gap analysis, architecture recommendation, and fixed-price implementation proposal.</p>
+      </div>
+      <div class="eng-tier featured reveal reveal-d1">
+        <div class="tier-label">Phase 2</div>
+        <div class="tier-name">Implementation</div>
+        <div class="tier-price">$15,000–$25,000</div>
+        <p class="tier-desc">Full build of your data infrastructure — pipelines, data model, dashboards, documentation, and training. Scope and price locked during assessment. Typical timeline: 6–10 weeks.</p>
+      </div>
+      <div class="eng-tier reveal reveal-d2">
+        <div class="tier-label">Ongoing</div>
+        <div class="tier-name">Retainer</div>
+        <div class="tier-price">$3,000<span>/month</span></div>
+        <p class="tier-desc">Continuous development, new dashboards, pipeline monitoring, and quarterly architecture reviews. Weekly alignment call. Cancel anytime with 30 days notice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-label reveal">FAQ</div>
+  <h2 class="reveal">Frequently asked.</h2>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">What industries do you work with?</div>
+    <div class="faq-a">We specialize in healthcare organizations — hospitals, specialty pharmacies, physician groups, behavioral health — and mid-market companies ($20M–$150M+) across any industry where finance and operations teams need better data visibility.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">Do you work with our existing systems?</div>
+    <div class="faq-a">Yes. We integrate with whatever you're already running — Epic, Athena, Cerner, QuickBooks, NetSuite, Sage, specialty billing platforms, and more. We build on top of your systems, not around them.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">Can you work remotely?</div>
+    <div class="faq-a">Most of our work is performed remotely through secure screen sharing, cloud environments, and documented handoffs. Miami-area clients also have the option of in-person sessions.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">What if we already have an IT team?</div>
+    <div class="faq-a">Great — we work alongside your IT department. They manage your infrastructure; we build the data layer on top of it. Everything we deploy is documented so your team can maintain it long-term.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">Is this just Power BI dashboards?</div>
+    <div class="faq-a">Dashboards are the visible layer, but the real value is underneath — the data pipelines, the data model, and the automation that ensures the numbers are accurate, consistent, and always current. We build the full stack, not just the front end.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">Do we own the work product?</div>
+    <div class="faq-a">100%. Every pipeline, dashboard, data model, and line of documentation is yours. No proprietary lock-in, no recurring licenses to us. When the engagement ends, you own everything.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">Can your systems help us prepare for audits or bank reporting?</div>
+    <div class="faq-a">Yes — audit readiness is built into every engagement. We design data models with full traceability so your team can pull audit-ready financial reports, AR reconciliation, revenue recognition documentation (ASC 606), and covenant compliance packages on demand. When your auditors, lenders, or board members ask questions, the answer is already in the system.</div>
+  </div>
+
+  <div class="faq-item reveal">
+    <div class="faq-q">How are you different from a typical BI or Power BI consulting firm?</div>
+    <div class="faq-a">Most BI firms are staffed by data engineers who build technically sound dashboards but don't understand the numbers underneath. We bring finance and accounting expertise — revenue recognition, contractual allowances, denial code classification, payer contract compliance — alongside the technical build. The result is a system that doesn't just display data, but surfaces the financial insights your team actually needs to make decisions.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <div class="section-label reveal">Let's Talk</div>
+    <h2 class="reveal">What can we help you<br><em>achieve?</em></h2>
+    <p class="cta-text reveal">Share your goals. We'll assess where your data gaps are, what's likely leaking, and whether we're the right fit — candidly and without obligation.</p>
+    <div class="cta-actions reveal">
+      <a href="YOUR_CALENDLY_LINK" class="btn-gold">Schedule a Consultation →</a>
+    </div>
+    <p class="cta-note reveal">Miami, FL · Accepting select engagements nationally · English &amp; Portuguese</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-form-section" id="inquiry">
+  <div class="contact-inner">
+    <div class="section-label reveal">Inquiry</div>
+    <h2 class="reveal">Start a <em>conversation.</em></h2>
+    <p class="contact-intro reveal">Share your organization's context. We'll respond within one business day with an honest assessment of whether our capabilities align with your needs.</p>
+
+    <div id="contactForm">
+      <div class="form-grid reveal">
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" placeholder="Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Your Role / Title</label>
+          <input type="text" id="title" placeholder="CFO, Controller, Director of Finance...">
+        </div>
+        <div class="form-group">
+          <label for="company">Organization *</label>
+          <input type="text" id="company" placeholder="Company or practice name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-group full">
+          <label for="industry">Industry</label>
+          <select id="industry">
+            <option value="" disabled selected>Select your industry...</option>
+            <option value="specialty-pharmacy">Specialty Pharmacy</option>
+            <option value="hospital-health-system">Hospital / Health System</option>
+            <option value="physician-group">Physician Group / Clinic</option>
+            <option value="behavioral-health">Behavioral Health</option>
+            <option value="home-health-dme">Home Health / DME</option>
+            <option value="other-healthcare">Other Healthcare</option>
+            <option value="finance-accounting">Finance / Accounting</option>
+            <option value="other">Other Industry</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="challenge">Describe your primary data or reporting challenge *</label>
+          <textarea id="challenge" placeholder="Example: Our finance team spends significant time assembling reports manually across disconnected systems. We lack real-time visibility into AR aging, payer performance, and denial trends — and audit preparation requires weeks of ad-hoc data compilation." required></textarea>
+        </div>
+        <div class="form-group full">
+          <label for="hearAbout">How did you hear about us?</label>
+          <select id="hearAbout">
+            <option value="" disabled selected>Select one...</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="google">Google Search</option>
+            <option value="referral">Referral / Word of Mouth</option>
+            <option value="colleague">Colleague</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-submit reveal">
+        <button type="button" class="btn-gold" onclick="submitForm()">Submit Inquiry →</button>
+      </div>
+      <p class="form-note reveal">We respond to every inquiry personally. No automated sequences. No sales pressure.</p>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <h3>Thank you.</h3>
+      <p>We've received your inquiry and will follow up within one business day.<br>If your need is urgent, feel free to <a href="mailto:pedro@ddhbiconsulting.com" style="color: var(--gold);">email us directly</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <span class="f-brand">DDH <span>Consulting</span></span>
-  <ul class="f-links"><li><a href="#capabilities">Capabilities</a></li><li><a href="#results">Results</a></li><li><a href="#engagement">Engagement</a></li><li><a href="#contact">Contact</a></li></ul>
-  <span class="f-copy">© 2026 DDH Consulting LLC · Miami, FL</span>
+  <span class="footer-brand">DDH <span>BI Consulting</span></span>
+  <ul class="footer-links">
+    <li><a href="#approach">Our Edge</a></li>
+    <li><a href="#capabilities">Solutions</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#engagement">Engagement</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 DDH Consulting LLC · Healthcare Data Architecture & Business Intelligence · Miami, FL · pedro@ddhbiconsulting.com</span>
 </footer>
 
 <script>
-// Scroll reveal + stagger
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      // Trigger counters if present
-      if (e.target.querySelectorAll('[data-target]').length) animateCounters(e.target);
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Nav scroll
 window.addEventListener('scroll', () => {
   document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Hero parallax — subtle grid movement
-const heroGrid = document.querySelector('.hero::before');
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  if (y < window.innerHeight) {
-    const hero = document.querySelector('.hero');
-    hero.style.setProperty('--grid-y', (y * 0.15) + 'px');
-  }
-}, { passive: true });
-// Apply via CSS custom property
-const style = document.createElement('style');
-style.textContent = '.hero::before{transform:translateY(var(--grid-y,0))}';
-document.head.appendChild(style);
-
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
     const t = document.querySelector(a.getAttribute('href'));
-    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if(t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
-// Counter animation
-function animateCounters(container) {
-  container.querySelectorAll('[data-target]').forEach(el => {
-    const target = parseInt(el.dataset.target);
-    const prefix = el.dataset.prefix || '';
-    const suffix = el.dataset.suffix || '';
-    const duration = 1600;
-    const start = performance.now();
-    function tick(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic
-      const ease = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(target * ease);
-      el.textContent = prefix + current + suffix;
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+// Form submission via formsubmit.co (free, no signup)
+function submitForm() {
+  const fields = {
+    firstName: document.getElementById('firstName').value.trim(),
+    lastName: document.getElementById('lastName').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    company: document.getElementById('company').value.trim(),
+    challenge: document.getElementById('challenge').value.trim()
+  };
+
+  // Validate required fields
+  if(!fields.firstName || !fields.lastName || !fields.email || !fields.company || !fields.challenge) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  const btn = document.querySelector('.form-submit .btn-gold');
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.6';
+
+  const formData = new FormData();
+  formData.append('First Name', fields.firstName);
+  formData.append('Last Name', fields.lastName);
+  formData.append('Email', fields.email);
+  formData.append('Phone', document.getElementById('phone').value.trim());
+  formData.append('Title', document.getElementById('title').value.trim());
+  formData.append('Organization', fields.company);
+  formData.append('Industry', document.getElementById('industry').value || 'Not specified');
+  formData.append('Challenge', fields.challenge);
+  formData.append('How They Heard', document.getElementById('hearAbout').value || 'Not specified');
+  formData.append('_subject', 'DDH BI Inquiry: ' + fields.company);
+  formData.append('_template', 'table');
+  formData.append('_captcha', 'false');
+
+  fetch('https://formsubmit.co/ajax/contact@ddhbiconsulting.com', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  })
+  .catch(error => {
+    // Fallback: open mailto with form data
+    const body = `Name: ${fields.firstName} ${fields.lastName}%0D%0AEmail: ${fields.email}%0D%0AOrganization: ${fields.company}%0D%0AChallenge: ${fields.challenge}`;
+    window.location.href = `mailto:pedro@ddhbiconsulting.com?subject=DDH BI Inquiry: ${fields.company}&body=${body}`;
+    btn.textContent = 'Submit Inquiry →';
+    btn.style.opacity = '1';
   });
 }
 </script>
+
 </body>
 </html>
