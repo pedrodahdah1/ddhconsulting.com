@@ -9,7 +9,7 @@
 <meta property="og:description" content="Purpose-built data infrastructure for healthcare financial performance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -18,7 +18,7 @@
   --bg:#FFFFFF;--bg-soft:#FBF9F5;
   --text:#0A2342;--text-mid:#4B5563;--text-light:#6B7280;
   --border:#E8EAED;--border-soft:#F0EDE6;
-  --serif:'Fraunces',Georgia,serif;
+  --serif:'Playfair Display',Georgia,serif;
   --sans:'DM Sans',-apple-system,sans-serif;
 }
 html{scroll-behavior:smooth}
@@ -31,7 +31,7 @@ button{font-family:inherit}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;padding:1.1rem 5vw;display:flex;justify-content:space-between;align-items:center;transition:all 0.3s ease}
 nav.scrolled{background:rgba(255,255,255,0.96);border-bottom-color:var(--border);padding:0.85rem 5vw}
 .nav-brand{display:flex;align-items:baseline;gap:0.5rem}
-.brand-mark{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--ink);letter-spacing:-0.02em;font-feature-settings:"ss01"}
+.brand-mark{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--ink);letter-spacing:-0.02em}
 .brand-mark::after{content:'';display:inline-block;width:4px;height:4px;background:var(--accent);border-radius:50%;margin-left:0.15rem;vertical-align:middle;transform:translateY(-0.45rem)}
 .brand-name{font-family:var(--sans);font-size:0.72rem;font-weight:500;text-transform:uppercase;letter-spacing:0.18em;color:var(--text-mid);padding-left:0.4rem;border-left:1px solid var(--border)}
 .nav-links{display:flex;gap:2.4rem;align-items:center}
@@ -53,7 +53,7 @@ nav.scrolled{background:rgba(255,255,255,0.96);border-bottom-color:var(--border)
 /* COMMON */
 .eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;display:inline-block}
 .eyebrow.center{display:block;text-align:center}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-0.015em;font-feature-settings:"ss01"}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-0.015em}
 h1 em,h2 em,h3 em{font-style:italic;font-weight:400;color:var(--ink)}
 .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink);color:#fff;padding:1rem 2rem;border-radius:4px;font-size:0.92rem;font-weight:500;transition:all 0.2s ease;border:none;cursor:pointer;font-family:var(--sans)}
 .btn-primary:hover{background:var(--ink-deep);transform:translateY(-1px);box-shadow:0 8px 24px rgba(10,35,66,0.18)}
@@ -61,13 +61,13 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:400;color:var(--ink)}
 .btn-outline:hover{border-color:var(--ink)}
 
 /* HERO */
-.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 5vw 5rem;position:relative;background:linear-gradient(180deg,#FFFFFF 0%,#FBF9F5 100%)}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8rem 5vw 5rem;position:relative;background:linear-gradient(180deg,#FFFFFF 0%,#FBF9F5 100%);text-align:center}
 .hero::before{content:'';position:absolute;top:0;right:0;width:50vw;height:50vw;background:radial-gradient(ellipse at top right,var(--accent-light) 0%,transparent 60%);pointer-events:none}
-.hero-content{max-width:920px;position:relative;z-index:2}
+.hero-content{max-width:920px;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
 .hero h1{font-size:clamp(2.4rem,5.4vw,4.6rem);line-height:1.05;margin-bottom:1.8rem}
 .hero-sub{font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--text-mid);max-width:640px;line-height:1.65;margin-bottom:2.6rem}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.hero-meta{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--text-light);letter-spacing:0.05em;text-transform:uppercase;font-weight:500}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.hero-meta{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:1rem;font-size:0.78rem;color:var(--text-light);letter-spacing:0.05em;text-transform:uppercase;font-weight:500;width:100%;max-width:560px}
 .hero-meta-dot{width:6px;height:6px;background:var(--accent);border-radius:50%}
 
 /* OUTCOMES */
@@ -534,7 +534,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
     <h2 class="reveal">What can we help you <em>achieve?</em></h2>
     <p class="cta-text reveal">Share your goals. We'll assess where your data gaps are, what's likely leaking, and whether we're the right fit — candidly and without obligation.</p>
     <div class="cta-actions reveal">
-      <a href="YOUR_CALENDLY_LINK" class="btn-primary">Schedule a Consultation →</a>
+      <a href="#inquiry" class="btn-primary">Schedule a Conversation →</a>
       <a href="#inquiry" class="btn-outline">Send a Message</a>
     </div>
     <p class="cta-note reveal">Miami, FL · Accepting select engagements nationally · English &amp; Portuguese</p>
