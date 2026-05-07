@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DDH BI Consulting — Healthcare Data Architecture &amp; Business Intelligence | Miami</title>
+<title>DDH BI Consulting | Healthcare Data Architecture and Business Intelligence | Miami</title>
 <meta name="description" content="DDH BI Consulting designs and deploys data infrastructure for healthcare organizations and mid-market enterprises. Power BI, SQL Server, Azure. Miami, FL.">
-<meta property="og:title" content="DDH BI Consulting — Healthcare Data Architecture">
-<meta property="og:description" content="Purpose-built data infrastructure for healthcare financial performance.">
+<meta property="og:title" content="DDH BI Consulting | Healthcare Data Architecture">
+<meta property="og:description" content="Strategic data infrastructure for healthcare financial and operational performance.">
 <meta property="og:url" content="https://ddhbiconsulting.com/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://ddhbiconsulting.com/">
@@ -299,6 +299,22 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:400;color:var(--ink)}
 .form-success a{color:var(--accent);border-bottom:1px solid var(--accent)}
 @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
 
+/* ABOUT */
+.about{padding:8rem 5vw;background:var(--bg)}
+.about-inner{max-width:1100px;margin:0 auto}
+.about-header{max-width:720px;margin-bottom:4rem}
+.about-header h2{font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.12;margin-bottom:1.4rem}
+.about-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:5rem;align-items:start}
+.about-bio p{font-size:1.05rem;color:var(--text-mid);line-height:1.78;margin-bottom:1.4rem}
+.about-bio p:last-child{margin-bottom:0}
+.about-bio p strong{color:var(--ink);font-weight:600}
+.about-credentials{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.credential-item{padding:1.3rem 1.6rem;border-bottom:1px solid var(--border)}
+.credential-item:last-child{border-bottom:none}
+.credential-label{font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem}
+.credential-value{font-size:0.92rem;color:var(--text);line-height:1.5}
+@media(max-width:880px){.about-layout{grid-template-columns:1fr;gap:3rem}}
+
 /* FOOTER */
 footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
 .footer-inner{max-width:1200px;margin:0 auto}
@@ -324,6 +340,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
     <li><a href="#capabilities">Solutions</a></li>
     <li><a href="#industries">Industries</a></li>
     <li><a href="#results">Results</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#engagement">Engagement</a></li>
     <li><a href="#contact" class="nav-cta">Speak With Our Team →</a></li>
   </ul>
@@ -334,7 +351,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
   <div class="hero-content">
     <span class="eyebrow reveal">DDH BI Consulting · Miami, FL</span>
     <h1 class="reveal reveal-d1">Data infrastructure for healthcare <em>financial performance.</em></h1>
-    <p class="hero-sub reveal reveal-d2">We design, build, and deploy the reporting architecture that transforms disconnected healthcare data into operational intelligence — enabling leaders to act on what they couldn't see before.</p>
+    <p class="hero-sub reveal reveal-d2">We build the data architecture and reporting infrastructure that healthcare finance leaders rely on to recover revenue, close faster, and make decisions with confidence — not spreadsheets.</p>
     <div class="hero-actions reveal reveal-d3">
       <a href="#inquiry" class="btn-primary">Speak With Us →</a>
       <a href="#approach" class="btn-outline">Our Approach</a>
@@ -441,7 +458,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
     <div class="cap-header">
       <span class="eyebrow reveal">Solutions</span>
       <h2 class="reveal">What we build.</h2>
-      <p class="reveal">Purpose-built data infrastructure for healthcare finance and operations — architected for your environment, owned by your organization.</p>
+      <p class="reveal">Designed for healthcare finance and operations — built to your environment's specific requirements, fully documented, and owned by your organization from day one.</p>
     </div>
     <div class="cap-grid">
       <div class="cap-card reveal"><span class="cap-num">01</span><h3>Revenue Visibility Systems</h3><p>Automated pipelines that consolidate billing, remittance, and collections data into unified reporting — surfacing underpayments, reimbursement variances, and revenue trends in real time.</p></div>
@@ -478,7 +495,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
     <div class="ind-header">
       <span class="eyebrow reveal">Industries</span>
       <h2 class="reveal">Purpose-built for healthcare and <em>high-growth organizations.</em></h2>
-      <p class="reveal">We serve organizations where financial and operational complexity has outpaced reporting infrastructure — and where a dedicated BI team isn't yet feasible or justified.</p>
+      <p class="reveal">We work with organizations where financial and operational complexity demands purpose-built infrastructure — and where leadership holds the data to a higher standard than what off-the-shelf tools can deliver.</p>
     </div>
     <div class="ind-grid">
       <div class="ind-card reveal"><h4>Specialty Pharmacies</h4><p>Payer performance monitoring, 835 remittance analytics, AR visibility, and reimbursement compliance infrastructure.</p></div>
@@ -499,6 +516,45 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
       <div class="case-result reveal reveal-d1"><div class="num">87%</div><div class="label">Reduction in weekly reporting time</div></div>
       <div class="case-result reveal reveal-d2"><div class="num">Real-time</div><div class="label">AR, denial &amp; payer performance visibility</div></div>
       <div class="case-result reveal reveal-d3"><div class="num">On-demand</div><div class="label">Audit-ready financial packages</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-header">
+      <span class="eyebrow reveal">About</span>
+      <h2 class="reveal">A practitioner's firm, <em>not a vendor's.</em></h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-bio reveal">
+        <p>DDH BI Consulting was founded by <strong>Pedro Dahdah</strong>, a data architect and financial analyst with hands-on experience inside healthcare organizations — building the reporting infrastructure that CFOs, controllers, and revenue cycle leaders depend on to run their operations.</p>
+        <p>Pedro's background spans financial accounting, revenue cycle operations, and enterprise data engineering. Before founding DDH, he worked within healthcare and mid-market finance environments where the gap between raw system data and reliable financial intelligence was a daily constraint — not a theoretical problem. That operational context is what makes our work different from a generalist BI firm.</p>
+        <p>Every engagement is led directly by Pedro. Clients get a single point of accountability who understands both the financial logic driving the business and the technical architecture required to surface it. No account managers. No offshore delivery. No hand-offs after the sale.</p>
+        <p>We work with a select number of clients at a time — by design. The model is built around depth of engagement, not volume of projects.</p>
+      </div>
+      <div class="about-credentials reveal reveal-d1">
+        <div class="credential-item">
+          <div class="credential-label">Core Expertise</div>
+          <div class="credential-value">Healthcare Revenue Cycle · Financial Reporting · Data Architecture · Business Intelligence</div>
+        </div>
+        <div class="credential-item">
+          <div class="credential-label">Technology</div>
+          <div class="credential-value">SQL Server · Power BI · Azure · SSIS · SSAS · ETL Engineering</div>
+        </div>
+        <div class="credential-item">
+          <div class="credential-label">Domain Knowledge</div>
+          <div class="credential-value">ASC 606 · CARC/RARC Classification · 835 Remittance Processing · Payer Contract Compliance</div>
+        </div>
+        <div class="credential-item">
+          <div class="credential-label">Location</div>
+          <div class="credential-value">Miami, FL · Serving clients nationally</div>
+        </div>
+        <div class="credential-item">
+          <div class="credential-label">Languages</div>
+          <div class="credential-value">English · Portuguese</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -554,7 +610,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
         <p class="tier-desc">Continuous architecture development, new reporting requirements, pipeline monitoring, and quarterly strategic reviews. Structured for organizations that need a long-term data partner without the overhead of a full-time team.</p>
       </div>
     </div>
-    <p class="eng-footer reveal reveal-d3">Investment is scoped during the assessment phase, based on your environment, complexity, and objectives. We work with a limited number of clients at a time to ensure delivery quality.</p>
+    <p class="eng-footer reveal reveal-d3">Investment is scoped during the assessment phase, based on your environment, complexity, and objectives. We deliberately limit active engagements to ensure the lead architect remains directly accountable to every client — no hand-offs, no junior staff.</p>
   </div>
 </section>
 
@@ -577,8 +633,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
 <section class="cta-section" id="contact">
   <div class="cta-inner">
     <span class="eyebrow center reveal">Let's Talk</span>
-    <h2 class="reveal">What can we help you <em>achieve?</em></h2>
-    <p class="cta-text reveal">Share your goals. We'll assess where your data gaps are, what's likely leaking, and whether we're the right fit — candidly and without obligation.</p>
+    <h2 class="reveal">The right conversation starts <em>here.</em></h2>
+    <p class="cta-text reveal">Tell us where your reporting is falling short. We'll give you a direct, honest read on where revenue is likely leaking and what it would take to fix it — no pitch, no obligation.</p>
     <div class="cta-actions reveal">
       <a href="#inquiry" class="btn-primary">Schedule a Conversation →</a>
       <a href="#inquiry" class="btn-outline">Send a Message</a>
@@ -622,7 +678,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:4rem 5vw 2rem}
         <p class="footer-tag">Strategic data infrastructure for healthcare financial and operational performance.</p>
       </div>
       <div class="footer-links">
-        <div class="footer-col"><h5>Firm</h5><ul><li><a href="#approach">Approach</a></li><li><a href="#capabilities">Solutions</a></li><li><a href="#industries">Industries</a></li><li><a href="#results">Results</a></li><li><a href="#engagement">Engagement</a></li></ul></div>
+        <div class="footer-col"><h5>Firm</h5><ul><li><a href="#approach">Approach</a></li><li><a href="#capabilities">Solutions</a></li><li><a href="#industries">Industries</a></li><li><a href="#results">Results</a></li><li><a href="#about">About</a></li><li><a href="#engagement">Engagement</a></li></ul></div>
         <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:pedro@ddhbiconsulting.com">pedro@ddhbiconsulting.com</a></li><li><a href="#contact">Schedule Consultation</a></li><li><a href="#inquiry">Send Inquiry</a></li><li><a href="https://www.linkedin.com/company/ddhconsulting/?viewAsMember=true" target="_blank">LinkedIn</a></li></ul></div>
       </div>
     </div>
