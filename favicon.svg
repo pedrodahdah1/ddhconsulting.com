@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#0A2342"/>
-  <text x="16" y="22" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#B8862F" text-anchor="middle" letter-spacing="-0.5">DDH</text>
-  <circle cx="25" cy="8" r="2.5" fill="#B8862F"/>
+  <!-- D letterform: gold filled shape -->
+  <path d="M8 7h6.5C19.8 7 24 11 24 16s-4.2 9-9.5 9H8V7z" fill="#B8862F"/>
+  <!-- White spine creates the classic D letterform contrast -->
+  <rect x="8" y="7" width="3.5" height="18" rx="1" fill="#ffffff"/>
+  <!-- Intelligence dots: data signal motif along the bowl -->
+  <circle cx="20.5" cy="10.5" r="1.1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="22.5" cy="13.5" r="1.1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="23" cy="17.5" r="1.1" fill="#ffffff" opacity="0.5"/>
 </svg>
