@@ -1,11 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#0A2342"/>
-  <!-- D letterform: gold filled shape -->
-  <path d="M8 7h6.5C19.8 7 24 11 24 16s-4.2 9-9.5 9H8V7z" fill="#B8862F"/>
-  <!-- White spine creates the classic D letterform contrast -->
-  <rect x="8" y="7" width="3.5" height="18" rx="1" fill="#ffffff"/>
-  <!-- Intelligence dots: data signal motif along the bowl -->
-  <circle cx="20.5" cy="10.5" r="1.1" fill="#ffffff" opacity="0.5"/>
-  <circle cx="22.5" cy="13.5" r="1.1" fill="#ffffff" opacity="0.5"/>
-  <circle cx="23" cy="17.5" r="1.1" fill="#ffffff" opacity="0.5"/>
+  <g fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+    <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+    <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+  </g>
 </svg>

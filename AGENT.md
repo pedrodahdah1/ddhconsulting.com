@@ -9,7 +9,7 @@
 
 **Company:** DDH Consulting LLC
 **Website:** ddhbiconsulting.com
-**Email:** pedro@ddhbiconsulting.com
+**Email:** contact@ddhbiconsulting.com
 **Location:** Miami, Florida
 **Principal:** Pedro Dahdah
 
@@ -176,7 +176,7 @@ Detailed breakdown of the five revenue intelligence categories: MPIP, MIPS, APCM
 Summary of completed engagements with outcome metrics. Client names anonymized. Focus on what was built, what it found, and what changed for the client's finance operations.
 
 **Contact**
-Simple contact page. Email: pedro@ddhbiconsulting.com. No pricing. Direct visitors to initiate a conversation.
+Simple contact page. Email: contact@ddhbiconsulting.com. No pricing. Direct visitors to initiate a conversation.
 
 ---
 
@@ -227,7 +227,7 @@ Portfolio assessments: two to three weeks. Full data architecture implementation
 Yes. Our retainer covers public intelligence data refresh and program list updates monthly. Maintenance fees cover client-specific system support, dashboard evolution, and integration of new data sources.
 
 **Who do we contact to get started?**
-Email pedro@ddhbiconsulting.com to initiate a discovery conversation.
+Email contact@ddhbiconsulting.com to initiate a discovery conversation.
 
 ---
 
