@@ -4,11 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DDH Consulting | Healthcare Revenue Intelligence & Data Architecture | Miami</title>
-<meta name="description" content="DDH Consulting is a data architecture and healthcare intelligence firm. We build data infrastructure and process public healthcare data to surface revenue opportunities — MPIP, MIPS, APCM, CCM/TCM, 340B — and deliver FP&A reporting systems for physician groups, MSOs, and healthcare finance leaders. Miami, FL.">
+<meta name="description" content="DDH Consulting is a data architecture and healthcare intelligence firm. We process public healthcare data to surface revenue opportunities across MPIP, MIPS, APCM, CCM/TCM, and 340B, and build FP&A reporting systems for physician groups, MSOs, and healthcare finance leaders. Miami, FL.">
 <meta property="og:title" content="DDH Consulting | Healthcare Revenue Intelligence">
-<meta property="og:description" content="Data architecture and healthcare intelligence firm. Public-data revenue intelligence and FP&A reporting infrastructure for healthcare organizations.">
+<meta property="og:description" content="Data architecture, program intelligence, and FP&A reporting systems for physician groups, MSOs, and healthcare finance leaders.">
 <meta property="og:url" content="https://ddhbiconsulting.com/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://ddhbiconsulting.com/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="DDH Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DDH Consulting | Healthcare Revenue Intelligence">
+<meta name="twitter:description" content="Data architecture, program intelligence, and FP&A reporting systems for healthcare finance leaders.">
+<meta name="twitter:image" content="https://ddhbiconsulting.com/social-card.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
 <link rel="apple-touch-icon" href="/favicon.svg?v=2">
@@ -69,6 +77,21 @@
   "sameAs": ["https://www.linkedin.com/company/ddhconsulting/"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "What types of organizations does DDH Consulting work with?","acceptedAnswer": {"@type": "Answer","text": "Physician groups, management services organizations, and specialty pharmacies, particularly those operating in Florida's Medicaid managed care environment or with significant Medicare patient populations. DDH also works with PE-backed healthcare organizations building stronger data and reporting infrastructure."}},
+    {"@type": "Question","name": "Does DDH Consulting work outside of Florida?","acceptedAnswer": {"@type": "Answer","text": "Yes. MPIP intelligence is specific to Florida's Medicaid program. MIPS, APCM, and CCM/TCM analysis applies nationally. Data architecture and FP&A reporting engagements have no geographic limitation."}},
+    {"@type": "Question","name": "How is DDH Consulting different from a billing company?","acceptedAnswer": {"@type": "Answer","text": "Billing companies manage claims submission and collections. DDH builds the analytical infrastructure that sits above that process: identifying program enrollment gaps, monitoring reimbursement performance against public benchmarks, and organizing financial data into reporting systems finance leadership uses. DDH works alongside existing billing operations."}},
+    {"@type": "Question","name": "What does DDH Consulting need to begin an engagement?","acceptedAnswer": {"@type": "Answer","text": "A portfolio assessment requires only the organization's NPI numbers; the initial analysis runs against public data. Implementation engagements that incorporate billing data require a data sharing agreement and access to billing system exports."}},
+    {"@type": "Question","name": "How does DDH Consulting handle sensitive financial and patient data?","acceptedAnswer": {"@type": "Answer","text": "All engagements involving protected health information or financial records are conducted under a signed Business Associate Agreement (BAA). Client data is isolated in dedicated database environments."}},
+    {"@type": "Question","name": "How long does an implementation take?","acceptedAnswer": {"@type": "Answer","text": "Portfolio assessments take two to three weeks. Full data architecture implementations take six to ten weeks, depending on the complexity of the data environment."}},
+    {"@type": "Question","name": "Does DDH Consulting provide ongoing support?","acceptedAnswer": {"@type": "Answer","text": "Yes. A monthly retainer covers public intelligence data refresh and program list updates. Maintenance covers client-specific system support, dashboard evolution, and integration of new data sources."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -112,6 +135,11 @@ nav.scrolled{background:rgba(255,255,255,0.97);border-bottom-color:var(--border)
 .reveal-d2{transition-delay:0.16s}
 .reveal-d3{transition-delay:0.24s}
 .reveal-d4{transition-delay:0.32s}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{transition-duration:0.01ms !important;animation-duration:0.01ms !important}
+}
 
 /* COMMON */
 .eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:inline-block}
@@ -264,7 +292,7 @@ section{position:relative}
 .faq-q::after{content:'+';color:var(--accent);font-size:1.3rem;font-weight:300;transition:transform 0.3s;flex-shrink:0}
 .faq-item.open .faq-q::after{transform:rotate(45deg)}
 .faq-a{color:var(--text-mid);font-size:0.93rem;line-height:1.78;max-height:0;overflow:hidden;transition:max-height 0.45s ease,padding 0.45s ease}
-.faq-item.open .faq-a{max-height:460px;padding-bottom:1.8rem}
+.faq-item.open .faq-a{max-height:640px;padding-bottom:1.8rem}
 
 /* CONTACT FORM */
 .contact-form-section{padding:7rem 5vw;background:var(--bg-soft);border-top:1px solid var(--border)}
@@ -305,6 +333,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.76rem;color:rgba(255,255,255,0.3)}
 @media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}}
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
@@ -340,7 +369,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
       <span>Data Architecture &amp; Healthcare Intelligence &nbsp;·&nbsp; Miami, FL</span>
     </div>
     <h1 class="reveal reveal-d1">Healthcare Revenue Intelligence,<br><em>Built on Public Data.</em></h1>
-    <p class="hero-sub reveal reveal-d2">DDH Consulting collects and processes public healthcare data to surface revenue opportunities at the provider level — program enrollment gaps, reimbursement discrepancies, and unclaimed federal and state program revenue. We build the data infrastructure and FP&amp;A reporting systems that give healthcare finance leadership a clear, organized view of performance.</p>
+    <p class="hero-sub reveal reveal-d2">DDH Consulting collects and processes public healthcare data to surface revenue opportunities at the provider level: program enrollment gaps, reimbursement discrepancies, and unclaimed federal and state program revenue. We build the data infrastructure and FP&amp;A reporting systems that give healthcare finance leadership a clear, organized view of performance.</p>
     <div class="hero-actions reveal reveal-d3">
       <a href="#contact" class="btn-primary">Get in Touch &nbsp;→</a>
       <a href="#solutions" class="btn-outline">Explore Solutions</a>
@@ -378,7 +407,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
         <h2 class="reveal">A data architecture and <em>healthcare intelligence firm.</em></h2>
       </div>
       <div class="who-body reveal reveal-d1">
-        <p>DDH Consulting collects and processes public healthcare data to deliver revenue performance intelligence to physician groups, management services organizations, and healthcare finance leaders. We build production systems and maintain them on an ongoing basis. Our deliverables are infrastructure and intelligence, not advisory reports — clients own their reporting layer.</p>
+        <p>DDH Consulting collects and processes public healthcare data to deliver revenue performance intelligence to physician groups, management services organizations, and healthcare finance leaders. We build production systems and maintain them on an ongoing basis. Our deliverables are infrastructure and intelligence, not advisory reports. Clients own their reporting layer.</p>
         <p>We specialize in <strong>Healthcare Revenue Intelligence</strong> — identifying gaps and reimbursement discrepancies — and <strong>Financial Data Architecture &amp; FP&amp;A Reporting</strong> — building the infrastructure that gives finance teams a clear view of their performance.</p>
       </div>
     </div>
@@ -397,26 +426,26 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
       <div class="service-card reveal">
         <span class="service-num">01</span>
         <h3>Data Architecture &amp; Engineering</h3>
-        <p>We design and build end-to-end data infrastructure — automated pipelines, cloud data warehouses, and semantic data models that connect your operational and financial data to our healthcare intelligence layer, producing a unified view of revenue performance.</p>
+        <p>We design and build end-to-end data infrastructure: automated pipelines, cloud data warehouses, and semantic data models that connect your operational and financial data to our healthcare intelligence layer, producing a unified view of revenue performance.</p>
         <p class="service-deliver"><strong>You own it:</strong> Every system is production-grade, documented, and owned by your organization at the conclusion of the engagement.</p>
       </div>
       <div class="service-card reveal reveal-d1">
         <span class="service-num">02</span>
         <h3>Healthcare Revenue Intelligence</h3>
-        <p>We collect, process, and organize public federal and state healthcare program data into a structured intelligence layer that identifies revenue gaps at the provider level — placing your organization's performance in the context of program benchmarks, enrollment status, and reimbursement standards.</p>
+        <p>We collect, process, and organize public federal and state healthcare program data into a structured intelligence layer that identifies revenue gaps at the provider level, placing your organization's performance in the context of program benchmarks, enrollment status, and reimbursement standards.</p>
         <p class="service-deliver"><strong>Always current:</strong> The intelligence layer is refreshed monthly as program lists and federal data sources update.</p>
       </div>
       <div class="service-card reveal reveal-d2">
         <span class="service-num">03</span>
         <h3>Business Intelligence &amp; FP&amp;A Reporting</h3>
-        <p>We build the reporting infrastructure healthcare finance teams use daily — semantic models, executive dashboards, revenue cycle analytics, and payer performance reporting. Built with enterprise architectural rigor: pre-calculated dimensions, fact tables, and measures your team can analyze without technical support for every report.</p>
-        <p class="service-deliver"><strong>Self-serve:</strong> Finance teams analyze on demand — no ticket required for every question.</p>
+        <p>We build the reporting infrastructure healthcare finance teams use daily: semantic models, executive dashboards, revenue cycle analytics, and payer performance reporting. Built with enterprise architectural rigor: pre-calculated dimensions, fact tables, and measures your team can analyze without technical support for every report.</p>
+        <p class="service-deliver"><strong>Self-serve:</strong> Finance teams analyze on demand, no ticket required for every question.</p>
       </div>
       <div class="service-card reveal reveal-d3">
         <span class="service-num">04</span>
         <h3>Development &amp; Maintenance</h3>
         <p>Client reporting systems require ongoing maintenance as data sources evolve, new program data becomes available, and organizational needs change. We support client-specific systems with pipeline monitoring, dashboard updates, schema changes, and integration of new data sources.</p>
-        <p class="service-deliver"><strong>A standing function:</strong> A continuous intelligence partner — not a one-time implementation.</p>
+        <p class="service-deliver"><strong>A standing function:</strong> A continuous intelligence partner, not a one-time implementation.</p>
       </div>
     </div>
   </div>
@@ -444,7 +473,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
       <div class="how-step reveal reveal-d2">
         <span class="how-step-num">STEP 03</span>
         <h4>Your team works from it daily</h4>
-        <p>You receive a production reporting layer your finance team owns and operates — surfacing revenue gaps and financial performance on demand.</p>
+        <p>You receive a production reporting layer your finance team owns and operates, surfacing revenue gaps and financial performance on demand.</p>
       </div>
     </div>
   </div>
@@ -457,7 +486,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
     <div class="revenue-header">
       <h2 class="reveal">Five programs. <em>Provider-level intelligence.</em></h2>
     </div>
-    <p class="revenue-intro reveal">DDH maintains an intelligence layer built entirely from public federal and state healthcare data, refreshed monthly as program lists and data sources update. We currently track five categories of revenue opportunity at the provider level — identifying where program eligibility, enrollment status, and reimbursement standards point to gaps worth investigating.</p>
+    <p class="revenue-intro reveal">DDH maintains an intelligence layer built entirely from public federal and state healthcare data, refreshed monthly as program lists and data sources update. We currently track five categories of revenue opportunity at the provider level, identifying where program eligibility, enrollment status, and reimbursement standards point to gaps worth investigating.</p>
     <div class="ri-grid">
       <div class="ri-card reveal">
         <div class="ri-top">
@@ -465,7 +494,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
           <span class="ri-scope">Florida<br>Medicaid</span>
         </div>
         <h4>Medicaid Physician Incentive Program</h4>
-        <p>Florida law requires Medicaid managed care plans to reimburse MPIP-qualified primary care physicians at Medicare-equivalent rates. When a plan fails to recognize a provider's eligibility, every Medicaid claim is underpaid — often undetected for extended periods. We cross-reference provider enrollment against AHCA qualified-provider lists across all 20 Florida managed care plans, monthly.</p>
+        <p>Florida law requires Medicaid managed care plans to reimburse MPIP-qualified primary care physicians at Medicare-equivalent rates. When a plan fails to recognize a provider's eligibility, every Medicaid claim is underpaid, often undetected for extended periods. We cross-reference provider enrollment against AHCA qualified-provider lists across all 20 Florida managed care plans, monthly.</p>
         <div class="ri-source"><strong>Source:</strong> AHCA monthly MPIP Qualified Provider list</div>
       </div>
       <div class="ri-card reveal reveal-d1">
@@ -474,7 +503,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
           <span class="ri-scope">National<br>Medicare B</span>
         </div>
         <h4>Merit-Based Incentive Payment System</h4>
-        <p>CMS applies automatic Medicare Part B payment adjustments — up to a 9% penalty — based on annual MIPS performance, applied two years after the performance period. We identify providers facing negative adjustments, quantify the exposure against their billing volume, and flag those eligible but not participating in MIPS or ACO arrangements.</p>
+        <p>CMS applies automatic Medicare Part B payment adjustments of up to a 9% penalty based on annual MIPS performance, applied two years after the performance period. We identify providers facing negative adjustments, quantify the exposure against their billing volume, and flag those eligible but not participating in MIPS or ACO arrangements.</p>
         <div class="ri-source"><strong>Source:</strong> CMS Quality Payment Program (QPP)</div>
       </div>
       <div class="ri-card reveal reveal-d2">
@@ -501,7 +530,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
           <span class="ri-scope">National</span>
         </div>
         <h4>Drug Pricing Program</h4>
-        <p>The 340B Drug Pricing Program allows qualifying healthcare organizations to purchase outpatient drugs at significantly reduced prices. Organizations that meet eligibility criteria but are not enrolled — or are not fully utilizing the program — may be incurring unnecessary drug expenditures. We identify organizations that appear to meet eligibility based on HRSA data.</p>
+        <p>The 340B Drug Pricing Program allows qualifying healthcare organizations to purchase outpatient drugs at significantly reduced prices. Organizations that meet eligibility criteria but are not enrolled, or are not fully utilizing the program, may be incurring unnecessary drug expenditures. We identify organizations that appear to meet eligibility based on HRSA data.</p>
         <div class="ri-source"><strong>Source:</strong> HRSA 340B database</div>
       </div>
       <div class="ri-card reveal reveal-d2" style="display:flex;flex-direction:column;justify-content:center;background:rgba(184,134,47,0.06);border-color:rgba(184,134,47,0.25)">
@@ -517,7 +546,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
 <section class="case-study" id="results">
   <div class="case-inner">
     <span class="eyebrow reveal">Case Study</span>
-    <h2 class="reveal">Regional Specialty Pharmacy — Revenue Cycle Intelligence</h2>
+    <h2 class="reveal">Regional Specialty Pharmacy: Revenue Cycle Intelligence</h2>
     <p class="case-context reveal">A specialty pharmacy engaged DDH Consulting to build data infrastructure connecting accounts receivable, claims processing, and revenue cycle data. The resulting system surfaced $340,000 in previously unidentified revenue discrepancies and reduced the finance team's monthly reporting time by 87%.</p>
     <div class="case-results">
       <div class="case-result reveal">
@@ -584,13 +613,13 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
         <div class="tier-label">Phase 01</div>
         <div class="tier-name">Portfolio Assessment</div>
         <div class="tier-meta">Two to three weeks</div>
-        <p class="tier-desc">A focused analysis of your provider portfolio against DDH's public intelligence data — MPIP enrollment across all managed care plans, MIPS participation and performance, APCM billing patterns, and other relevant program indicators. Delivered as a structured findings report with provider-level detail and a prioritized opportunity summary.</p>
+        <p class="tier-desc">A focused analysis of your provider portfolio against DDH's public intelligence data: MPIP enrollment across all managed care plans, MIPS participation and performance, APCM billing patterns, and other relevant program indicators. Delivered as a structured findings report with provider-level detail and a prioritized opportunity summary.</p>
       </div>
       <div class="eng-tier featured reveal reveal-d1">
         <div class="tier-label">Phase 02</div>
         <div class="tier-name">Data Architecture</div>
         <div class="tier-meta">Six to ten weeks</div>
-        <p class="tier-desc">Design and build of client-specific infrastructure — connecting your billing and financial data to DDH's intelligence layer, building a semantic model aligned to your reporting needs, and delivering a production dashboard your finance team uses daily. You own the infrastructure at conclusion.</p>
+        <p class="tier-desc">Design and build of client-specific infrastructure: connecting your billing and financial data to DDH's intelligence layer, building a semantic model aligned to your reporting needs, and delivering a production dashboard your finance team uses daily. You own the infrastructure at conclusion.</p>
       </div>
       <div class="eng-tier reveal reveal-d2">
         <div class="tier-label">Phase 03</div>
@@ -599,7 +628,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
         <p class="tier-desc">A monthly intelligence retainer covering public data refresh and program list updates, plus a separate maintenance function for client-specific system support, dashboard evolution, and integration of new data sources as your organization grows.</p>
       </div>
     </div>
-    <p class="eng-footer reveal reveal-d3">A portfolio assessment requires only your organization's NPI numbers — we run the initial analysis against public data.</p>
+    <p class="eng-footer reveal reveal-d3">A portfolio assessment requires only your organization's NPI numbers. We run the initial analysis against public data.</p>
   </div>
 </section>
 
@@ -610,10 +639,10 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
       <span class="eyebrow reveal">FAQ</span>
       <h2 class="reveal">Common questions.</h2>
     </div>
-    <div class="faq-item reveal"><button class="faq-q">What types of organizations does DDH work with?</button><div class="faq-a">Physician groups, management services organizations, and specialty pharmacies — particularly those operating in Florida's Medicaid managed care environment or with significant Medicare patient populations. We also work with PE-backed healthcare organizations building stronger data and reporting infrastructure.</div></div>
+    <div class="faq-item reveal"><button class="faq-q">What types of organizations does DDH work with?</button><div class="faq-a">Physician groups, management services organizations, and specialty pharmacies, particularly those operating in Florida's Medicaid managed care environment or with significant Medicare patient populations. We also work with PE-backed healthcare organizations building stronger data and reporting infrastructure.</div></div>
     <div class="faq-item reveal"><button class="faq-q">Do you work outside of Florida?</button><div class="faq-a">Yes. MPIP intelligence is specific to Florida's Medicaid program. MIPS, APCM, and CCM/TCM analysis applies nationally. Data architecture and FP&A reporting engagements have no geographic limitation.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">How is DDH different from our billing company?</button><div class="faq-a">Billing companies manage claims submission and collections. DDH builds the analytical infrastructure that sits above that process — identifying program enrollment gaps, monitoring reimbursement performance against public benchmarks, and organizing financial data into reporting systems your finance leadership uses. We work alongside your existing billing operations.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">What do you need from us to begin?</button><div class="faq-a">A portfolio assessment requires only your organization's NPI numbers — we run the initial analysis against public data. Implementation engagements that incorporate your billing data require a data sharing agreement and access to billing system exports.</div></div>
+    <div class="faq-item reveal"><button class="faq-q">How is DDH different from our billing company?</button><div class="faq-a">Billing companies manage claims submission and collections. DDH builds the analytical infrastructure that sits above that process: identifying program enrollment gaps, monitoring reimbursement performance against public benchmarks, and organizing financial data into reporting systems your finance leadership uses. We work alongside your existing billing operations.</div></div>
+    <div class="faq-item reveal"><button class="faq-q">What do you need from us to begin?</button><div class="faq-a">A portfolio assessment requires only your organization's NPI numbers. We run the initial analysis against public data. Implementation engagements that incorporate your billing data require a data sharing agreement and access to billing system exports.</div></div>
     <div class="faq-item reveal"><button class="faq-q">How do you handle sensitive financial and patient data?</button><div class="faq-a">All engagements involving protected health information or financial records are conducted under a signed Business Associate Agreement (BAA). Client data is isolated in dedicated database environments.</div></div>
     <div class="faq-item reveal"><button class="faq-q">How long does an implementation take?</button><div class="faq-a">Portfolio assessments take two to three weeks. Full data architecture implementations take six to ten weeks, depending on the complexity of your data environment.</div></div>
     <div class="faq-item reveal"><button class="faq-q">Do you provide ongoing support?</button><div class="faq-a">Yes. Our retainer covers public intelligence data refresh and program list updates monthly. Maintenance covers client-specific system support, dashboard evolution, and integration of new data sources as your needs grow.</div></div>
@@ -628,14 +657,15 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
     <p class="contact-intro reveal">Tell us what you're working to solve. A portfolio assessment requires only your NPI numbers to begin, and we respond to every inquiry within one business day.</p>
     <div id="contactForm">
       <div class="form-grid reveal">
-        <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" placeholder="Jane" required></div>
-        <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" placeholder="Smith" required></div>
-        <div class="form-group"><label for="title">Role / Title</label><input type="text" id="title" placeholder="CFO, VP Finance, Administrator..."></div>
-        <div class="form-group"><label for="company">Organization *</label><input type="text" id="company" placeholder="Practice, MSO, or health system name" required></div>
-        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" placeholder="jane@organization.com" required></div>
-        <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="(305) 000-0000"></div>
+        <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" autocomplete="given-name" placeholder="Jane" required></div>
+        <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" autocomplete="family-name" placeholder="Smith" required></div>
+        <div class="form-group"><label for="title">Role / Title</label><input type="text" id="title" autocomplete="organization-title" placeholder="CFO, VP Finance, Administrator..."></div>
+        <div class="form-group"><label for="company">Organization *</label><input type="text" id="company" autocomplete="organization" placeholder="Practice, MSO, or health system name" required></div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" autocomplete="email" placeholder="jane@organization.com" required></div>
+        <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" autocomplete="tel" placeholder="(305) 000-0000"></div>
+        <input type="text" id="companyWebsite" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <div class="form-group full"><label for="industry">Organization Type</label><select id="industry"><option value="" disabled selected>Select...</option><option value="physician-group">Physician Group</option><option value="mso">Management Services Organization (MSO)</option><option value="specialty-pharmacy">Specialty Pharmacy</option><option value="health-system">Health System</option><option value="pe-firm">PE Firm / Operating Partner</option><option value="other">Other</option></select></div>
-        <div class="form-group full"><label for="challenge">Describe your data, reporting, or revenue intelligence need *</label><textarea id="challenge" placeholder="Share what your team is trying to solve — program intelligence, FP&A reporting, or data infrastructure." required></textarea></div>
+        <div class="form-group full"><label for="challenge">Describe your data, reporting, or revenue intelligence need *</label><textarea id="challenge" placeholder="Share what your team is trying to solve: program intelligence, FP&A reporting, or data infrastructure." required></textarea></div>
         <div class="form-group full"><label for="hearAbout">How did you hear about us?</label><select id="hearAbout"><option value="" disabled selected>Select one...</option><option value="linkedin">LinkedIn</option><option value="google">Google Search</option><option value="referral">Referral</option><option value="colleague">Colleague</option><option value="other">Other</option></select></div>
       </div>
       <div class="form-submit reveal"><button type="button" class="btn-primary" onclick="submitForm()">Submit Inquiry &nbsp;→</button></div>
@@ -676,7 +706,7 @@ footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 
         <div class="footer-col"><h5>Contact</h5><ul>
           <li><a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a></li>
           <li><a href="#contact">Send Inquiry</a></li>
-          <li><a href="https://www.linkedin.com/company/ddhconsulting/?viewAsMember=true" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul></div>
       </div>
     </div>
@@ -710,12 +740,20 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 document.querySelectorAll('.faq-q').forEach(q => {
+  q.setAttribute('aria-expanded', 'false');
   q.addEventListener('click', () => {
     const item = q.parentElement;
     const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if(!wasOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if(!wasOpen) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); }
   });
+});
+
+document.querySelectorAll('.form-group select').forEach(sel => {
+  sel.addEventListener('change', () => { sel.style.color = 'var(--text)'; });
 });
 
 function submitForm() {
@@ -730,6 +768,11 @@ function submitForm() {
     alert('Please fill in all required fields.');
     return;
   }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  if(document.getElementById('companyWebsite').value) return;
   const btn = document.querySelector('.form-submit .btn-primary');
   btn.textContent = 'Sending...';
   btn.style.opacity = '0.6';
@@ -747,6 +790,7 @@ function submitForm() {
   formData.append('How They Heard', document.getElementById('hearAbout').value || 'Not specified');
   formData.append('_subject', 'DDH Inquiry: ' + fields.company);
   formData.append('_template', 'table');
+  formData.append('_honey', document.getElementById('companyWebsite').value);
   formData.append('_captcha', 'false');
 
   fetch('https://formsubmit.co/ajax/contact@ddhbiconsulting.com', { method: 'POST', body: formData })
@@ -756,8 +800,8 @@ function submitForm() {
       document.getElementById('formSuccess').style.display = 'block';
     })
     .catch(() => {
-      const body = 'Name: ' + fields.firstName + ' ' + fields.lastName + '%0D%0AEmail: ' + fields.email + '%0D%0AOrganization: ' + fields.company + '%0D%0AChallenge: ' + fields.challenge;
-      window.location.href = 'mailto:contact@ddhbiconsulting.com?subject=DDH Inquiry: ' + fields.company + '&body=' + body;
+      const body = encodeURIComponent('Name: ' + fields.firstName + ' ' + fields.lastName + '\r\nEmail: ' + fields.email + '\r\nOrganization: ' + fields.company + '\r\nChallenge: ' + fields.challenge);
+      window.location.href = 'mailto:contact@ddhbiconsulting.com?subject=' + encodeURIComponent('DDH Inquiry: ' + fields.company) + '&body=' + body;
       btn.textContent = 'Submit Inquiry →';
       btn.style.opacity = '1';
       btn.disabled = false;
