@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporting Health Check | DDH Consulting</title>
+<meta name="description" content="Ten yes-or-no questions to see how healthy your month-end reporting is. Built for pharmacies, physician practices, and healthcare businesses. Takes about three minutes.">
+<meta property="og:title" content="How healthy is your month-end? | DDH Consulting">
+<meta property="og:description" content="Ten yes-or-no questions for pharmacies and physician practices. See where your reporting is solid and where it's costing you time.">
+<meta property="og:url" content="https://ddhbiconsulting.com/checkup.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="DDH Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
+<link rel="canonical" href="https://ddhbiconsulting.com/checkup.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5QVLV1G6C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J5QVLV1G6C');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0A2342;--ink-deep:#061629;
+  --accent:#B8862F;--accent-soft:#D4A645;--accent-light:rgba(184,134,47,0.08);
+  --bg:#FFFFFF;--bg-soft:#F8F7F4;
+  --text:#0A2342;--text-mid:#4B5563;--text-light:#6B7280;
+  --border:#E4E7EB;
+  --good:#2F6B4F;--good-bg:rgba(47,107,79,0.08);
+  --warn:#9A6A1F;--warn-bg:rgba(184,134,47,0.1);
+  --risk:#9B3B32;--risk-bg:rgba(155,59,50,0.08);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',-apple-system,sans-serif;
+}
+body{font-family:var(--sans);background:var(--bg-soft);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-0.015em}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+
+nav{background:#fff;border-bottom:1px solid var(--border);padding:1rem 5vw;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{display:flex;align-items:center;gap:0.5rem}
+.nav-logo{width:28px;height:28px}
+.brand-mark{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-0.02em;line-height:1}
+.brand-divider{width:1px;height:16px;background:var(--border);margin:0 0.4rem}
+.brand-name{font-size:0.68rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-light)}
+.nav-back{font-size:0.84rem;font-weight:500;color:var(--text-mid)}
+.nav-back:hover{color:var(--ink)}
+
+main{max-width:760px;margin:0 auto;padding:4rem 5vw 6rem}
+.eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:inline-block}
+.intro h1{font-size:clamp(2rem,4.4vw,3rem);line-height:1.1;margin-bottom:1rem}
+.intro p{color:var(--text-mid);font-size:1.02rem;line-height:1.7;margin-bottom:2.5rem}
+
+.progress{height:4px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:0.6rem}
+.progress-bar{height:100%;width:0;background:var(--accent);transition:width 0.3s ease}
+.progress-label{font-size:0.78rem;color:var(--text-light);margin-bottom:1.6rem}
+
+.q{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.5rem 1.6rem;margin-bottom:0.9rem;transition:border-color 0.2s}
+.q.answered{border-color:rgba(10,35,66,0.22)}
+.q-top{display:flex;gap:1rem;align-items:flex-start}
+.q-num{font-family:var(--serif);color:var(--accent);font-size:0.85rem;min-width:1.6rem;padding-top:0.1rem}
+.q-text{font-size:0.98rem;color:var(--ink);font-weight:500;line-height:1.5}
+.q-hint{font-size:0.84rem;color:var(--text-light);margin-top:0.3rem;line-height:1.5}
+.q-opts{display:flex;gap:0.6rem;margin-top:1rem;padding-left:2.6rem}
+.opt{border:1px solid var(--border);background:#fff;border-radius:4px;padding:0.55rem 1.4rem;font-size:0.88rem;font-weight:500;color:var(--text-mid);cursor:pointer;transition:all 0.15s}
+.opt:hover{border-color:var(--ink);color:var(--ink)}
+.opt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+@media(max-width:520px){.q-opts{padding-left:0}.q-top{gap:0.6rem}}
+
+.actions{margin-top:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:0.45rem;background:var(--ink);color:#fff;padding:0.95rem 1.9rem;border-radius:4px;font-size:0.92rem;font-weight:500;border:none;cursor:pointer;transition:all 0.2s}
+.btn-primary:hover{background:var(--ink-deep)}
+.btn-primary:disabled{opacity:0.4;cursor:not-allowed}
+.btn-outline{display:inline-flex;align-items:center;gap:0.45rem;background:transparent;color:var(--ink);padding:0.95rem 1.9rem;border-radius:4px;font-size:0.92rem;font-weight:500;border:1px solid var(--border);cursor:pointer}
+.btn-outline:hover{border-color:var(--ink)}
+.actions-note{font-size:0.82rem;color:var(--text-light)}
+
+#results{display:none}
+.score-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:2.4rem 2.2rem;margin-bottom:1.6rem}
+.score-row{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
+.score-num{font-family:var(--serif);font-size:3.6rem;line-height:1;color:var(--ink)}
+.score-num span{font-size:1.4rem;color:var(--text-light)}
+.badge{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.8rem;border-radius:100px;margin-bottom:0.5rem}
+.badge.good{background:var(--good-bg);color:var(--good)}
+.badge.warn{background:var(--warn-bg);color:var(--warn)}
+.badge.risk{background:var(--risk-bg);color:var(--risk)}
+.score-summary{color:var(--text-mid);font-size:0.98rem;line-height:1.65;max-width:460px}
+
+.gaps h2{font-size:1.5rem;margin:2.4rem 0 1rem}
+.gap{background:#fff;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;padding:1.2rem 1.4rem;margin-bottom:0.8rem}
+.gap h3{font-family:var(--sans);font-size:0.95rem;font-weight:600;margin-bottom:0.35rem}
+.gap p{font-size:0.9rem;color:var(--text-mid);line-height:1.6}
+.no-gaps{color:var(--text-mid);font-size:0.95rem}
+
+.capture{background:var(--ink);border-radius:8px;padding:2.4rem 2.2rem;margin-top:2.4rem;color:#fff}
+.capture h2{color:#fff;font-size:1.6rem;margin-bottom:0.6rem}
+.capture h2 em{color:var(--accent-soft)}
+.capture p{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.65;margin-bottom:1.6rem}
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+.cap-grid .full{grid-column:1/-1}
+.cap-grid label{display:block;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:0.4rem}
+.cap-grid input{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.18);border-radius:4px;padding:0.85rem 1rem;color:#fff;font-family:var(--sans);font-size:0.93rem;outline:none}
+.cap-grid input:focus{border-color:var(--accent-soft)}
+.capture .btn-primary{background:var(--accent);margin-top:1.2rem;width:100%;justify-content:center}
+.capture .btn-primary:hover{background:var(--accent-soft)}
+.cap-note{font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.9rem;text-align:center}
+.cap-done{display:none;text-align:center;padding:1rem 0}
+.cap-done h2{margin-bottom:0.6rem}
+.alt-cta{margin-top:1.6rem;text-align:center;font-size:0.9rem;color:var(--text-mid)}
+.alt-cta a{color:var(--accent);font-weight:600;border-bottom:1px solid currentColor}
+@media(max-width:560px){.cap-grid{grid-template-columns:1fr}}
+
+footer{text-align:center;font-size:0.78rem;color:var(--text-light);padding:2rem 5vw 3rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand" aria-label="DDH Consulting home">
+    <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="32" height="32" rx="6" fill="#0A2342"/>
+      <g fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+        <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+        <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+      </g>
+    </svg>
+    <span class="brand-mark">DDH</span>
+    <span class="brand-divider"></span>
+    <span class="brand-name">Consulting</span>
+  </a>
+  <a href="/" class="nav-back">← Back to site</a>
+</nav>
+
+<main>
+  <section id="quiz">
+    <div class="intro">
+      <span class="eyebrow">Reporting Health Check</span>
+      <h1>How healthy is <em>your month-end?</em></h1>
+      <p>Ten yes-or-no questions for pharmacies, physician practices, and healthcare businesses. Answer based on how things work today, not how they're supposed to work. You'll see your score and the gaps worth fixing first.</p>
+    </div>
+    <div class="progress"><div class="progress-bar" id="bar"></div></div>
+    <div class="progress-label" id="progressLabel">0 of 10 answered</div>
+    <div id="questions"></div>
+    <div class="actions">
+      <button class="btn-primary" id="seeResults" disabled>See My Results →</button>
+      <span class="actions-note">No email needed to see your score.</span>
+    </div>
+  </section>
+
+  <section id="results" aria-live="polite">
+    <span class="eyebrow">Your Results</span>
+    <div class="score-card">
+      <div class="score-row">
+        <div class="score-num" id="scoreNum">0<span>/10</span></div>
+        <div>
+          <span class="badge" id="scoreBadge"></span>
+          <p class="score-summary" id="scoreSummary"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gaps">
+      <h2>Where to start</h2>
+      <div id="gapList"></div>
+    </div>
+
+    <div class="capture" id="capture">
+      <div id="capForm">
+        <h2>Want a second opinion <em>on these results?</em></h2>
+        <p>Send your results to Pedro. He'll reply personally with a short note on which gap is likely costing you the most and how it's usually fixed. No sales sequence, just a reply.</p>
+        <div class="cap-grid">
+          <div><label for="capName">Name *</label><input id="capName" autocomplete="name"></div>
+          <div><label for="capOrg">Organization *</label><input id="capOrg" autocomplete="organization"></div>
+          <div class="full"><label for="capEmail">Work Email *</label><input id="capEmail" type="email" autocomplete="email"></div>
+          <input type="text" id="capHoney" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        </div>
+        <button class="btn-primary" id="capSend">Send My Results →</button>
+        <p class="cap-note">Your answers go only to DDH Consulting. They are never shared or sold.</p>
+      </div>
+      <div class="cap-done" id="capDone">
+        <h2>Sent.</h2>
+        <p>Pedro will reply within one business day. A copy of your results is on its way to your inbox.</p>
+      </div>
+    </div>
+
+    <div class="alt-cta">Rather just talk? <a href="/?from=checkup#contact">Book a 30-minute reporting review</a></div>
+    <div class="alt-cta"><a href="#" id="retake" style="color:var(--text-light);font-weight:500">Retake the health check</a></div>
+  </section>
+</main>
+
+<footer>© 2026 DDH Consulting LLC · Miami, FL · <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a></footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Your monthly financials are final within 10 business days of month-end.",
+    hint: "Final means the owners have them and nobody is still adjusting.",
+    gap: "Month-end runs long",
+    fix: "Long closes usually come from manual exports and late reconciliations. Automating the data pulls and reconciling throughout the month typically shortens the close by more than anything else." },
+  { q: "Bank deposits are reconciled to payer remittances, not just to the bank statement.",
+    hint: "You can tie each deposit to the remits or claims it pays.",
+    gap: "Cash isn't tied to remittances",
+    fix: "Matching deposits to 835 remittances or payer statements is where underpayments and missing payments show up. Without it, short-pays look like normal cash." },
+  { q: "Revenue in your pharmacy or practice-management system ties to your accounting system each month, with differences explained.",
+    hint: "",
+    gap: "Systems don't tie",
+    fix: "When the operating system and the general ledger disagree, every report built on top inherits the problem. A monthly tie-out with a list of explained differences fixes it at the source." },
+  { q: "Your monthly reports refresh without anyone copying and pasting exports.",
+    hint: "",
+    gap: "Reports are rebuilt by hand",
+    fix: "Copy-paste reporting costs hours each month and introduces errors that are hard to catch. Scheduled refreshes from a single organized data source remove the manual steps." },
+  { q: "More than one person knows how to produce the monthly reports.",
+    hint: "If that person took two weeks off, reporting would still go out.",
+    gap: "Reporting depends on one person",
+    fix: "Key-person risk is fixed with documentation and a process that doesn't live in one workbook. It's also the first thing a buyer or lender will ask about." },
+  { q: "You can see revenue and margin by location, provider, or product line.",
+    hint: "",
+    gap: "No visibility by location or line",
+    fix: "Blended totals hide which locations, providers, or product lines are carrying the business. A consistent data model makes these cuts available on demand." },
+  { q: "AR aging by payer is available on demand, without a special request.",
+    hint: "",
+    gap: "Payer AR isn't visible",
+    fix: "Knowing which payers are slow, and by how much, drives collection priorities and contract conversations. It should be a dashboard, not a project." },
+  { q: "Commissions or incentive pay are calculated by a documented formula, not rebuilt each cycle.",
+    hint: "Answer yes if you don't pay commissions or incentives.",
+    gap: "Pay calculations are rebuilt each cycle",
+    fix: "A documented, automated calculation with a statement per person ends most disputes and takes the work off someone's plate every pay cycle." },
+  { q: "You have a budget and compare actual results to it every month.",
+    hint: "",
+    gap: "No budget vs. actual",
+    fix: "Without plan vs. actual side by side, decisions on hiring, expansion, and payer contracts are made on gut feel. A simple budget model and monthly variance report is a quick win." },
+  { q: "Owners and managers get a one-page summary of key numbers every month.",
+    hint: "",
+    gap: "No leadership summary",
+    fix: "Leaders shouldn't have to read a full P&L to know how the month went. A one-page KPI summary gets read; a 40-tab workbook doesn't." }
+];
+
+const answers = new Array(QUESTIONS.length).fill(null);
+const wrap = document.getElementById('questions');
+
+QUESTIONS.forEach((item, i) => {
+  const el = document.createElement('div');
+  el.className = 'q';
+  el.innerHTML =
+    '<div class="q-top"><span class="q-num">' + String(i + 1).padStart(2, '0') + '</span><div>' +
+    '<div class="q-text">' + item.q + '</div>' +
+    (item.hint ? '<div class="q-hint">' + item.hint + '</div>' : '') +
+    '</div></div>' +
+    '<div class="q-opts" role="group" aria-label="Question ' + (i + 1) + '">' +
+    '<button type="button" class="opt" data-v="yes" aria-pressed="false">Yes</button>' +
+    '<button type="button" class="opt" data-v="no" aria-pressed="false">No</button></div>';
+  el.querySelectorAll('.opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      answers[i] = btn.dataset.v;
+      el.classList.add('answered');
+      el.querySelectorAll('.opt').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      updateProgress();
+    });
+  });
+  wrap.appendChild(el);
+});
+
+let started = false;
+function updateProgress() {
+  const n = answers.filter(a => a !== null).length;
+  if (!started && n === 1) { started = true; if (typeof gtag === 'function') gtag('event', 'checkup_start'); }
+  document.getElementById('bar').style.width = (n / QUESTIONS.length * 100) + '%';
+  document.getElementById('progressLabel').textContent = n + ' of ' + QUESTIONS.length + ' answered';
+  document.getElementById('seeResults').disabled = n < QUESTIONS.length;
+}
+
+function tier(score) {
+  if (score >= 8) return { cls: 'good', label: 'Solid foundation', text: 'Your reporting is in better shape than most. The remaining gaps are worth closing, and they are usually quick to fix once the basics are in place.' };
+  if (score >= 5) return { cls: 'warn', label: 'Some gaps', text: 'The basics work, but a few gaps are likely costing your team hours every month and leaving questions unanswered. These are the most common fixes we make.' };
+  return { cls: 'risk', label: 'Reporting at risk', text: 'Several core pieces depend on manual work or aren\'t in place yet. That is common in growing healthcare businesses, and it\'s the situation where a reporting system pays back fastest.' };
+}
+
+let result = null;
+document.getElementById('seeResults').addEventListener('click', () => {
+  const score = answers.filter(a => a === 'yes').length;
+  const t = tier(score);
+  const gaps = QUESTIONS.filter((_, i) => answers[i] === 'no');
+  result = { score, tier: t.label, gaps: gaps.map(g => g.gap) };
+
+  document.getElementById('scoreNum').innerHTML = score + '<span>/10</span>';
+  const badge = document.getElementById('scoreBadge');
+  badge.className = 'badge ' + t.cls; badge.textContent = t.label;
+  document.getElementById('scoreSummary').textContent = t.text;
+
+  const list = document.getElementById('gapList');
+  list.innerHTML = '';
+  if (!gaps.length) {
+    list.innerHTML = '<p class="no-gaps">No gaps on this list. If your reporting still feels slow or fragile, the issue is usually in data quality or definitions, which a short review can pin down.</p>';
+  } else {
+    gaps.forEach(g => {
+      const d = document.createElement('div');
+      d.className = 'gap';
+      d.innerHTML = '<h3>' + g.gap + '</h3><p>' + g.fix + '</p>';
+      list.appendChild(d);
+    });
+  }
+
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('results').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (typeof gtag === 'function') gtag('event', 'checkup_complete', { score: score });
+});
+
+document.getElementById('retake').addEventListener('click', e => {
+  e.preventDefault();
+  answers.fill(null);
+  document.querySelectorAll('.q').forEach(q => q.classList.remove('answered'));
+  document.querySelectorAll('.opt').forEach(b => b.setAttribute('aria-pressed', 'false'));
+  updateProgress();
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('quiz').style.display = 'block';
+  window.scrollTo({ top: 0 });
+});
+
+document.getElementById('capSend').addEventListener('click', () => {
+  const name = document.getElementById('capName').value.trim();
+  const org = document.getElementById('capOrg').value.trim();
+  const email = document.getElementById('capEmail').value.trim();
+  if (!name || !org || !email) { alert('Please fill in your name, organization, and email.'); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+  if (document.getElementById('capHoney').value) return;
+
+  const btn = document.getElementById('capSend');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+
+  const answerLines = QUESTIONS.map((q, i) => (i + 1) + '. ' + (answers[i] === 'yes' ? 'Yes' : 'No') + ': ' + q.q).join('\n');
+  const gapText = result.gaps.length ? result.gaps.map(g => '- ' + g).join('\n') : '- None flagged';
+  const firstName = name.split(' ')[0];
+
+  const fd = new FormData();
+  fd.append('Name', name);
+  fd.append('Organization', org);
+  fd.append('email', email);
+  fd.append('Score', result.score + '/10 (' + result.tier + ')');
+  fd.append('Gaps', gapText);
+  fd.append('Answers', answerLines);
+  fd.append('_subject', 'Health Check: ' + org + ' scored ' + result.score + '/10');
+  fd.append('_template', 'table');
+  fd.append('_captcha', 'false');
+  fd.append('_honey', '');
+  fd.append('_autoresponse',
+    'Hi ' + firstName + ',\n\n' +
+    'Thanks for taking the Reporting Health Check. Your score was ' + result.score + '/10 (' + result.tier + ').\n\n' +
+    'Gaps flagged:\n' + gapText + '\n\n' +
+    'I\'ll reply personally within one business day with a short note on where I\'d start. ' +
+    'If it\'s easier to talk it through, just reply to this email with a couple of times that work for a 30-minute call.\n\n' +
+    'Pedro Dahdah\nDDH Consulting\nddhbiconsulting.com');
+
+  fetch('https://formsubmit.co/ajax/contact@ddhbiconsulting.com', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(() => {
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form: 'health_check', score: result.score });
+      document.getElementById('capForm').style.display = 'none';
+      document.getElementById('capDone').style.display = 'block';
+    })
+    .catch(() => {
+      const body = encodeURIComponent('Name: ' + name + '\nOrganization: ' + org + '\nScore: ' + result.score + '/10\n\nGaps:\n' + gapText);
+      window.location.href = 'mailto:contact@ddhbiconsulting.com?subject=' + encodeURIComponent('Health Check: ' + org) + '&body=' + body;
+      btn.textContent = 'Send My Results →'; btn.disabled = false;
+    });
+});
+</script>
+</body>
+</html>
