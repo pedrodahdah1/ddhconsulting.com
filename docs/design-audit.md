@@ -40,3 +40,24 @@ Overall: about 5 as a premium advisory site. A competent brochure. Not yet a pag
 - Use one accent for rules, numbers, and focus, not as a second text color everywhere.
 - Make the primary action the consultation, and the second action the qualifier.
 - Move in short, eased steps. No looping video, no library.
+
+## Typography benchmarks
+
+Fetched 4 November 2026. OpenAI’s homepage returned Cloudflare 403, so that row uses OpenAI’s published brand guidelines and a computed-style inspection of openai.com from 20 September 2026. The other rows are from the live CSS.
+
+| Site | Headings | Body | Weights | Tracking and size | License |
+| --- | --- | --- | --- | --- | --- |
+| OpenAI | OpenAI Sans | OpenAI Sans | 400 navigation, 500 headlines and body | Headline about 48px, weight 500, line-height 1.16, letter-spacing -0.03em. Body about 18px, weight 500, -0.01em. | Proprietary. Custom face by Dinamo. Not available to license for this site. Earlier site (2023–2025) used Söhne, also a commercial Klim face. |
+| Anthropic | Anthropic Serif for some display, Anthropic Sans for UI | Anthropic Sans | Regular, medium, semibold, bold | Sans stack `var(--anthropic-sans)`. Small positive tracking on some text (0.01em to 0.018em). Mono is Anthropic Mono, with JetBrains Mono as a code fallback. | Proprietary custom families. Not licensed for third-party self-hosting. |
+| Apple | SF Pro Display | SF Pro Text | 400 body, 500 and 600 headlines | Body 17px, line-height 1.47, letter-spacing -0.022em. Display headlines around 40px, weight 600, line-height 1.1. | Proprietary. Apple does not allow SF Pro to be self-hosted on a third-party site. |
+| Stripe | Söhne (`sohne-var`) | Söhne | Variable 1–1000; used weights include 300, 400, 500, 600 | Headings often -0.02em, some utilities -0.01em. A 2rem style uses line-height 1 and -0.02em. Code is Source Code Pro. | Söhne is a commercial Klim Type Foundry family. Source Code Pro is open, but it is only the code face. |
+| Linear | Inter Variable (`InterVariable.woff2`) | Inter | Medium on large titles (`--font-weight-medium`), with the large title’s line-height forced to 1 | One sans for product and marketing. | Inter is SIL Open Font License. Legal to self-host. |
+| Vercel | Geist Sans | Geist Sans | 450 and 550 are the common weights, plus normal / medium / semibold tokens | Tight tracking: about -0.32px on 16px text, and several pixels of negative tracking on large display sizes. Mono and pixel faces are separate. | Geist Sans is SIL Open Font License (Vercel, with basement.studio). Legal to self-host. |
+
+The shared pattern is a single neo-grotesque, weight 400 for reading and 500 for headings, with negative letter-spacing that gets tighter as the type gets larger. Serifs are the exception (Anthropic uses one for some display lines). SF Pro, Söhne, OpenAI Sans, and Anthropic Sans cannot be shipped here.
+
+### Pairing chosen
+
+Geist Sans, weights 400 and 500, latin subset, self-hosted. It is the face Vercel actually ships, it sits in the same grotesque family as SF Pro, Inter, and Söhne, and the license allows this site to host the files. Inter would have matched Linear exactly and was the other serious option. Instrument Sans is more humanistic and less like those product sites. No accent serif: the benchmarks that set the tone are sans throughout, and a second family is what made the previous page feel like a template.
+
+Applied scale: body 17px, line-height 1.5, tracking -0.011em. Headlines weight 500, tracking -0.042em at the largest size and about -0.032em below that. Only 400 and 500 are preloaded.
