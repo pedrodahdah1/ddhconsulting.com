@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporting Health Check | DDH Consulting</title>
+<meta name="description" content="Ten yes-or-no questions on whether healthcare reporting still depends on someone digging. See the gaps, then schedule a consultation. About three minutes.">
+<meta property="og:title" content="How much of reporting still depends on you? | DDH Consulting">
+<meta property="og:description" content="A short Reporting Health Check for MSOs, physician groups, ASCs, and pharmacy groups. The result recommends a consultation and, if it is a fit, a Data &amp; Reporting Diagnostic.">
+<meta property="og:url" content="https://ddhbiconsulting.com/checkup.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="DDH Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How much of reporting still depends on you? | DDH Consulting">
+<meta name="twitter:description" content="Ten questions for healthcare finance and operations leaders. Results point to a consultation and the Data &amp; Reporting Diagnostic.">
+<meta name="twitter:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
+<link rel="canonical" href="https://ddhbiconsulting.com/checkup.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<link rel="preload" href="/fonts/geist-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js");</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.addEventListener("load", function () {
+    var s = document.createElement("script");
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-J5QVLV1G6C";
+    s.async = true;
+    s.onload = function () { gtag("js", new Date()); gtag("config", "G-J5QVLV1G6C"); };
+    document.head.appendChild(s);
+  });
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="/" aria-label="DDH Consulting home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#121A24"/>
+        <g fill="none" stroke="#E0B08A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+          <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+          <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+        </g>
+      </svg>
+      <span class="brand-name">DDH</span>
+      <span class="brand-sub">Consulting</span>
+    </a>
+    <a class="fine" href="/" style="margin-left:auto">Back to site</a>
+    <a class="btn btn-primary btn-sm header-cta" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</header>
+<main id="main" class="check-main">
+  <section id="quiz">
+    <p class="eyebrow">Reporting Health Check</p>
+    <h1>How much of reporting still depends on you?</h1>
+    <p class="lede">Ten yes-or-no questions for finance and operations leaders at MSOs, physician and specialty groups, ASCs, and multi-location pharmacy groups. Answer for how reporting actually runs, including the close. One question at a time. No email is required to see the result.</p>
+    <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="bar"></div></div>
+    <p class="progress-label" id="progressLabel">Question 1 of 10</p>
+    <div class="q-card" id="qCard" aria-live="polite"></div>
+    <div class="check-nav">
+      <button class="linkish" type="button" id="backBtn">Back</button>
+      <span class="fine">Your answers stay in this browser until you send them.</span>
+    </div>
+  </section>
+
+  <section id="results" aria-live="polite">
+    <p class="eyebrow">Your results</p>
+    <div class="score-card">
+      <div class="score-row">
+        <div class="score-num" id="scoreNum">0<span>/10</span></div>
+        <div>
+          <span class="badge" id="scoreBadge"></span>
+          <p id="scoreSummary"></p>
+        </div>
+      </div>
+    </div>
+    <h2 style="font-size:1.6rem;margin:22px 0 12px">Where to start</h2>
+    <div id="gapList"></div>
+    <div class="next-panel">
+      <h2>Recommended next step: a consultation.</h2>
+      <p id="nextCopy"></p>
+      <a class="btn btn-light" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Schedule a consultation</a>
+      <p class="fine" style="margin-top:14px">Prefer to write first? <a href="/?from=checkup#contact">Use the contact form</a>.</p>
+    </div>
+    <div class="send-card" id="capture">
+      <div id="capForm">
+        <h2>Send these results ahead of the call</h2>
+        <p class="fine">Optional. Pedro replies personally within one business day. Sending the score does not start an engagement.</p>
+        <div class="form-grid">
+          <div class="field"><label for="capName">Name *</label><input id="capName" autocomplete="name"></div>
+          <div class="field"><label for="capOrg">Organization *</label><input id="capOrg" autocomplete="organization"></div>
+          <div class="field full"><label for="capEmail">Work email *</label><input id="capEmail" type="email" autocomplete="email"></div>
+          <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="capHoney">Website</label><input id="capHoney" tabindex="-1" autocomplete="off"></div>
+        </div>
+        <div class="form-actions"><button class="btn btn-primary" id="capSend" type="button">Send my results</button></div>
+        <p class="form-note">Answers go only to DDH Consulting at contact@ddhbiconsulting.com. They are not shared or sold. Please do not include patient information.</p>
+      </div>
+      <div id="capDone" style="display:none">
+        <h2>Sent.</h2>
+        <p class="fine">Pedro will reply within one business day. A copy of your results is on its way to your inbox.</p>
+      </div>
+    </div>
+    <p style="margin-top:16px"><button class="linkish" type="button" id="retake">Retake the health check</button></p>
+  </section>
+</main>
+<footer>
+  <div class="wrap footer-base">
+    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
+  </div>
+</footer>
+<script>
+const QUESTIONS = [
+  { q: "Monthly financials are final within 10 business days of month-end.", hint: "Final means leadership has them, and nobody is still adjusting.", gap: "Month-end runs long", fix: "A long close usually comes from manual exports and reconciliations left until the end. Scheduled pulls, and tie-outs during the month, are what shorten it." },
+  { q: "Bank deposits are reconciled to payer remittances, not only to the bank statement.", hint: "Each deposit can be tied to the remittances or claims it pays.", gap: "Cash is not tied to remittances", fix: "Matching deposits to remittances is where underpayments and missing payments become visible. Without that match, a short-pay looks like ordinary cash." },
+  { q: "Revenue in the operating or billing system ties to the accounting system each month, with differences explained.", hint: "", gap: "The operating system and the ledger do not tie", fix: "When the operating system and the general ledger disagree, every report above them inherits the difference. A monthly tie-out, with each difference explained, fixes it at the source." },
+  { q: "Monthly reports refresh without anyone copying and pasting exports.", hint: "", gap: "Reports are rebuilt by hand", fix: "Copy-and-paste reporting takes hours each month and hides errors. A scheduled refresh from one organized source removes those steps." },
+  { q: "More than one person can produce the monthly reports.", hint: "If that person were out for two weeks, reporting would still go out.", gap: "Reporting depends on one person", fix: "The remedy is documentation and a process that does not live in one workbook. Buyers and lenders ask about this early." },
+  { q: "Revenue and margin are visible by location, provider, service line, or site.", hint: "", gap: "No view by location, provider, or service line", fix: "A blended total hides which sites, providers, or service lines are carrying the result. A consistent model makes those cuts available on demand." },
+  { q: "Accounts receivable by payer are available without a special request.", hint: "", gap: "Payer receivables are not visible", fix: "Knowing which payers are slow, and by how much, drives collection work and contract conversations. It should be a standing view." },
+  { q: "Commissions or incentive pay are calculated from a documented formula, not rebuilt each cycle.", hint: "Answer yes if the organization does not pay commissions or incentives.", gap: "Pay calculations are rebuilt each cycle", fix: "A documented calculation, with a statement per person, is what makes a pay cycle explainable." },
+  { q: "There is a plan, and actual results are compared with it every month.", hint: "", gap: "No plan versus actual", fix: "Hiring, a new site, and payer decisions need actual results next to a plan. A maintained model and a monthly variance view are the practical starting point." },
+  { q: "Finance and operations leaders receive a one-page summary of the key numbers every month.", hint: "", gap: "No leadership summary", fix: "Leadership should not have to read a full set of statements to know how the month went. A one-page summary gets read." }
+];
+
+const answers = new Array(QUESTIONS.length).fill(null);
+let index = 0;
+let started = false;
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const card = document.getElementById("qCard");
+
+function renderQuestion() {
+  const item = QUESTIONS[index];
+  const yesOn = answers[index] === "yes" ? "true" : "false";
+  const noOn = answers[index] === "no" ? "true" : "false";
+  card.innerHTML =
+    '<p class="q-kicker">' + String(index + 1).padStart(2, "0") + "</p>" +
+    "<h2>" + item.q + "</h2>" +
+    (item.hint ? '<p class="q-hint">' + item.hint + "</p>" : "") +
+    '<div class="choice-row" role="group" aria-label="Question ' + (index + 1) + '">' +
+    '<button type="button" class="choice" data-v="yes" aria-pressed="' + yesOn + '">Yes</button>' +
+    '<button type="button" class="choice" data-v="no" aria-pressed="' + noOn + '">No</button></div>';
+  card.querySelectorAll(".choice").forEach(function (btn) {
+    btn.addEventListener("click", function () { choose(btn.dataset.v); });
+  });
+  document.getElementById("progressLabel").textContent = "Question " + (index + 1) + " of " + QUESTIONS.length;
+  document.getElementById("bar").style.width = (index / QUESTIONS.length * 100) + "%";
+  document.getElementById("backBtn").disabled = index === 0;
+  if (!reduce) {
+    card.classList.remove("enter");
+    void card.offsetWidth;
+    card.classList.add("enter");
+  }
+}
+
+function choose(value) {
+  answers[index] = value;
+  if (!started) { started = true; if (typeof gtag === "function") gtag("event", "checkup_start"); }
+  card.querySelectorAll(".choice").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.v === value)); });
+  window.setTimeout(function () {
+    if (index < QUESTIONS.length - 1) { index += 1; renderQuestion(); }
+    else showResults();
+  }, reduce ? 0 : 180);
+}
+
+document.getElementById("backBtn").addEventListener("click", function () {
+  if (index === 0) return;
+  index -= 1;
+  renderQuestion();
+});
+
+function tier(score) {
+  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A consultation is still the right next conversation if leadership wants a written view of what to tighten.", next: "Book a call to walk through what is already solid and what is still fragile. If it is a fit, the Data & Reporting Diagnostic turns that into a written scope." };
+  if (score >= 5) return { cls: "warn", label: "Some gaps", text: "The basics are there, and a few gaps are likely taking time every month. These are the gaps a Diagnostic is meant to put in order.", next: "Book a call. If the conversation confirms a fit, the Data & Reporting Diagnostic is the first step: a written view of these gaps and a recommended scope for the retainer." };
+  return { cls: "risk", label: "Reporting at risk", text: "Several core pieces are still manual, or are not in place. That is common in growing healthcare organizations. A Diagnostic is how we sort what to address first.", next: "Book a call. If it is a fit, the Data & Reporting Diagnostic is the first step, before any build: a written view of the gaps and a recommended scope for the retainer." };
+}
+
+let result = null;
+function showResults() {
+  const score = answers.filter(function (a) { return a === "yes"; }).length;
+  const t = tier(score);
+  const gaps = QUESTIONS.filter(function (_, i) { return answers[i] === "no"; });
+  result = { score: score, tier: t.label, gaps: gaps.map(function (g) { return g.gap; }) };
+  document.getElementById("scoreNum").innerHTML = score + "<span>/10</span>";
+  const badge = document.getElementById("scoreBadge");
+  badge.className = "badge " + t.cls;
+  badge.textContent = t.label;
+  document.getElementById("scoreSummary").textContent = t.text;
+  document.getElementById("nextCopy").textContent = t.next;
+  const list = document.getElementById("gapList");
+  list.innerHTML = "";
+  if (!gaps.length) {
+    list.innerHTML = '<p class="fine">Nothing on this list is open. If reporting still feels slow or fragile, the issue is often definitions or data quality, which a Diagnostic is meant to pin down.</p>';
+  } else {
+    gaps.forEach(function (g) {
+      const d = document.createElement("article");
+      d.className = "gap";
+      d.innerHTML = "<h3>" + g.gap + "</h3><p>" + g.fix + "</p>";
+      list.appendChild(d);
+    });
+  }
+  document.getElementById("bar").style.width = "100%";
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("results").classList.add("show");
+  window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  if (typeof gtag === "function") gtag("event", "checkup_complete", { score: score });
+}
+
+document.getElementById("retake").addEventListener("click", function () {
+  answers.fill(null);
+  index = 0;
+  result = null;
+  document.getElementById("results").classList.remove("show");
+  document.getElementById("quiz").style.display = "block";
+  document.getElementById("capForm").style.display = "block";
+  document.getElementById("capDone").style.display = "none";
+  const btn = document.getElementById("capSend");
+  btn.textContent = "Send my results";
+  btn.disabled = false;
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+});
+
+document.getElementById("capSend").addEventListener("click", function () {
+  const name = document.getElementById("capName").value.trim();
+  const org = document.getElementById("capOrg").value.trim();
+  const email = document.getElementById("capEmail").value.trim();
+  if (!name || !org || !email) { alert("Please fill in your name, organization, and email."); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert("Please enter a valid email address."); return; }
+  if (document.getElementById("capHoney").value) return;
+  const btn = document.getElementById("capSend");
+  btn.textContent = "Sending...";
+  btn.disabled = true;
+  const answerLines = QUESTIONS.map(function (q, i) { return (i + 1) + ". " + (answers[i] === "yes" ? "Yes" : "No") + ": " + q.q; }).join("\n");
+  const gapText = result.gaps.length ? result.gaps.map(function (g) { return "- " + g; }).join("\n") : "- None flagged";
+  const firstName = name.split(" ")[0];
+  const fd = new FormData();
+  fd.append("Name", name);
+  fd.append("Organization", org);
+  fd.append("email", email);
+  fd.append("Score", result.score + "/10 (" + result.tier + ")");
+  fd.append("Gaps", gapText);
+  fd.append("Answers", answerLines);
+  fd.append("_subject", "Health Check: " + org + " scored " + result.score + "/10");
+  fd.append("_template", "table");
+  fd.append("_captcha", "false");
+  fd.append("_honey", "");
+  fd.append("_autoresponse",
+    "Hi " + firstName + ",\n\n" +
+    "Thanks for completing the Reporting Health Check. Your score was " + result.score + "/10 (" + result.tier + ").\n\n" +
+    "Gaps flagged:\n" + gapText + "\n\n" +
+    "The useful next step is a consultation. If it is a fit, a Data & Reporting Diagnostic is how these gaps become a written scope for a retainer. " +
+    "Reply with a couple of times that work, or book a time at https://calendly.com/pedroodahdah/30min.\n\n" +
+    "Pedro Dahdah\nDDH Consulting\nhttps://ddhbiconsulting.com");
+  fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
+    .then(function (r) { return r.json(); })
+    .then(function () {
+      if (typeof gtag === "function") gtag("event", "generate_lead", { form: "health_check", score: result.score });
+      document.getElementById("capForm").style.display = "none";
+      document.getElementById("capDone").style.display = "block";
+    })
+    .catch(function () {
+      const body = encodeURIComponent("Name: " + name + "\nOrganization: " + org + "\nScore: " + result.score + "/10\n\nGaps:\n" + gapText);
+      window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent("Health Check: " + org) + "&body=" + body;
+      btn.textContent = "Send my results";
+      btn.disabled = false;
+    });
+});
+
+const header = document.querySelector(".site-header");
+window.addEventListener("scroll", function () {
+  header.classList.toggle("is-condensed", window.scrollY > 8);
+}, { passive: true });
+
+renderQuestion();
+</script>
+</body>
+</html>
