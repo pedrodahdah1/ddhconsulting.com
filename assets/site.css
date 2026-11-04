@@ -184,7 +184,7 @@ section[id] { scroll-margin-top: 96px; }
   gap: var(--s6);
   align-items: center;
 }
-.hero h1 { font-size: clamp(2.7rem, 4.6vw, 4.35rem); max-width: 11ch; margin-bottom: var(--s3); }
+.hero h1 { font-size: clamp(2.45rem, 4vw, 3.7rem); max-width: 13em; margin-bottom: var(--s3); }
 .hero .lede { margin-bottom: var(--s4); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: var(--s2); }
 .hero .fine { margin-top: var(--s1); }
@@ -258,7 +258,49 @@ section[id] { scroll-margin-top: 96px; }
 .board.in .bar:nth-child(4) i { animation-delay: 240ms; }
 @keyframes rise { to { transform: scaleY(1); } }
 .bar em { font-style: normal; font-size: 0.72rem; color: var(--muted); font-weight: 500; }
+.sources { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+.source {
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.source i {
+  display: block;
+  width: 6px; height: 6px;
+  margin: 0 auto 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.alert-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  opacity: 0;
+}
+.board.in .alert-card { animation: fade-in 500ms var(--ease) 280ms forwards; }
+.alert-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.alert-card strong { display: block; font-size: 0.85rem; font-weight: 500; letter-spacing: -0.01em; color: var(--ink); }
+.alert-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
 .board-caption { margin-top: 12px; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 780px) {
+  .sources { grid-template-columns: 1fr 1fr; }
+}
 
 /* Clients */
 .section { padding: var(--s7) 0; }
@@ -626,6 +668,7 @@ footer a:hover { color: #E0B08A; }
   }
   .js .reveal { opacity: 1; transform: none; }
   .bar i, .board::before, .spark path { transform: none; stroke-dashoffset: 0; }
+  .alert-card { opacity: 1; }
   .spark .area { opacity: 1; }
   .timeline::before { transform: none; }
 }
