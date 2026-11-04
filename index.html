@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DDH Consulting | Embedded BI &amp; Reporting for Healthcare</title>
 <meta name="description" content="DDH Consulting is an embedded BI, reporting, and automation partner for healthcare finance leaders at MSOs, specialty groups, ASCs, and pharmacy groups.">
-<meta property="og:title" content="DDH Consulting | Embedded BI &amp; Reporting for Healthcare">
-<meta property="og:description" content="A monthly retainer for healthcare finance and operations: reporting systems, close automation, cash and forecasting, incentive calculations, and BI modernization.">
+<meta property="og:title" content="DDH Consulting | A month-end your leadership can defend">
+<meta property="og:description" content="An embedded BI, reporting, and automation retainer for healthcare finance and operations. Close, cash, incentives, and the systems behind them.">
 <meta property="og:url" content="https://ddhbiconsulting.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ddhbiconsulting.com/social-card.png">
@@ -14,19 +14,26 @@
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="DDH Consulting">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DDH Consulting | Embedded BI &amp; Reporting for Healthcare">
-<meta name="twitter:description" content="A monthly retainer for healthcare finance and operations: reporting systems, close automation, cash and forecasting, and BI modernization.">
+<meta name="twitter:title" content="DDH Consulting | A month-end your leadership can defend">
+<meta name="twitter:description" content="An embedded BI, reporting, and automation retainer for healthcare finance and operations.">
 <meta name="twitter:image" content="https://ddhbiconsulting.com/social-card.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
 <link rel="apple-touch-icon" href="/favicon.svg?v=2">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5QVLV1G6C"></script>
+<link rel="preload" href="/fonts/fraunces-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js");</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J5QVLV1G6C');
+  window.addEventListener("load", function () {
+    var s = document.createElement("script");
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-J5QVLV1G6C";
+    s.async = true;
+    s.onload = function () { gtag("js", new Date()); gtag("config", "G-J5QVLV1G6C"); };
+    document.head.appendChild(s);
+  });
 </script>
 <script type="application/ld+json">
 {
@@ -72,901 +79,592 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --ink:#0A2342;--ink-deep:#061629;
-  --accent:#B8862F;--accent-soft:#D4A645;--accent-light:rgba(184,134,47,0.08);
-  --bg:#FFFFFF;--bg-soft:#F8F7F4;
-  --text:#0A2342;--text-mid:#4B5563;--text-light:#6B7280;
-  --border:#E4E7EB;--border-soft:#EDE9E1;
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'DM Sans',-apple-system,sans-serif;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-ul{list-style:none}
-button{font-family:inherit}
-section[id]{scroll-margin-top:5.5rem}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;padding:1rem 5vw;display:flex;justify-content:space-between;align-items:center;transition:all 0.3s ease}
-nav.scrolled{background:rgba(255,255,255,0.97);border-bottom-color:var(--border);padding:0.8rem 5vw}
-.nav-brand{display:flex;align-items:center;gap:0.5rem}
-.nav-logo{width:28px;height:28px;flex-shrink:0}
-.brand-mark{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-0.02em;line-height:1}
-.brand-divider{width:1px;height:16px;background:var(--border);margin:0 0.4rem}
-.brand-name{font-family:var(--sans);font-size:0.68rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-light)}
-.nav-links{display:flex;gap:1.6rem;align-items:center}
-.nav-links a{font-size:0.84rem;font-weight:500;color:var(--text-mid);transition:color 0.2s;letter-spacing:0.01em}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--ink) !important;color:#fff !important;padding:0.65rem 1.3rem;border-radius:4px;font-size:0.82rem;font-weight:500;letter-spacing:0.01em;transition:all 0.2s;white-space:nowrap}
-.nav-cta:hover{background:var(--ink-deep) !important;transform:translateY(-1px)}
-.nav-cta-mobile{display:none}
-@media(max-width:1100px){.nav-links{display:none}.nav-cta-mobile{display:inline-flex;background:var(--ink);color:#fff;padding:0.55rem 1rem;border-radius:4px;font-size:0.78rem;font-weight:500;white-space:nowrap}}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-d1{transition-delay:0.08s}
-.reveal-d2{transition-delay:0.16s}
-.reveal-d3{transition-delay:0.24s}
-.reveal-d4{transition-delay:0.32s}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
-  *,*::before,*::after{transition-duration:0.01ms !important;animation-duration:0.01ms !important}
-}
-
-/* COMMON */
-.eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:inline-block}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-0.015em}
-h1 em,h2 em,h3 em{font-style:italic;color:var(--ink)}
-.btn-primary{display:inline-flex;align-items:center;gap:0.45rem;background:var(--ink);color:#fff;padding:0.95rem 1.9rem;border-radius:4px;font-size:0.9rem;font-weight:500;transition:all 0.2s ease;border:none;cursor:pointer;font-family:var(--sans);letter-spacing:0.01em}
-.btn-primary:hover{background:var(--ink-deep);transform:translateY(-1px);box-shadow:0 6px 20px rgba(10,35,66,0.16)}
-.btn-outline{display:inline-flex;align-items:center;gap:0.45rem;background:transparent;color:var(--ink);padding:0.95rem 1.9rem;border-radius:4px;font-size:0.9rem;font-weight:500;border:1px solid var(--border);transition:all 0.2s;letter-spacing:0.01em}
-.btn-outline:hover{border-color:var(--ink)}
-section{position:relative}
-
-/* HERO */
-.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:9rem 5vw 6rem;background:#FFFFFF;text-align:center;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(10,35,66,0.04) 0%,transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
-.hero-content{max-width:1000px;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
-.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:100px;padding:0.4rem 1rem;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mid);margin-bottom:2rem}
-.hero-tag-dot{width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.06;margin-bottom:1.8rem;letter-spacing:-0.025em}
-.hero h1 em{color:var(--accent)}
-.hero-sub{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--text-mid);max-width:740px;line-height:1.72;margin-bottom:2.8rem}
-.hero-actions{display:flex;gap:0.85rem;flex-wrap:wrap;justify-content:center}
-.hero-write{margin-top:1.15rem;font-size:0.88rem;color:var(--text-mid)}
-.hero-write a{font-weight:600;border-bottom:1px solid rgba(10,35,66,0.28)}
-.hero-write a:hover{border-bottom-color:var(--ink)}
-.hero-divider{margin-top:4rem;padding-top:2.5rem;border-top:1px solid var(--border);display:flex;align-items:flex-start;justify-content:center;gap:2rem;width:100%;max-width:960px;flex-wrap:wrap}
-.hero-stat{text-align:center}
-.hero-stat-num{font-family:var(--serif);font-size:1.25rem;color:var(--ink);font-weight:500;line-height:1.2;margin-bottom:0.35rem}
-.hero-stat-label{font-size:0.7rem;color:var(--text-light);letter-spacing:0.06em;text-transform:uppercase;font-weight:500;max-width:160px;margin:0 auto}
-.hero-divider-sep{width:1px;height:40px;background:var(--border)}
-@media(max-width:600px){.hero h1 br{display:none}.hero-divider-sep{display:none}.hero-divider{gap:1.6rem 2rem}.hero-stat{flex:1 1 40%}}
-
-/* WHO */
-.who{padding:7rem 5vw;background:var(--bg-soft);border-top:1px solid var(--border)}
-.who-inner{max-width:1200px;margin:0 auto}
-.who-header{max-width:760px;margin-bottom:3rem}
-.who-header h2{font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.12;margin-bottom:1rem}
-.who-header p{font-size:1.04rem;color:var(--text-mid);line-height:1.75}
-.aud-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
-.aud-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.7rem 1.45rem;display:flex;flex-direction:column}
-.aud-card h3{font-family:var(--sans);font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:0.7rem;letter-spacing:0}
-.aud-card p{color:var(--text-mid);font-size:0.9rem;line-height:1.65}
-.who-foot{margin-top:2.2rem;display:grid;grid-template-columns:180px 1fr;gap:2rem;align-items:start;padding-top:2rem;border-top:1px solid var(--border)}
-.who-foot h3{font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)}
-.who-people{display:flex;flex-wrap:wrap;gap:0.5rem}
-.chip{font-size:0.78rem;font-weight:500;color:var(--text-mid);background:#fff;border:1px solid var(--border);border-radius:100px;padding:0.4rem 0.9rem}
-.who-geo{margin-top:1.1rem;font-size:0.9rem;color:var(--text-mid);line-height:1.6;max-width:640px}
-@media(max-width:1000px){.aud-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.aud-grid{grid-template-columns:1fr}.who-foot{grid-template-columns:1fr;gap:0.8rem}}
-
-/* PROBLEMS */
-.problems{padding:8rem 5vw;background:var(--ink);overflow:hidden;position:relative}
-.problems::before{content:'';position:absolute;top:-40%;right:-20%;width:60%;height:160%;background:radial-gradient(ellipse at center,rgba(184,134,47,0.07) 0%,transparent 70%);pointer-events:none}
-.problems-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
-.problems .eyebrow{color:var(--accent-soft)}
-.problems-header{max-width:780px;margin-bottom:1.4rem}
-.problems-header h2{font-size:clamp(2rem,3.8vw,3rem);line-height:1.1;color:#fff}
-.problems-header h2 em{color:var(--accent-soft)}
-.problems-intro{font-size:1.05rem;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:3.5rem;max-width:780px}
-.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.pr-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:2rem 1.9rem;transition:all 0.25s;display:flex;flex-direction:column}
-.pr-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(184,134,47,0.4)}
-.pr-label{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-soft);margin-bottom:1rem}
-.pr-card h3{font-size:1.02rem;font-weight:600;font-family:var(--sans);color:#fff;margin-bottom:0.7rem;line-height:1.35;letter-spacing:0.005em}
-.pr-card p{font-size:0.88rem;color:rgba(255,255,255,0.58);line-height:1.65;flex-grow:1}
-.pr-fix{font-size:0.78rem;color:rgba(255,255,255,0.5);padding-top:1rem;margin-top:1.2rem;border-top:1px solid rgba(255,255,255,0.08);line-height:1.5}
-.pr-fix strong{color:rgba(255,255,255,0.8);font-weight:600}
-@media(max-width:960px){.pr-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.pr-grid{grid-template-columns:1fr}}
-
-/* RETAINER */
-.lead{padding:8rem 5vw;background:var(--bg);border-top:1px solid var(--border)}
-.lead-inner{max-width:1200px;margin:0 auto}
-.lead-header{max-width:800px;margin-bottom:3.5rem}
-.lead-header h2{font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.1;margin-bottom:1.2rem}
-.lead-header p{font-size:1.04rem;color:var(--text-mid);line-height:1.75}
-.lead-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:3rem;align-items:start}
-.lead-list h3{font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem}
-.lead-list ul{border-top:1px solid var(--border)}
-.lead-list li{display:flex;gap:0.8rem;padding:0.9rem 0;border-bottom:1px solid var(--border);font-size:0.95rem;color:var(--text-mid);line-height:1.55}
-.lead-list li::before{content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:0.55rem}
-.lead-list li strong{color:var(--ink);font-weight:600}
-.aside-card{background:var(--ink);color:#fff;border-radius:8px;padding:2.2rem 2rem}
-.aside-card h3{font-family:var(--serif);font-size:1.55rem;font-weight:500;color:#fff;line-height:1.25;margin-bottom:1rem}
-.aside-card p{color:rgba(255,255,255,0.72);font-size:0.95rem;line-height:1.7;margin-bottom:1rem}
-.aside-card ul{margin:0.4rem 0 1.5rem}
-.aside-card li{color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.5;padding:0.55rem 0 0.55rem 1rem;border-top:1px solid rgba(255,255,255,0.1);position:relative}
-.aside-card li::before{content:'';position:absolute;left:0;top:1.05rem;width:4px;height:4px;border-radius:50%;background:var(--accent-soft)}
-.aside-card .btn-primary{background:#fff;color:var(--ink)}
-.aside-card .btn-primary:hover{background:var(--accent-soft);color:var(--ink)}
-.aside-write{margin-top:0.95rem;font-size:0.86rem}
-.aside-write a{color:var(--accent-soft);border-bottom:1px solid rgba(212,166,69,0.45)}
-.aside-write a:hover{color:#fff;border-bottom-color:#fff}
-.contact-book{margin-bottom:1.6rem}
-.contact-or{color:var(--text-mid);font-size:0.95rem;line-height:1.6;margin-bottom:1.4rem}
-.compare{margin-top:4.5rem}
-.compare h3{font-size:1.5rem;font-weight:400;margin-bottom:1.4rem}
-.compare-table{width:100%;border-collapse:collapse;font-size:0.92rem}
-.compare-table th,.compare-table td{text-align:left;padding:1rem 1.1rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
-.compare-table th{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light)}
-.compare-table td:first-child{font-weight:600;color:var(--ink);min-width:11rem}
-.compare-table td{color:var(--text-mid)}
-.compare-table tr.us td{background:var(--accent-light);color:var(--ink)}
-.compare-wrap{overflow-x:auto}
-@media(max-width:960px){.lead-grid{grid-template-columns:1fr;gap:2.5rem}}
-@media(max-width:600px){.compare-table thead{display:none}.compare-table,.compare-table tbody,.compare-table tr,.compare-table td{display:block;width:100%}.compare-table tr{border:1px solid var(--border);border-radius:8px;margin-bottom:0.8rem;overflow:hidden}.compare-table td{border-bottom:none;padding:0.45rem 1rem}.compare-table td:first-child{padding-top:0.9rem;font-size:0.98rem}.compare-table td:last-child{padding-bottom:0.9rem}.compare-table td[data-label]::before{content:attr(data-label) ": ";font-weight:600;color:var(--text-light);font-size:0.78rem}}
-
-/* WORKSTREAMS */
-.services{padding:8rem 5vw;background:var(--bg-soft);border-top:1px solid var(--border)}
-.services-inner{max-width:1200px;margin:0 auto}
-.services-header{max-width:760px;margin-bottom:3.2rem}
-.services-header h2{font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.1;margin-bottom:0.8rem}
-.services-header p{font-size:1rem;color:var(--text-mid);line-height:1.7}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.service-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:2.3rem 2rem;transition:all 0.25s;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background 0.25s}
-.service-card:hover{border-color:rgba(10,35,66,0.25);transform:translateY(-2px);box-shadow:0 16px 36px rgba(10,35,66,0.07)}
-.service-card:hover::before{background:var(--accent)}
-.service-num{font-family:var(--serif);font-size:0.78rem;color:var(--accent);font-weight:500;margin-bottom:1.1rem;display:block;letter-spacing:0.1em}
-.service-kicker{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:0.45rem}
-.service-card h3{font-size:1.45rem;margin-bottom:0.85rem;line-height:1.25;font-weight:500}
-.service-card p{color:var(--text-mid);font-size:0.92rem;line-height:1.68;margin-bottom:1rem}
-.service-card p:last-child{margin-bottom:0}
-.service-deliver{font-size:0.82rem;color:var(--text-light);padding-top:1rem;border-top:1px solid var(--border);line-height:1.55;margin-top:auto}
-.service-deliver strong{color:var(--ink);font-weight:600;font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-bottom:0.25rem}
-.section-cta{margin-top:2.2rem;display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center}
-.section-cta p{color:var(--text-mid);font-size:0.95rem;margin-right:0.4rem}
-@media(max-width:640px){.services-grid{grid-template-columns:1fr}}
-
-/* HOW IT WORKS */
-.engagement{padding:8rem 5vw;background:var(--bg);border-top:1px solid var(--border)}
-.eng-inner{max-width:1200px;margin:0 auto}
-.eng-header{max-width:740px;margin-bottom:3.2rem}
-.eng-header h2{font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.1;margin-bottom:1.2rem}
-.eng-header p{font-size:1.04rem;color:var(--text-mid);line-height:1.72}
-.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
-.step{grid-column:span 2;background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.8rem 1.5rem}
-.step:nth-child(4),.step:nth-child(5){grid-column:span 3}
-.step.featured{background:var(--ink);border-color:var(--ink)}
-.tier-label{font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem}
-.step.featured .tier-label{color:var(--accent-soft)}
-.tier-name{font-family:var(--serif);font-size:1.4rem;margin-bottom:0.4rem;font-weight:500;line-height:1.2;color:var(--ink)}
-.step.featured .tier-name{color:#fff}
-.tier-meta{font-size:0.8rem;color:var(--text-light);letter-spacing:0.03em;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
-.step.featured .tier-meta{color:rgba(255,255,255,0.6);border-bottom-color:rgba(255,255,255,0.14)}
-.tier-desc{color:var(--text-mid);font-size:0.92rem;line-height:1.68}
-.step.featured .tier-desc{color:rgba(255,255,255,0.75)}
-.eng-footer{margin-top:2.2rem;color:var(--text-mid);font-size:0.95rem;line-height:1.65;max-width:720px}
-.eng-footer a{color:var(--ink);font-weight:600;border-bottom:1px solid rgba(10,35,66,0.25)}
-@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}.step,.step:nth-child(4),.step:nth-child(5){grid-column:auto}}
-@media(max-width:600px){.steps{grid-template-columns:1fr}}
-
-/* PROOF + FOUNDER share the work layout in two sections */
-.work{padding:7.5rem 5vw;background:var(--bg-soft);border-top:1px solid var(--border)}
-.work-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.work h2{font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.15;margin-bottom:1.3rem}
-.work p{color:var(--text-mid);font-size:1rem;line-height:1.78;margin-bottom:1.1rem}
-.work p strong{color:var(--ink);font-weight:600}
-.case-box{background:#fff;border:1px solid var(--border);border-radius:8px;padding:2.2rem 2rem}
-.case-tag{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;display:block}
-.case-box h3{font-size:1.3rem;font-weight:500;margin-bottom:0.9rem;line-height:1.3}
-.case-list{margin-top:1.2rem;border-top:1px solid var(--border)}
-.case-list li{display:flex;gap:0.8rem;padding:0.85rem 0;border-bottom:1px solid var(--border);font-size:0.92rem;color:var(--text-mid);line-height:1.5}
-.case-list li:last-child{border-bottom:none;padding-bottom:0}
-.case-list li::before{content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:0.5rem}
-.case-note{margin-top:1.3rem;font-size:0.8rem;color:var(--text-light);font-style:italic;font-family:var(--serif)}
-.practice-list{margin-top:0.4rem;border-top:1px solid var(--border)}
-.practice-list li{padding:0.7rem 0;border-bottom:1px solid var(--border);font-size:0.92rem;color:var(--text-mid);line-height:1.5}
-.practice-list li strong{color:var(--ink);font-weight:600}
-@media(max-width:860px){.work-inner{grid-template-columns:1fr;gap:2.5rem}}
-
-/* TRUST */
-.trust{padding:6.5rem 5vw;background:var(--bg);border-top:1px solid var(--border)}
-.trust-inner{max-width:1200px;margin:0 auto}
-.trust-header{max-width:680px;margin-bottom:2.4rem}
-.trust-header h2{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.trust-card{border:1px solid var(--border);border-radius:8px;padding:1.8rem 1.6rem;background:var(--bg-soft)}
-.trust-card h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin-bottom:0.6rem;letter-spacing:0}
-.trust-card p{color:var(--text-mid);font-size:0.92rem;line-height:1.65}
-@media(max-width:860px){.trust-grid{grid-template-columns:1fr}}
-
-/* CHECKUP BAND */
-.checkup-band{padding:4.5rem 5vw;background:var(--accent-light);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
-.checkup-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2.5rem;flex-wrap:wrap}
-.checkup-inner h2{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2;margin-bottom:0.5rem}
-.checkup-inner p{color:var(--text-mid);font-size:0.98rem;max-width:640px;line-height:1.65}
-
-/* FAQ */
-.faq{padding:7rem 5vw;background:var(--bg);border-top:1px solid var(--border)}
-.faq-inner{max-width:820px;margin:0 auto}
-.faq-header{margin-bottom:3rem}
-.faq h2{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.6rem 0;font-size:1rem;color:var(--ink);font-weight:500;font-family:var(--sans);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:2rem;transition:color 0.2s}
-.faq-q:hover{color:var(--accent)}
-.faq-q::after{content:'+';color:var(--accent);font-size:1.3rem;font-weight:300;transition:transform 0.3s;flex-shrink:0}
-.faq-item.open .faq-q::after{transform:rotate(45deg)}
-.faq-a{color:var(--text-mid);font-size:0.93rem;line-height:1.78;max-height:0;overflow:hidden;transition:max-height 0.45s ease,padding 0.45s ease}
-.faq-item.open .faq-a{max-height:640px;padding-bottom:1.8rem}
-
-/* CONTACT */
-.contact-form-section{padding:7rem 5vw;background:var(--bg-soft);border-top:1px solid var(--border)}
-.contact-inner{max-width:720px;margin:0 auto}
-.contact-form-section h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:0.9rem;line-height:1.15}
-.contact-intro{color:var(--text-mid);font-size:0.98rem;line-height:1.72;margin-bottom:1.5rem}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-.form-group{display:flex;flex-direction:column}
-.form-group.full{grid-column:1 / -1}
-.form-group label{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:0.45rem}
-.form-group input,.form-group select,.form-group textarea{background:#fff;border:1px solid var(--border);border-radius:4px;padding:0.9rem 1rem;color:var(--text);font-family:var(--sans);font-size:0.93rem;transition:border-color 0.2s;outline:none;-webkit-appearance:none}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(10,35,66,0.06)}
-.form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-light)}
-.form-group select{color:var(--text-light);cursor:pointer}
-.form-group textarea{resize:vertical;min-height:120px;line-height:1.6}
-.form-submit{margin-top:1.4rem}
-.form-submit .btn-primary{width:100%;justify-content:center;font-size:0.95rem;padding:1.05rem}
-.form-note{color:var(--text-light);font-size:0.78rem;margin-top:1rem;text-align:center;line-height:1.6}
-.form-success{display:none;text-align:center;padding:4rem 1rem}
-.form-success h3{font-size:1.8rem;color:var(--ink);margin-bottom:1rem;font-weight:500}
-.form-success p{color:var(--text-mid);font-size:0.98rem;line-height:1.7}
-.form-success a{color:var(--accent);border-bottom:1px solid currentColor}
-@media(max-width:580px){.form-grid{grid-template-columns:1fr}}
-
-/* FOOTER */
-footer{background:var(--ink-deep);color:rgba(255,255,255,0.65);padding:4rem 5vw 2rem}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-top{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:2rem}
-.footer-logo{display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem}
-.footer-logo-svg{width:26px;height:26px;opacity:0.9}
-.footer-brand-name{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:#fff;letter-spacing:-0.02em}
-.footer-tag{font-size:0.9rem;line-height:1.65;max-width:420px;color:rgba(255,255,255,0.5)}
-.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.footer-col h5{color:rgba(255,255,255,0.9);font-family:var(--sans);font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1rem}
-.footer-col ul li{margin-bottom:0.55rem}
-.footer-col a{color:rgba(255,255,255,0.5);font-size:0.86rem;transition:color 0.2s}
-.footer-col a:hover{color:var(--accent-soft)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.76rem;color:rgba(255,255,255,0.3)}
-@media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}}
-</style>
-<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="/" aria-label="DDH Consulting home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#121A24"/>
+        <g fill="none" stroke="#E0B08A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+          <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+          <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+        </g>
+      </svg>
+      <span class="brand-name">DDH</span>
+      <span class="brand-sub">Consulting</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#clients">Clients</a>
+      <a href="#retainer">Retainer</a>
+      <a href="#practice">Practice</a>
+      <a href="#process">Process</a>
+      <a href="/checkup.html">Health Check</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+  </div>
+  <div id="menu-panel" class="menu-panel" hidden>
+    <a href="#clients">Clients</a>
+    <a href="#retainer">Retainer</a>
+    <a href="#practice">Practice</a>
+    <a href="#process">Process</a>
+    <a href="/checkup.html">Health Check</a>
+    <a href="#contact">Write to us</a>
+    <a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</header>
 
-<nav>
-  <a href="#" class="nav-brand" aria-label="DDH Consulting home">
-    <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect width="32" height="32" rx="6" fill="#0A2342"/>
-      <g fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
-        <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
-        <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
-      </g>
-    </svg>
-    <span class="brand-mark">DDH</span>
-    <span class="brand-divider"></span>
-    <span class="brand-name">Consulting</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#who">Clients</a></li>
-    <li><a href="#retainer">Retainer</a></li>
-    <li><a href="#workstreams">Focus</a></li>
-    <li><a href="#process">How It Works</a></li>
-    <li><a href="/checkup.html">Health Check</a></li>
-    <li><a href="https://calendly.com/pedroodahdah/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a></li>
-  </ul>
-  <a href="https://calendly.com/pedroodahdah/30min" class="nav-cta-mobile" target="_blank" rel="noopener">Book a Call</a>
-</nav>
-
-<main>
-<!-- HERO -->
+<main id="main">
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-tag reveal">
-      <span class="hero-tag-dot"></span>
-      <span>Embedded BI, Reporting &amp; Automation &nbsp;·&nbsp; Healthcare</span>
-    </div>
-    <h1 class="reveal reveal-d1">An embedded partner for <br><em>healthcare finance.</em></h1>
-    <p class="hero-sub reveal reveal-d2">DDH Consulting works with finance and operations leaders at MSOs, physician and specialty groups, ASCs, and multi-location pharmacy groups. We build the reporting, the close, the cash picture, and the incentive calculations, and we stay on a monthly retainer to keep them current.</p>
-    <div class="hero-actions reveal reveal-d3">
-      <a href="https://calendly.com/pedroodahdah/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a consultation &nbsp;→</a>
-      <a href="#retainer" class="btn-outline">See the retainer</a>
-    </div>
-    <p class="hero-write reveal reveal-d3">Prefer to write? <a href="#contact">Use the contact form</a>.</p>
-    <div class="hero-divider reveal reveal-d4">
-      <div class="hero-stat">
-        <div class="hero-stat-num">Healthcare only</div>
-        <div class="hero-stat-label">MSOs, groups, ASCs, pharmacies</div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Embedded BI for healthcare finance</p>
+      <h1>A month-end your leadership can defend.</h1>
+      <p class="lede">DDH Consulting sits with finance and operations leaders at MSOs, physician and specialty groups, ASCs, and multi-location pharmacy groups. We build the reporting, the close, the cash picture, and the incentive calculations, and we keep them current on a monthly retainer.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Schedule a consultation</a>
+        <a class="btn btn-secondary" href="/checkup.html">Take the free Reporting Health Check</a>
       </div>
-      <div class="hero-divider-sep"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">Finance and systems</div>
-        <div class="hero-stat-label">One principal, both sides</div>
-      </div>
-      <div class="hero-divider-sep"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">Monthly cadence</div>
-        <div class="hero-stat-label">Leadership reviews included</div>
-      </div>
-      <div class="hero-divider-sep"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">Miami</div>
-        <div class="hero-stat-label">Remote across the United States</div>
-      </div>
+      <p class="fine">Prefer to write? <a href="#contact">Use the contact form</a>.</p>
     </div>
-  </div>
-</section>
-
-<!-- WHO -->
-<section class="who" id="who">
-  <div class="who-inner">
-    <div class="who-header">
-      <span class="eyebrow reveal">Who we serve</span>
-      <h2 class="reveal">Organizations that have outgrown the workbook.</h2>
-      <p class="reveal reveal-d1">The retainer is built for healthcare finance and operations leaders who need reporting they can stand behind, and who are not looking to staff a full internal BI team to get it.</p>
-    </div>
-    <div class="aud-grid">
-      <article class="aud-card reveal">
-        <h3>Management services organizations</h3>
-        <p>Portfolio reporting across practices: one set of definitions, a close that travels from site to site, and dashboards leadership can compare.</p>
-      </article>
-      <article class="aud-card reveal reveal-d1">
-        <h3>PE-backed physician and specialty groups</h3>
-        <p>Typically on the order of 20 to 150 providers. Management reporting, cash, and incentives that a CFO and an operating partner can both use.</p>
-      </article>
-      <article class="aud-card reveal reveal-d2">
-        <h3>ASCs and specialty groups</h3>
-        <p>Case volume, payer mix, and site-level results, tied to the general ledger rather than rebuilt before each meeting.</p>
-      </article>
-      <article class="aud-card reveal reveal-d3">
-        <h3>Multi-location pharmacy groups</h3>
-        <p>Location performance, cash applied against remittances, and commission calculations that hold up from one pay cycle to the next.</p>
-      </article>
-    </div>
-    <div class="who-foot reveal">
-      <h3>Who we sit with</h3>
-      <div>
-        <div class="who-people">
-          <span class="chip">CFOs and VPs of finance</span>
-          <span class="chip">Controllers</span>
-          <span class="chip">COOs and heads of operations</span>
-          <span class="chip">MSO and practice administrators</span>
-          <span class="chip">Operating partners</span>
+    <div>
+      <div class="board in" id="board" aria-hidden="true">
+        <div class="board-top"><span class="pill">Illustrative</span><span>Month view</span></div>
+        <div class="kpis">
+          <div class="kpi"><span>Close day</span><strong data-count="8">8</strong></div>
+          <div class="kpi"><span>Open items</span><strong data-count="4">4</strong></div>
+          <div class="kpi"><span>Sites in view</span><strong data-count="12">12</strong></div>
         </div>
-        <p class="who-geo">Based in Miami. Most of the work is remote, for organizations across the United States. On-site in South Florida when the work calls for it.</p>
+        <svg class="spark" viewBox="0 0 320 72" aria-hidden="true">
+          <path class="area" d="M4 52 C40 50 48 28 80 30 C120 32 130 18 168 20 C210 22 220 40 260 28 C290 20 304 16 316 12 L316 68 L4 68 Z"/>
+          <path pathLength="100" d="M4 52 C40 50 48 28 80 30 C120 32 130 18 168 20 C210 22 220 40 260 28 C290 20 304 16 316 12"/>
+        </svg>
+        <div class="bars">
+          <div class="bar"><i style="--h:46%"></i><em>A</em></div>
+          <div class="bar"><i style="--h:72%"></i><em>B</em></div>
+          <div class="bar"><i style="--h:58%"></i><em>C</em></div>
+          <div class="bar"><i style="--h:84%"></i><em>D</em></div>
+        </div>
       </div>
+      <p class="board-caption">Example composition for the layout. Not a client result.</p>
     </div>
   </div>
 </section>
 
-<!-- SITUATION -->
-<section class="problems" id="situation">
-  <div class="problems-inner">
-    <span class="eyebrow reveal">The situation</span>
-    <div class="problems-header">
-      <h2 class="reveal">The data is there. <em>The system is not.</em></h2>
+<section class="section" id="clients">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">Who we serve</p>
+      <h2 class="reveal">Organizations that have outgrown the workbook.</h2>
+      <p class="lede reveal">Finance and operations leaders who need reporting they can stand behind, and who are not staffing a full internal BI team to get it.</p>
     </div>
-    <p class="problems-intro reveal">Most of the organizations we sit with already have a practice, pharmacy, or billing system, a general ledger, bank activity, and payroll. None of it becomes a monthly picture leadership can use until someone stitches it together. That stitching is the work.</p>
-    <div class="pr-grid">
-      <article class="pr-card reveal">
-        <div class="pr-label">Month-end</div>
-        <h3>The close still depends on a workbook</h3>
-        <p>The same exports are pulled, pasted, and repaired every month. One late file and the package slips.</p>
-        <div class="pr-fix"><strong>In the retainer:</strong> scheduled pulls and a monthly package that does not wait on a manual rebuild.</div>
+    <ol class="index-list">
+      <li class="reveal">
+        <span class="index-num">01</span>
+        <div>
+          <h3>Management services organizations</h3>
+          <p>Portfolio reporting across practices: one set of definitions, a close that travels from site to site, and dashboards leadership can compare.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="index-num">02</span>
+        <div>
+          <h3>PE-backed physician and specialty groups</h3>
+          <p>Typically on the order of 20 to 150 providers. Management reporting, cash, and incentives that a CFO and an operating partner can both use.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="index-num">03</span>
+        <div>
+          <h3>ASCs and specialty groups</h3>
+          <p>Case volume, payer mix, and site-level results, tied to the general ledger rather than rebuilt before each meeting.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="index-num">04</span>
+        <div>
+          <h3>Multi-location pharmacy groups</h3>
+          <p>Location performance, cash applied against remittances, and commission calculations that hold from one pay cycle to the next.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="sit-with reveal">
+      <strong>Who we sit with</strong>
+      <span class="chip">CFOs and VPs of finance</span>
+      <span class="chip">Controllers</span>
+      <span class="chip">COOs</span>
+      <span class="chip">MSO and practice administrators</span>
+      <span class="chip">Operating partners</span>
+    </div>
+    <p class="fine reveal" style="margin-top:16px">Based in Miami. Most of the work is remote, for organizations across the United States. On-site in South Florida when the work calls for it.</p>
+  </div>
+</section>
+
+<section class="section band" id="problems">
+  <div class="wrap split">
+    <div class="sticky-copy">
+      <p class="eyebrow reveal">The situation</p>
+      <h2 class="reveal">The data is there. The system is not.</h2>
+      <p class="reveal">The organizations we sit with already have a practice, pharmacy, or billing system, a general ledger, bank activity, and payroll. None of it becomes a monthly picture until someone stitches it together. That stitching is the work.</p>
+    </div>
+    <div>
+      <article class="issue reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3.5h7l5 5V20a1.5 1.5 0 0 1-1.5 1.5h-10.5A1.5 1.5 0 0 1 5.5 20V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h5.5M8 13h8M8 17h5"/></svg></div>
+        <div><h3>The close still depends on a workbook</h3><p>The same exports are pulled and repaired every month. One late file and the package slips.</p></div>
       </article>
-      <article class="pr-card reveal reveal-d1">
-        <div class="pr-label">Cash</div>
-        <h3>Deposits, remittances, and the ledger disagree</h3>
-        <p>Cash hits the bank, payers send remittances, and the general ledger shows something else. The difference gets plugged.</p>
-        <div class="pr-fix"><strong>In the retainer:</strong> a tie-out across those layers, with each exception listed and a reason beside it.</div>
+      <article class="issue reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2.2"/></svg></div>
+        <div><h3>Deposits, remittances, and the ledger disagree</h3><p>Cash hits the bank, payers send remittances, and the general ledger shows something else.</p></div>
       </article>
-      <article class="pr-card reveal reveal-d2">
-        <div class="pr-label">Incentives</div>
-        <h3>Compensation is rebuilt every cycle</h3>
-        <p>Provider incentives or sales commissions are reconstructed by hand, so every payout raises a question about the number.</p>
-        <div class="pr-fix"><strong>In the retainer:</strong> a documented formula, a calculation that can be rerun, and a statement each person can check.</div>
+      <article class="issue reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.2 4.6L19 8.2l-3.5 3.4.8 4.9L12 14.8 7.7 16.5l.8-4.9L5 8.2l4.8-.6L12 3z"/></svg></div>
+        <div><h3>Compensation is rebuilt every cycle</h3><p>Provider incentives or sales commissions are reconstructed by hand, so every payout raises a question.</p></div>
       </article>
-      <article class="pr-card reveal">
-        <div class="pr-label">Visibility</div>
-        <h3>A direct question takes days</h3>
-        <p>Which site is off, which payer is slow, which provider is an outlier. The data exists. The answer is still another spreadsheet.</p>
-        <div class="pr-fix"><strong>In the retainer:</strong> dashboards by location, payer, provider, or service line, on a schedule.</div>
+      <article class="issue reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 2 4-6"/></svg></div>
+        <div><h3>A direct question takes days</h3><p>Which site is off, which payer is slow, which provider is an outlier. The answer is still another spreadsheet.</p></div>
       </article>
-      <article class="pr-card reveal reveal-d1">
-        <div class="pr-label">Key person</div>
-        <h3>One person knows how reporting works</h3>
-        <p>The process lives in one workbook and one memory. When that person is out, the month stops.</p>
-        <div class="pr-fix"><strong>In the retainer:</strong> a written process the client's own team can follow.</div>
+      <article class="issue reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.4-3 3.8-4.5 7-4.5S17.6 16 19 19"/></svg></div>
+        <div><h3>One person knows how reporting works</h3><p>The process lives in one workbook and one memory. When that person is out, the month stops.</p></div>
       </article>
-      <article class="pr-card reveal reveal-d2">
-        <div class="pr-label">Legacy BI</div>
-        <h3>The model no one wants to extend</h3>
-        <p>SQL Server and SSAS still hold numbers leadership asks about, and every new cut becomes a project.</p>
-        <div class="pr-fix"><strong>In the retainer:</strong> a path to Power BI or Microsoft Fabric, with definitions finance can explain.</div>
+      <article class="issue reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
+        <div><h3>The model no one wants to extend</h3><p>SQL Server and SSAS still hold the numbers leadership asks about, and every new cut becomes a project.</p></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- RETAINER -->
-<section class="lead" id="retainer">
-  <div class="lead-inner">
-    <div class="lead-header">
-      <span class="eyebrow reveal">The retainer</span>
-      <h2 class="reveal">What an embedded partner does, <em>month to month.</em></h2>
-      <p class="reveal reveal-d1">DDH stays with finance and operations after the first build. One principal is accountable for the reporting, the close, the cash picture, the calculations in scope, and the models those numbers come from. You meet that same person at the leadership review.</p>
+<section class="section" id="retainer">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">The retainer</p>
+      <h2 class="reveal">What an embedded partner does, month to month.</h2>
+      <p class="lede reveal">One principal is accountable for the reporting, the close, the cash picture, the calculations in scope, and the models those numbers come from. You meet that same person at the leadership review.</p>
     </div>
-    <div class="lead-grid">
-      <div class="lead-list reveal">
-        <h3>Each month</h3>
-        <ul>
-          <li><span><strong>Management reporting</strong> by location, provider, payer, or service line, refreshed on a schedule</span></li>
-          <li><span><strong>Close support</strong> so the package is produced without rebuilding workbooks by hand</span></li>
-          <li><span><strong>Cash and a forecast</strong> updated as deposits and remittances land</span></li>
-          <li><span><strong>Commission and incentive calculations</strong> rerun from a documented formula</span></li>
-          <li><span><strong>Reconciliation review</strong> across the bank, remittances, and the general ledger, with exceptions explained</span></li>
-          <li><span><strong>A leadership review</strong> of what moved, why, and what needs a decision</span></li>
-          <li><span><strong>Analysis when it cannot wait</strong> for a payer, a site, a provider, or a contract question</span></li>
-          <li><span><strong>Steady improvement</strong> of pipelines, definitions, and models, including AI-assisted automation where it removes manual preparation</span></li>
-        </ul>
-      </div>
-      <aside class="aside-card reveal reveal-d1">
+    <div class="month-grid">
+      <article class="month-card reveal"><span>01</span><h3>The package lands</h3><p>Management reporting by location, provider, payer, or service line, on a schedule.</p></article>
+      <article class="month-card reveal"><span>02</span><h3>Exceptions are named</h3><p>Bank, remittances, and the general ledger, with each difference and a reason.</p></article>
+      <article class="month-card reveal"><span>03</span><h3>Cash is updated</h3><p>Collections and a forecast refreshed as deposits and remittances arrive.</p></article>
+      <article class="month-card reveal"><span>04</span><h3>Leadership reviews</h3><p>What moved, why, and what needs a decision. Then the models get sharper.</p></article>
+    </div>
+    <div class="aside-note reveal">
+      <div>
         <h3>A small number of retainers. The same principal.</h3>
-        <p>The engagement is scoped after a Data &amp; Reporting Diagnostic and written down before onboarding. Scope follows what the organization actually needs.</p>
-        <ul>
-          <li>Healthcare finance judgment and the system that produces the number</li>
-          <li>Claims, revenue-cycle, and provider data, used with that judgment</li>
-          <li>Work built in your environment</li>
-          <li>You own the data and the code</li>
-          <li>A Business Associate Agreement when protected health information is in scope</li>
-        </ul>
-        <a href="https://calendly.com/pedroodahdah/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a consultation &nbsp;→</a>
-        <p class="aside-write"><a href="#contact">Prefer to write? Use the form.</a></p>
-      </aside>
-    </div>
-    <div class="compare reveal">
-      <h3>How the retainer sits next to the usual alternatives</h3>
-      <div class="compare-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr><th>Option</th><th>Healthcare finance</th><th>Builds and keeps the systems</th><th>How the relationship works</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Full-time analyst</td>
-              <td data-label="Healthcare finance">Depends on the person hired</td>
-              <td data-label="Builds and keeps the systems">Rarely the same person</td>
-              <td data-label="How the relationship works">A permanent role on the team</td>
-            </tr>
-            <tr>
-              <td>Contract developer</td>
-              <td data-label="Healthcare finance">Rarely</td>
-              <td data-label="Builds and keeps the systems">Often a build, then a handoff</td>
-              <td data-label="How the relationship works">A project, then someone else owns it</td>
-            </tr>
-            <tr class="us">
-              <td>DDH retainer</td>
-              <td data-label="Healthcare finance">Yes. Close, cash, incentives, reporting</td>
-              <td data-label="Builds and keeps the systems">Yes. Pipelines, models, and the monthly package</td>
-              <td data-label="How the relationship works">Embedded month to month, with leadership reviews</td>
-            </tr>
-          </tbody>
-        </table>
+        <p>Scope is set after a Data &amp; Reporting Diagnostic and written down before onboarding. The work follows what the organization actually needs: healthcare finance judgment, claims and revenue-cycle data, and the system that produces the number. You own the data and the code. A Business Associate Agreement is in place when protected health information is in scope.</p>
+      </div>
+      <div>
+        <a class="btn btn-light" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Schedule a consultation</a>
+        <p class="fine" style="margin-top:14px"><a href="#contact" style="color:#fff;border-bottom-color:rgba(255,252,248,.4)">Prefer to write? Use the form.</a></p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- WORKSTREAMS -->
-<section class="services" id="workstreams">
-  <div class="services-inner">
-    <div class="services-header">
-      <span class="eyebrow reveal">Focus areas</span>
-      <h2 class="reveal">Four workstreams, <em>one engagement.</em></h2>
-      <p class="reveal reveal-d1">These are the kinds of work a retainer includes. They are weighted to what the Diagnostic finds. They are not a menu of separate packages.</p>
-    </div>
-    <div class="services-grid">
-      <article class="service-card reveal">
-        <span class="service-num">01</span>
-        <div class="service-kicker">Close and reporting automation</div>
-        <h3>Month-End Autopilot</h3>
-        <p>Scheduled extracts, reconciliations between the operating system, remittances, and the general ledger, and a monthly package that goes out without a workbook rebuild. Differences are listed with a reason.</p>
-        <p class="service-deliver"><strong>Inside the retainer</strong>A close that keeps its date, and a package more than one person can produce.</p>
-      </article>
-      <article class="service-card reveal reveal-d1">
-        <span class="service-num">02</span>
-        <div class="service-kicker">Cash and forecasting</div>
-        <h3>Cash Truth</h3>
-        <p>What has actually been collected, what is still outstanding by payer, and a forecast finance can update as deposits and remittances arrive. Built for conversations about liquidity and payer speed.</p>
-        <p class="service-deliver"><strong>Inside the retainer</strong>A cash picture that is ready between meetings, maintained as the month moves.</p>
-      </article>
-      <article class="service-card reveal">
-        <span class="service-num">03</span>
-        <div class="service-kicker">Commission and incentive calculations</div>
-        <h3>Commission Engine</h3>
-        <p>Provider compensation and sales commissions run from a documented formula. The same logic produces each cycle, with a statement the person being paid can review.</p>
-        <p class="service-deliver"><strong>Inside the retainer</strong>A calculation that can be explained, cycle after cycle.</p>
-      </article>
-      <article class="service-card reveal reveal-d1">
-        <span class="service-num">04</span>
-        <div class="service-kicker">SQL Server, SSAS, Power BI, Fabric</div>
-        <h3>BI Modernization</h3>
-        <p>Legacy SQL Server and SSAS reporting moved onto Power BI or Microsoft Fabric. Pipelines from claims and revenue-cycle data, practice or pharmacy systems, accounting, payroll, and the bank. Public sources, including CMS and NPPES, where they strengthen a provider or market view. AI-assisted automation only where it removes repetitive preparation, with a person still accountable for the figure leadership sees.</p>
-        <p class="service-deliver"><strong>Inside the retainer</strong>One governed model, documented, in the client's environment.</p>
-      </article>
-    </div>
-    <div class="section-cta reveal">
-      <p>Not sure which of these matters first?</p>
-      <a href="https://calendly.com/pedroodahdah/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a consultation &nbsp;→</a>
-      <a href="/checkup.html" class="btn-outline">Take the Health Check</a>
+    <div class="compare">
+      <h3 class="reveal">How the retainer sits next to the usual alternatives</h3>
+      <div class="compare-row compare-head reveal" aria-hidden="true"><span></span><span>Healthcare finance</span><span>The systems</span><span>The relationship</span></div>
+      <div class="compare-row reveal"><strong>Full-time analyst</strong><span>Depends on the person hired</span><span>Rarely the same person</span><span>A permanent role</span></div>
+      <div class="compare-row reveal"><strong>Contract developer</strong><span>Rarely</span><span>Often a build, then a handoff</span><span>A project, then someone else owns it</span></div>
+      <div class="compare-row us reveal"><strong>DDH retainer</strong><span>Close, cash, incentives, reporting</span><span>Pipelines, models, and the monthly package</span><span>Embedded, with leadership reviews</span></div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="engagement" id="process">
-  <div class="eng-inner">
-    <div class="eng-header">
-      <span class="eyebrow reveal">How it works</span>
-      <h2 class="reveal">From a conversation to a <em>monthly cadence.</em></h2>
-      <p class="reveal">The Data &amp; Reporting Diagnostic is the first step of the work. A written proposal follows it. The retainer starts after that proposal is agreed.</p>
+<section class="section" id="practice" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">Focus areas</p>
+      <h2 class="reveal">Four workstreams. One engagement.</h2>
+      <p class="lede reveal">These are the kinds of work a retainer includes, weighted to what the Diagnostic finds. They are parts of the engagement, not a menu.</p>
     </div>
-    <div class="steps">
-      <article class="step reveal">
-        <div class="tier-label">Step 01</div>
-        <div class="tier-name">Intro call</div>
-        <div class="tier-meta">A working conversation</div>
-        <p class="tier-desc">With finance or operations leadership. How the close, the cash, the reporting, and the incentives work today, and which questions still go unanswered.</p>
+    <div class="streams">
+      <article class="stream reveal">
+        <div class="stream-no">01</div>
+        <div>
+          <p class="eyebrow">Close and reporting automation</p>
+          <h3>Month-End Autopilot</h3>
+          <p>Scheduled extracts, reconciliations between the operating system, remittances, and the general ledger, and a monthly package that goes out without a workbook rebuild.</p>
+        </div>
+        <p class="stream-note"><strong>Inside the retainer</strong>A close that keeps its date, and a package more than one person can produce.</p>
       </article>
-      <article class="step featured reveal reveal-d1">
-        <div class="tier-label">Step 02</div>
-        <div class="tier-name">Diagnostic</div>
-        <div class="tier-meta">The first step</div>
-        <p class="tier-desc">A Data &amp; Reporting Diagnostic. We review source systems, definitions, and the close, and what leadership cannot see yet. You receive a written view of the gaps and a recommended scope.</p>
+      <article class="stream reveal">
+        <div class="stream-no">02</div>
+        <div>
+          <p class="eyebrow">Cash and forecasting</p>
+          <h3>Cash Truth</h3>
+          <p>What has actually been collected, what is still outstanding by payer, and a forecast finance can update as deposits and remittances arrive.</p>
+        </div>
+        <p class="stream-note"><strong>Inside the retainer</strong>A cash picture that is ready between meetings.</p>
       </article>
-      <article class="step reveal reveal-d2">
-        <div class="tier-label">Step 03</div>
-        <div class="tier-name">Written proposal</div>
-        <div class="tier-meta">Before any build</div>
-        <p class="tier-desc">Workstreams, cadence, and how the retainer will run, agreed before onboarding begins.</p>
+      <article class="stream reveal">
+        <div class="stream-no">03</div>
+        <div>
+          <p class="eyebrow">Commission and incentive calculations</p>
+          <h3>Commission Engine</h3>
+          <p>Provider compensation and sales commissions run from a documented formula. The same logic produces each cycle, with a statement the person being paid can review.</p>
+        </div>
+        <p class="stream-note"><strong>Inside the retainer</strong>A calculation that can be explained, cycle after cycle.</p>
       </article>
-      <article class="step reveal">
-        <div class="tier-label">Step 04</div>
-        <div class="tier-name">Onboarding</div>
-        <div class="tier-meta">In your environment</div>
-        <p class="tier-desc">Access, a Business Associate Agreement when protected health information is in scope, pipelines and models, and a first package tested against closed periods.</p>
-      </article>
-      <article class="step reveal reveal-d1">
-        <div class="tier-label">Step 05</div>
-        <div class="tier-name">Monthly cadence</div>
-        <div class="tier-meta">Leadership reviews</div>
-        <p class="tier-desc">Reporting on a set rhythm, a review with leadership, and continued work on the systems underneath.</p>
+      <article class="stream reveal">
+        <div class="stream-no">04</div>
+        <div>
+          <p class="eyebrow">SQL Server, SSAS, Power BI, Fabric</p>
+          <h3>BI Modernization</h3>
+          <p>Legacy reporting moved onto Power BI or Microsoft Fabric. Pipelines from claims and revenue-cycle data, practice or pharmacy systems, accounting, payroll, and the bank. Public sources, including CMS and NPPES, where they strengthen a provider or market view. AI-assisted automation only where it removes repetitive preparation, with a person still accountable for the figure leadership sees.</p>
+        </div>
+        <p class="stream-note"><strong>Inside the retainer</strong>One governed model, documented, in your environment.</p>
       </article>
     </div>
-    <p class="eng-footer reveal">The <a href="/checkup.html">Reporting Health Check</a> is a short qualifier you can take before the call. It does not replace the Diagnostic.</p>
   </div>
 </section>
 
-<!-- PROOF -->
-<section class="work" id="proof">
-  <div class="work-inner">
-    <div class="reveal">
-      <span class="eyebrow">Selected work</span>
-      <h2>Work we can describe plainly.</h2>
-      <p>The engagement below is described in operational terms, with the client name withheld. It is the pattern of the retainer: reporting that stays in use, calculations that repeat, and analysis when leadership asks a new question.</p>
+<section class="section" id="process" style="background:var(--paper-2)">
+  <div class="wrap process-grid">
+    <div class="sticky-copy">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="reveal">From a conversation to a monthly cadence.</h2>
+      <p class="lede reveal">The Data &amp; Reporting Diagnostic is the first step of the work. A written proposal follows it. The retainer starts after that proposal is agreed.</p>
     </div>
-    <div class="case-box reveal reveal-d1">
-      <span class="case-tag">Current engagement · Pharmacy</span>
+    <ol class="timeline reveal" id="timeline">
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Intro call</h3><p class="step-meta">A working conversation</p><p>With finance or operations leadership. How the close, the cash, the reporting, and the incentives work today.</p></div></li>
+      <li class="step-row is-key"><span class="node" aria-hidden="true"></span><div><h3>Data &amp; Reporting Diagnostic</h3><p class="step-meta">The first step</p><p>We review source systems, definitions, and the close, and what leadership cannot see yet. You receive a written view of the gaps and a recommended scope.</p></div></li>
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Written proposal</h3><p class="step-meta">Before any build</p><p>Workstreams, cadence, and how the retainer will run, agreed before onboarding begins.</p></div></li>
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Onboarding</h3><p class="step-meta">In your environment</p><p>Access, a Business Associate Agreement when protected health information is in scope, pipelines and models, and a first package tested against closed periods.</p></div></li>
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Monthly cadence</h3><p class="step-meta">Leadership reviews</p><p>Reporting on a set rhythm, a review with leadership, and continued work on the systems underneath.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="expertise">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">Why DDH</p>
+      <h2 class="reveal">Healthcare finance, and the data underneath it.</h2>
+      <p class="lede reveal">The judgment and the system stay with one principal. Reporting that does not tie to the bank, the remittance, or the general ledger is not finished.</p>
+    </div>
+    <div class="expert-grid">
+      <article class="expert reveal"><div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M6 7V5h12v2M7 7l1 12h8l1-12"/></svg></div><h3>Claims and revenue-cycle data</h3><p>What was billed, what was collected, and where the two disagree, by payer, site, and provider.</p></article>
+      <article class="expert reveal"><div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3"/><path d="M4 20c1.5-3.2 4-5 8-5s6.5 1.8 8 5"/></svg></div><h3>Provider data</h3><p>Including public CMS and NPPES datasets, where they sharpen a provider or market view.</p></article>
+      <article class="expert reveal"><div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6"/><path d="M5 12v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/></svg></div><h3>The stack the reporting sits on</h3><p>SQL Server, SSIS, SSAS, Power BI, and Microsoft Fabric. Built in your environment.</p></article>
+      <article class="expert reveal"><div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h6l2-5 3 10 2-5h3"/></svg></div><h3>Pipelines and automation</h3><p>Including AI-assisted preparation, with a person accountable for the number that reaches leadership.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proof" style="padding-top:0">
+  <div class="wrap proof">
+    <div>
+      <p class="eyebrow reveal">Selected work</p>
+      <h2 class="reveal">Work we can describe plainly.</h2>
+      <p class="lede reveal">The engagement below is described in operational terms, with the client name withheld. It is the pattern of the retainer: reporting that stays in use, calculations that repeat, and analysis when leadership asks a new question.</p>
+    </div>
+    <article class="case reveal">
+      <p class="eyebrow">Current engagement · Pharmacy</p>
       <h3>Ongoing reporting and analysis for a pharmacy client</h3>
-      <p style="color:var(--text-mid);font-size:0.95rem;line-height:1.7;margin:0">DDH supports the finance and leadership team with recurring reporting and with analysis as questions come up.</p>
-      <ul class="case-list">
+      <p style="color:var(--muted);margin-bottom:12px">DDH supports the finance and leadership team with recurring reporting and with analysis as questions come up.</p>
+      <ul>
         <li>Power BI dashboards for ongoing performance reporting</li>
         <li>Sales commission calculations each pay cycle</li>
         <li>Recurring and ad-hoc reports for leadership</li>
         <li>Data analysis on request as operating questions arise</li>
       </ul>
-      <p class="case-note">Client name withheld.</p>
-    </div>
+      <p class="note">Client name withheld.</p>
+    </article>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust" id="trust">
-  <div class="trust-inner">
-    <div class="trust-header">
-      <span class="eyebrow reveal">Trust</span>
+<section class="section" id="trust" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">Trust</p>
       <h2 class="reveal">How data and ownership are handled.</h2>
     </div>
     <div class="trust-grid">
       <article class="trust-card reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V6l8-3z"/></svg></div>
         <h3>HIPAA-aware handling</h3>
-        <p>Financial reporting is designed so it does not need patient-level detail unless the question truly requires it. What is shared is limited to what the work needs. The contact form is not a place to send clinical information.</p>
+        <p>Financial reporting is designed so it does not need patient-level detail unless the question truly requires it. The contact form is not a place to send clinical information.</p>
       </article>
-      <article class="trust-card reveal reveal-d1">
+      <article class="trust-card reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3.5h7l5 5V20a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M9 14l2 2 4-4"/></svg></div>
         <h3>A BAA is available</h3>
         <p>When protected health information is in scope, a Business Associate Agreement is signed before any data is shared.</p>
       </article>
-      <article class="trust-card reveal reveal-d2">
+      <article class="trust-card reveal">
+        <div class="icon-bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="15" r="3"/><path d="M11 15h8l2-2-3-3h-4"/></svg></div>
         <h3>You own the data and the code</h3>
-        <p>Systems are built in your environment and documented so your team, or someone you hire later, can run them. The client owns its data and its code.</p>
+        <p>Systems are built in your environment and documented so your team, or someone you hire later, can run them.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section class="work" id="about">
-  <div class="work-inner">
-    <div class="reveal">
-      <span class="eyebrow">Principal</span>
-      <h2>You work with the person doing the work.</h2>
-      <p>DDH Consulting is led by <strong>Pedro Dahdah</strong>. He is the principal on every retainer: the healthcare finance questions, and the systems that answer them. That includes the models, the pipelines, the reconciliations, and the reporting leadership uses.</p>
-      <p>A finance lead who cannot build leaves a list of wishes. A developer who does not know healthcare finance builds reports that do not tie to the bank, the remittance, or the general ledger. The retainer is accountable to both.</p>
-    </div>
-    <div class="reveal reveal-d1">
-      <span class="eyebrow">Areas of practice</span>
-      <ul class="practice-list">
-        <li><strong>Healthcare finance.</strong> Close, cash, forecasting, and incentive calculations.</li>
-        <li><strong>Claims and revenue-cycle data.</strong> What was billed, what was collected, and where the two disagree.</li>
-        <li><strong>Provider data.</strong> Including public CMS and NPPES datasets, where they sharpen a provider or market view.</li>
-        <li><strong>The stack the reporting sits on.</strong> SQL Server, SSIS, SSAS, Power BI, and Microsoft Fabric.</li>
-        <li><strong>Pipelines and automation.</strong> Including AI-assisted preparation, with a person accountable for the number.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- CHECKUP BAND -->
-<section class="checkup-band">
-  <div class="checkup-inner reveal">
+<section class="section" id="founder">
+  <div class="wrap founder">
     <div>
-      <h2>How healthy is the month-end?</h2>
-      <p>Ten yes-or-no questions for finance and operations leaders. You get a score and the gaps. The recommended next step is a consultation, and then the Diagnostic if it is a fit. About three minutes.</p>
+      <p class="eyebrow reveal">Principal</p>
+      <h2 class="reveal">You work with the person doing the work.</h2>
+      <p class="lede reveal">DDH Consulting is led by Pedro Dahdah. He is the principal on every retainer: the healthcare finance questions, and the systems that answer them. That includes the models, the pipelines, the reconciliations, and the reporting leadership uses.</p>
+      <p class="lede reveal" style="margin-top:16px">A finance lead who cannot build leaves a list of wishes. A developer who does not know healthcare finance builds reports that do not tie. The retainer is accountable to both.</p>
     </div>
-    <a href="/checkup.html" class="btn-primary">Take the Health Check &nbsp;→</a>
+    <ul class="practice reveal">
+      <li><strong>Healthcare finance.</strong> Close, cash, forecasting, and incentive calculations.</li>
+      <li><strong>Claims and revenue-cycle data.</strong> What was billed, what was collected, and where they disagree.</li>
+      <li><strong>Provider data.</strong> Including public CMS and NPPES datasets.</li>
+      <li><strong>The reporting stack.</strong> SQL Server, SSIS, SSAS, Power BI, and Microsoft Fabric.</li>
+      <li><strong>Pipelines and automation.</strong> With a person accountable for the number.</li>
+    </ul>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="faq-inner">
-    <div class="faq-header">
-      <span class="eyebrow reveal">FAQ</span>
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap" style="max-width:800px">
+    <div class="section-head">
+      <p class="eyebrow reveal">FAQ</p>
       <h2 class="reveal">Common questions.</h2>
     </div>
-    <div class="faq-item reveal"><button class="faq-q">Who is the retainer for?</button><div class="faq-a">Management services organizations, PE-backed physician and specialty groups (often on the order of 20 to 150 providers), ambulatory surgery centers and specialty groups, and multi-location pharmacy groups. The conversation is usually with a CFO, controller, COO, administrator, or operating partner.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">What does a typical month include?</button><div class="faq-a">Scheduled management reporting, attention to the close, cash and forecast updates, commission or incentive calculations when they are in scope, a leadership review, and continued work on the pipelines and models. The mix is set in a written proposal after the Diagnostic.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">What is the Data &amp; Reporting Diagnostic?</button><div class="faq-a">It is the first step after an introductory call. We review source systems, definitions, the close, and the questions leadership still cannot answer, then we write up the gaps and a recommended scope. Onboarding does not start until that proposal is agreed.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">Are the focus areas separate engagements?</button><div class="faq-a">No. Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization are parts of the retainer. Some organizations need all four. Most begin with the ones the Diagnostic ranks highest.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">What systems do you work with?</button><div class="faq-a">The systems you already run: practice management, pharmacy, billing and claims, accounting, banking, and payroll, and the databases behind them. Reporting is delivered in Power BI, Excel, or Microsoft Fabric. If a system can produce an export or can be queried, we can work with it. Public datasets, including CMS and NPPES, are used where they improve a provider or market view.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">Do we need to buy new software?</button><div class="faq-a">Usually not. Most retainers run on tools the organization already has. If a new tool is the right answer, we explain what it is and why before anything is purchased.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">Who owns the data and the code?</button><div class="faq-a">You do. The work is built in your environment and documented so your team, or someone you hire later, can run it.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">How do you handle patient information?</button><div class="faq-a">Most financial reporting does not need patient-level detail, and we design it that way. When protected health information is required, a Business Associate Agreement is signed before any data is shared.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">How is this different from hiring an analyst or a contractor?</button><div class="faq-a">A full-time analyst is one role. A contract developer can build a report without owning whether it agrees with the books. On this retainer, one principal is accountable for the healthcare finance question and for the reporting system that answers it.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">How many clients do you take?</button><div class="faq-a">A small number of retainers at a time, so each organization works with the same principal every month.</div></div>
-    <div class="faq-item reveal"><button class="faq-q">How do we start?</button><div class="faq-a">Book a 30-minute consultation. If there is a fit, the Data &amp; Reporting Diagnostic is the first step, and a written proposal follows. Commercial terms are in that proposal. They are not listed on this site. If you would rather write first, use the form on this page. Most work is remote, for organizations across the United States, with on-site visits available in South Florida. A short Reporting Health Check is available before the call.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Who is the retainer for?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Management services organizations, PE-backed physician and specialty groups (often on the order of 20 to 150 providers), ambulatory surgery centers and specialty groups, and multi-location pharmacy groups. The conversation is usually with a CFO, controller, COO, administrator, or operating partner.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">What does a typical month include?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Scheduled management reporting, attention to the close, cash and forecast updates, commission or incentive calculations when they are in scope, a leadership review, and continued work on the pipelines and models. The mix is set in a written proposal after the Diagnostic.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">What is the Data &amp; Reporting Diagnostic?<span aria-hidden="true">+</span></button><div class="faq-a"><div>It is the first step after an introductory call. We review source systems, definitions, the close, and the questions leadership still cannot answer, then we write up the gaps and a recommended scope. Onboarding does not start until that proposal is agreed.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Are the focus areas separate engagements?<span aria-hidden="true">+</span></button><div class="faq-a"><div>No. Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization are parts of the retainer. Some organizations need all four. Most begin with the ones the Diagnostic ranks highest.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">What systems do you work with?<span aria-hidden="true">+</span></button><div class="faq-a"><div>The systems you already run: practice management, pharmacy, billing and claims, accounting, banking, and payroll, and the databases behind them. Reporting is delivered in Power BI, Excel, or Microsoft Fabric. If a system can produce an export or can be queried, we can work with it. Public datasets, including CMS and NPPES, are used where they improve a provider or market view.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Do we need to buy new software?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Usually not. Most retainers run on tools the organization already has. If a new tool is the right answer, we explain what it is and why before anything is purchased.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Who owns the data and the code?<span aria-hidden="true">+</span></button><div class="faq-a"><div>You do. The work is built in your environment and documented so your team, or someone you hire later, can run it.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How do you handle patient information?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Most financial reporting does not need patient-level detail, and we design it that way. When protected health information is required, a Business Associate Agreement is signed before any data is shared.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How is this different from hiring an analyst or a contractor?<span aria-hidden="true">+</span></button><div class="faq-a"><div>A full-time analyst is one role. A contract developer can build a report without owning whether it agrees with the books. On this retainer, one principal is accountable for the healthcare finance question and for the reporting system that answers it.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How many clients do you take?<span aria-hidden="true">+</span></button><div class="faq-a"><div>A small number of retainers at a time, so each organization works with the same principal every month.</div></div></div>
+    <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How do we start?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Book a 30-minute consultation. If there is a fit, the Data &amp; Reporting Diagnostic is the first step, and a written proposal follows. Commercial terms are in that proposal. They are not listed on this site. If you would rather write first, use the form on this page. Most work is remote, for organizations across the United States, with on-site visits available in South Florida. A short Reporting Health Check is available before the call.</div></div></div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-form-section" id="contact">
-  <div class="contact-inner">
-    <span class="eyebrow reveal">Schedule a consultation</span>
-    <h2 class="reveal">Book a time, or write first.</h2>
-    <p class="contact-intro reveal">The direct path is a 30-minute call. If you would rather write, send a note below. Pedro replies personally within one business day. Please do not include patient information.</p>
-    <div class="contact-book reveal">
-      <a href="https://calendly.com/pedroodahdah/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a consultation &nbsp;→</a>
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow reveal" style="color:#E0B08A">Begin</p>
+    <h2 class="reveal">Start with a conversation.</h2>
+    <p class="lede reveal">If it is a fit, the Data &amp; Reporting Diagnostic is the first step. Or take the Health Check if you want a short view of the gaps first.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-light" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Schedule a consultation</a>
+      <a class="btn btn-ghost" href="/checkup.html">Take the free Reporting Health Check</a>
     </div>
-    <p class="contact-or reveal">Prefer to write? Use the form.</p>
-    <div id="contactForm">
-      <div class="form-grid reveal">
-        <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" autocomplete="given-name" required></div>
-        <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" autocomplete="family-name" required></div>
-        <div class="form-group"><label for="title">Role / Title</label><input type="text" id="title" autocomplete="organization-title" placeholder="CFO, COO, Controller, Operating Partner"></div>
-        <div class="form-group"><label for="company">Organization *</label><input type="text" id="company" autocomplete="organization" required></div>
-        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" autocomplete="email" required></div>
-        <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" autocomplete="tel"></div>
-        <input type="text" id="companyWebsite" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-        <div class="form-group"><label for="industry">Organization Type</label><select id="industry"><option value="" disabled selected>Select...</option><option value="mso">MSO</option><option value="physician-specialty">Physician or specialty group</option><option value="asc">Ambulatory surgery center</option><option value="pharmacy">Multi-location pharmacy group</option><option value="other">Other healthcare organization</option></select></div>
-        <div class="form-group"><label for="size">Approximate Size</label><select id="size"><option value="" disabled selected>Select...</option><option value="under-20">Under 20 providers</option><option value="20-150">20 to 150 providers</option><option value="over-150">More than 150 providers</option><option value="multi-site">Several locations</option><option value="not-sure">Not sure yet</option></select></div>
-        <div class="form-group full"><label for="interest">Interested In</label><select id="interest"><option value="" disabled selected>Select...</option><option value="retainer">Monthly retainer</option><option value="diagnostic">Data &amp; Reporting Diagnostic</option><option value="month-end">Month-End Autopilot</option><option value="cash">Cash and forecasting</option><option value="commission">Commission and incentive calculations</option><option value="bi-modernization">BI modernization</option><option value="not-sure">Not sure yet</option></select></div>
-        <div class="form-group full"><label for="challenge">What should be clearer each month? *</label><textarea id="challenge" placeholder="For example: the close date, cash over the coming weeks, incentive calculations, payer collections, or a legacy model no one will extend." required></textarea></div>
-        <div class="form-group full"><label for="hearAbout">How did you hear about us?</label><select id="hearAbout"><option value="" disabled selected>Select one...</option><option value="linkedin">LinkedIn</option><option value="google">Google Search</option><option value="referral">Referral</option><option value="health-check">Reporting Health Check</option><option value="other">Other</option></select></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow reveal">Write to us</p>
+      <h2 class="reveal">Prefer to write first.</h2>
+      <p class="lede reveal">Send a note about the organization and the reporting, close, cash, or incentive question in front of you. Pedro replies personally within one business day. Please do not include patient information.</p>
+      <p class="fine reveal" style="margin-top:18px">Or <a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">book a 30-minute call</a>.</p>
+    </div>
+    <div>
+      <form id="contactForm" class="reveal" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="firstName">First name *</label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+          <div class="field"><label for="lastName">Last name *</label><input id="lastName" name="lastName" autocomplete="family-name" required></div>
+          <div class="field"><label for="title">Role / title</label><input id="title" name="title" autocomplete="organization-title" placeholder="CFO, COO, Controller"></div>
+          <div class="field"><label for="company">Organization *</label><input id="company" name="company" autocomplete="organization" required></div>
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
+          <div class="field"><label for="industry">Organization type</label><select id="industry"><option value="" disabled selected>Select...</option><option value="mso">MSO</option><option value="physician-specialty">Physician or specialty group</option><option value="asc">Ambulatory surgery center</option><option value="pharmacy">Multi-location pharmacy group</option><option value="other">Other healthcare organization</option></select></div>
+          <div class="field"><label for="size">Approximate size</label><select id="size"><option value="" disabled selected>Select...</option><option value="under-20">Under 20 providers</option><option value="20-150">20 to 150 providers</option><option value="over-150">More than 150 providers</option><option value="multi-site">Several locations</option><option value="not-sure">Not sure yet</option></select></div>
+          <div class="field full"><label for="interest">Interested in</label><select id="interest"><option value="" disabled selected>Select...</option><option value="retainer">Monthly retainer</option><option value="diagnostic">Data &amp; Reporting Diagnostic</option><option value="month-end">Month-End Autopilot</option><option value="cash">Cash and forecasting</option><option value="commission">Commission and incentive calculations</option><option value="bi-modernization">BI modernization</option><option value="not-sure">Not sure yet</option></select></div>
+          <div class="field full"><label for="challenge">What should be clearer each month? *</label><textarea id="challenge" required placeholder="The close date, cash over the coming weeks, incentive calculations, payer collections, or a legacy model."></textarea></div>
+          <div class="field full"><label for="hearAbout">How did you hear about us?</label><select id="hearAbout"><option value="" disabled selected>Select one...</option><option value="linkedin">LinkedIn</option><option value="google">Google Search</option><option value="referral">Referral</option><option value="health-check">Reporting Health Check</option><option value="other">Other</option></select></div>
+        </div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Send a message</button></div>
+        <p class="form-note">Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <h3>Thank you.</h3>
+        <p class="lede">Your note came through. Pedro will reply within one business day. If it is urgent, email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
       </div>
-      <div class="form-submit reveal"><button type="button" class="btn-primary" onclick="submitForm()">Send a message &nbsp;→</button></div>
-      <p class="form-note reveal">Or email <a href="mailto:contact@ddhbiconsulting.com" style="border-bottom:1px solid currentColor">contact@ddhbiconsulting.com</a> directly.</p>
-    </div>
-    <div class="form-success" id="formSuccess">
-      <h3>Thank you.</h3>
-      <p>Your note came through. Pedro will reply within one business day.<br>If it is urgent, email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <div class="footer-logo">
-          <svg class="footer-logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="32" height="32" rx="6" fill="#0A2342"/>
-            <g fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
-              <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
-              <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
-            </g>
-          </svg>
-          <span class="footer-brand-name">DDH Consulting</span>
-        </div>
-        <p class="footer-tag">An embedded BI, reporting, and automation partner for healthcare finance and operations. Miami, FL.</p>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:12px">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1A2733"/><g fill="none" stroke="#E0B08A" stroke-width="1.7" stroke-linecap="round"><ellipse cx="16" cy="9.5" rx="7" ry="2.8"/><path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/><path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/></g></svg>
+        <span class="brand-name">DDH Consulting</span>
       </div>
-      <div class="footer-links">
-        <div class="footer-col"><h5>Firm</h5><ul>
-          <li><a href="#who">Who we serve</a></li>
-          <li><a href="#retainer">The retainer</a></li>
-          <li><a href="#workstreams">Focus areas</a></li>
-          <li><a href="#process">How it works</a></li>
-          <li><a href="/checkup.html">Health Check</a></li>
-        </ul></div>
-        <div class="footer-col"><h5>Contact</h5><ul>
-          <li><a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a></li>
-          <li><a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a Call</a></li>
-          <li><a href="#contact">Write to us</a></li>
-          <li><a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul></div>
-      </div>
+      <p>An embedded BI, reporting, and automation partner for healthcare finance and operations. Miami, FL.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 DDH Consulting LLC &nbsp;·&nbsp; Miami, FL</span>
-      <span>Embedded BI &nbsp;·&nbsp; Reporting &nbsp;·&nbsp; Automation</span>
+    <div class="footer-col">
+      <h3>Firm</h3>
+      <ul>
+        <li><a href="#clients">Who we serve</a></li>
+        <li><a href="#retainer">The retainer</a></li>
+        <li><a href="#practice">Focus areas</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="/checkup.html">Health Check</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a></li>
+        <li><a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a></li>
+        <li><a href="#contact">Write to us</a></li>
+        <li><a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <span>Embedded BI · Reporting · Automation</span>
   </div>
 </footer>
 
 <script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var header = document.querySelector(".site-header");
+  var onScroll = function () { header.classList.toggle("is-condensed", window.scrollY > 8); };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var groups = new Map();
+    reveals.forEach(function (el) {
+      var parent = el.parentElement;
+      if (!groups.has(parent)) groups.set(parent, []);
+      groups.get(parent).push(el);
+    });
+    groups.forEach(function (list) {
+      list.forEach(function (el, i) { el.style.transitionDelay = Math.min(i, 6) * 70 + "ms"; });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
+
+  var boardStarted = false;
+  function startBoard() {
+    if (boardStarted) return;
+    boardStarted = true;
+    document.querySelectorAll("[data-count]").forEach(function (el) {
+      var target = Number(el.getAttribute("data-count"));
+      if (reduce) { el.textContent = String(target); return; }
+      var t0 = performance.now();
+      function frame(now) {
+        var p = Math.min(1, (now - t0) / 700);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = String(Math.round(target * eased));
+        if (p < 1) requestAnimationFrame(frame);
+      }
+      el.textContent = "0";
+      requestAnimationFrame(frame);
+    });
+  }
+  startBoard();
+
+  var menuBtn = document.querySelector(".menu-btn");
+  var panel = document.getElementById("menu-panel");
+  menuBtn.addEventListener("click", function () {
+    var open = menuBtn.getAttribute("aria-expanded") === "true";
+    menuBtn.setAttribute("aria-expanded", String(!open));
+    panel.hidden = open;
   });
-}, { threshold: 0.06, rootMargin: '0px 0px -16px 0px' });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  panel.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      menuBtn.setAttribute("aria-expanded", "false");
+      panel.hidden = true;
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { menuBtn.setAttribute("aria-expanded", "false"); panel.hidden = true; }
+  });
 
-window.addEventListener('scroll', () => {
-  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+  document.querySelectorAll(".faq-q").forEach(function (q) {
+    q.addEventListener("click", function () {
+      var item = q.parentElement;
+      var was = item.classList.contains("open");
+      document.querySelectorAll(".faq-item").forEach(function (i) {
+        i.classList.remove("open");
+        i.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+      });
+      if (!was) { item.classList.add("open"); q.setAttribute("aria-expanded", "true"); }
+    });
+  });
 
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if(href === '#') return;
+  var params = new URLSearchParams(location.search);
+  var allowed = new Set(["retainer","diagnostic","month-end","cash","commission","bi-modernization","not-sure"]);
+  if (params.get("from") === "checkup") {
+    var src = document.getElementById("hearAbout");
+    src.value = "health-check";
+  }
+  var interestParam = params.get("interest");
+  var interestEl = document.getElementById("interest");
+  if (allowed.has(interestParam)) interestEl.value = interestParam;
+  else if (params.get("from") === "checkup") interestEl.value = "diagnostic";
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    const t = document.querySelector(href);
-    if(t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var fields = {
+      firstName: document.getElementById("firstName").value.trim(),
+      lastName: document.getElementById("lastName").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      company: document.getElementById("company").value.trim(),
+      challenge: document.getElementById("challenge").value.trim()
+    };
+    if (!fields.firstName || !fields.lastName || !fields.email || !fields.company || !fields.challenge) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    if (document.getElementById("companyWebsite").value) return;
+    var btn = e.target.querySelector("button");
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+    var formData = new FormData();
+    formData.append("First Name", fields.firstName);
+    formData.append("Last Name", fields.lastName);
+    formData.append("email", fields.email);
+    formData.append("Phone", document.getElementById("phone").value.trim());
+    formData.append("Title", document.getElementById("title").value.trim());
+    formData.append("Organization", fields.company);
+    formData.append("Organization Type", document.getElementById("industry").value || "Not specified");
+    formData.append("Approximate Size", document.getElementById("size").value || "Not specified");
+    formData.append("Interested In", document.getElementById("interest").value || "Not specified");
+    formData.append("What Should Be Clearer", fields.challenge);
+    formData.append("How They Heard", document.getElementById("hearAbout").value || "Not specified");
+    formData.append("_subject", "Consultation request: " + fields.company);
+    formData.append("_template", "table");
+    formData.append("_honey", document.getElementById("companyWebsite").value);
+    formData.append("_captcha", "false");
+    fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: formData })
+      .then(function (r) { return r.json(); })
+      .then(function () {
+        if (typeof gtag === "function") gtag("event", "generate_lead", { form: "consultation" });
+        document.getElementById("contactForm").style.display = "none";
+        document.getElementById("formSuccess").style.display = "block";
+      })
+      .catch(function () {
+        var body = encodeURIComponent("Name: " + fields.firstName + " " + fields.lastName + "\r\nEmail: " + fields.email + "\r\nOrganization: " + fields.company + "\r\nWhat should be clearer: " + fields.challenge);
+        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent("Consultation request: " + fields.company) + "&body=" + body;
+        btn.textContent = "Send a message";
+        btn.disabled = false;
+      });
   });
-});
-
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.setAttribute('aria-expanded', 'false');
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-    });
-    if(!wasOpen) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); }
-  });
-});
-
-document.querySelectorAll('.form-group select').forEach(sel => {
-  sel.addEventListener('change', () => { sel.style.color = 'var(--text)'; });
-});
-
-const params = new URLSearchParams(location.search);
-const interestAllowed = new Set(['retainer','diagnostic','month-end','cash','commission','bi-modernization','not-sure']);
-if (params.get('from') === 'checkup') {
-  const src = document.getElementById('hearAbout');
-  src.value = 'health-check';
-  src.style.color = 'var(--text)';
-}
-const interestParam = params.get('interest');
-const interestEl = document.getElementById('interest');
-if (interestAllowed.has(interestParam)) {
-  interestEl.value = interestParam;
-  interestEl.style.color = 'var(--text)';
-} else if (params.get('from') === 'checkup') {
-  interestEl.value = 'diagnostic';
-  interestEl.style.color = 'var(--text)';
-}
-
-function submitForm() {
-  const fields = {
-    firstName: document.getElementById('firstName').value.trim(),
-    lastName: document.getElementById('lastName').value.trim(),
-    email: document.getElementById('email').value.trim(),
-    company: document.getElementById('company').value.trim(),
-    challenge: document.getElementById('challenge').value.trim()
-  };
-  if(!fields.firstName || !fields.lastName || !fields.email || !fields.company || !fields.challenge) {
-    alert('Please fill in all required fields.');
-    return;
-  }
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-  if(document.getElementById('companyWebsite').value) return;
-  const btn = document.querySelector('.form-submit .btn-primary');
-  btn.textContent = 'Sending...';
-  btn.style.opacity = '0.6';
-  btn.disabled = true;
-
-  const formData = new FormData();
-  formData.append('First Name', fields.firstName);
-  formData.append('Last Name', fields.lastName);
-  formData.append('email', fields.email);
-  formData.append('Phone', document.getElementById('phone').value.trim());
-  formData.append('Title', document.getElementById('title').value.trim());
-  formData.append('Organization', fields.company);
-  formData.append('Organization Type', document.getElementById('industry').value || 'Not specified');
-  formData.append('Approximate Size', document.getElementById('size').value || 'Not specified');
-  formData.append('Interested In', document.getElementById('interest').value || 'Not specified');
-  formData.append('What Should Be Clearer', fields.challenge);
-  formData.append('How They Heard', document.getElementById('hearAbout').value || 'Not specified');
-  formData.append('_subject', 'Consultation request: ' + fields.company);
-  formData.append('_template', 'table');
-  formData.append('_honey', document.getElementById('companyWebsite').value);
-  formData.append('_captcha', 'false');
-
-  fetch('https://formsubmit.co/ajax/contact@ddhbiconsulting.com', { method: 'POST', body: formData })
-    .then(r => r.json())
-    .then(() => {
-      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form: 'consultation' });
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    })
-    .catch(() => {
-      const body = encodeURIComponent('Name: ' + fields.firstName + ' ' + fields.lastName + '\r\nEmail: ' + fields.email + '\r\nOrganization: ' + fields.company + '\r\nWhat should be clearer: ' + fields.challenge);
-      window.location.href = 'mailto:contact@ddhbiconsulting.com?subject=' + encodeURIComponent('Consultation request: ' + fields.company) + '&body=' + body;
-      btn.textContent = 'Send a message →';
-      btn.style.opacity = '1';
-      btn.disabled = false;
-    });
-}
+})();
 </script>
-
 </body>
 </html>
