@@ -549,7 +549,18 @@ section[id] { scroll-margin-top: 96px; }
   border-radius: 16px;
   padding: 18px 16px 20px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
+.method-fee {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+.run-note { margin-top: var(--s4); max-width: 42rem; color: var(--text); }
 .method-node {
   width: 36px;
   height: 36px;
@@ -567,6 +578,7 @@ section[id] { scroll-margin-top: 96px; }
 }
 .method-card h3 { font-family: var(--sans); font-size: 1.15rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; }
 .method-card p { color: var(--muted); font-size: 0.95rem; }
+.method-card .method-fee { color: var(--accent); font-size: 0.85rem; }
 .method-card .eyebrow { margin-bottom: 8px; }
 
 .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -687,6 +699,17 @@ section[id] { scroll-margin-top: 96px; }
 .form-note a { border-bottom: 1px solid currentColor; }
 .form-success { display: none; padding: var(--s4) 0; }
 .form-success h3 { font-size: 2rem; margin-bottom: 8px; }
+.form-success .btn { margin-top: 18px; }
+fieldset.field { border: 0; padding: 0; margin: 0; }
+.field legend {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.yesno { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
 /* Footer */
 footer { background: var(--deep); color: rgba(255, 252, 248, 0.66); padding: var(--s6) 0 var(--s3); }

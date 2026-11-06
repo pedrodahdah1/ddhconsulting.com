@@ -90,16 +90,35 @@
           <label class="check-opt"><input type="checkbox" name="systems" value="BI tool"> BI tool</label>
         </div>
       </fieldset>
+      <fieldset class="field full">
+        <legend>Do you already have an in-house data team? *</legend>
+        <div class="yesno">
+          <label class="check-opt"><input type="radio" name="dataTeam" value="Yes" required> Yes</label>
+          <label class="check-opt"><input type="radio" name="dataTeam" value="No"> No</label>
+        </div>
+      </fieldset>
+      <fieldset class="field full">
+        <legend>Does your billing company already send a full monthly package? *</legend>
+        <div class="yesno">
+          <label class="check-opt"><input type="radio" name="billingPack" value="Yes" required> Yes</label>
+          <label class="check-opt"><input type="radio" name="billingPack" value="No"> No</label>
+        </div>
+      </fieldset>
       <div class="field full"><label for="pain">The main reporting pain *</label><textarea id="pain" required placeholder="The close is late, cash does not match what was booked, incentives are rebuilt by hand, or a question still takes a spreadsheet."></textarea></div>
       <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
     </div>
     <div class="form-actions"><button class="btn btn-primary" type="submit">Submit application</button></div>
     <p class="form-note">We review every application within 2 business days. Please do not include patient information. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
   </form>
-  <div class="form-success" id="applySuccess">
+  <div class="form-success" id="applyFit">
     <h3>Application received.</h3>
-    <p class="lede">We review every application within 2 business days. If a conversation is the right next step, Pedro will write to schedule the Reporting Review.</p>
-    <p class="fine" style="margin-top:14px">If you want a short view of the gaps while you wait, the <a href="/checkup.html">Reporting Health Check</a> takes a few minutes and stays in your browser.</p>
+    <p class="lede">We review every application within 2 business days. Book the Reporting Review. You leave with a written read of where your reporting leaks, whether or not we work together.</p>
+    <a class="btn btn-primary" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book your Reporting Review</a>
+  </div>
+  <div class="form-success" id="applyMiss">
+    <h3>This is not the right next step.</h3>
+    <p class="lede">The Reporting Review is for organizations whose reporting is still manual, without an in-house data team and without a billing company that already sends a full monthly package. The Health Check is yours to use on your own.</p>
+    <a class="btn btn-primary" href="/checkup.html">Take the Reporting Health Check</a>
   </div>
 </main>
 <footer>
@@ -123,8 +142,10 @@
     var orgType = document.getElementById("orgType").value;
     var scale = document.getElementById("scale").value.trim();
     var pain = document.getElementById("pain").value.trim();
-    if (!name || !email || !role || !orgType || !scale || !pain) {
-      alert("Please fill in name, email, role, organization type, locations or providers, and the reporting pain.");
+    var dataTeam = document.querySelector('input[name="dataTeam"]:checked');
+    var billingPack = document.querySelector('input[name="billingPack"]:checked');
+    if (!name || !email || !role || !orgType || !scale || !pain || !dataTeam || !billingPack) {
+      alert("Please fill in name, email, role, organization type, locations or providers, the two yes or no questions, and the reporting pain.");
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -132,34 +153,40 @@
       return;
     }
     if (document.getElementById("companyWebsite").value) return;
+    var poorFit = orgType === "Other healthcare organization" || dataTeam.value === "Yes" || billingPack.value === "Yes";
     var systems = Array.prototype.map.call(document.querySelectorAll('input[name="systems"]:checked'), function (el) { return el.value; });
     var btn = e.target.querySelector("button");
     btn.textContent = "Sending...";
     btn.disabled = true;
+    function showResult() {
+      document.getElementById("applyForm").style.display = "none";
+      document.getElementById(poorFit ? "applyMiss" : "applyFit").style.display = "block";
+    }
     var fd = new FormData();
     fd.append("Name", name);
     fd.append("email", email);
     fd.append("Role", role);
     fd.append("Organization Type", orgType);
     fd.append("Locations or Providers", scale);
+    fd.append("In-house data team", dataTeam.value);
+    fd.append("Billing company sends a full monthly package", billingPack.value);
+    fd.append("Fit for a Review call", poorFit ? "No" : "Yes");
     fd.append("Systems", systems.length ? systems.join(", ") : "Not specified");
     fd.append("Main Reporting Pain", pain);
-    fd.append("_subject", "Reporting Review application: " + orgType);
+    fd.append("_subject", (poorFit ? "Outside current fit: " : "Reporting Review application: ") + orgType);
     fd.append("_template", "table");
     fd.append("_captcha", "false");
     fd.append("_honey", document.getElementById("companyWebsite").value);
     fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
       .then(function () {
-        if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review" });
-        document.getElementById("applyForm").style.display = "none";
-        document.getElementById("applySuccess").style.display = "block";
+        if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review", fit: poorFit ? "no" : "yes" });
+        showResult();
       })
       .catch(function () {
-        var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
-        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent("Reporting Review application") + "&body=" + body;
-        btn.textContent = "Submit application";
-        btn.disabled = false;
+        showResult();
+        var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nIn-house data team: " + dataTeam.value + "\nBilling package: " + billingPack.value + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
+        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent(poorFit ? "Outside current fit" : "Reporting Review application") + "&body=" + body;
       });
   });
 })();
