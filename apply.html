@@ -67,16 +67,18 @@
     <div class="form-grid">
       <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="email">Work email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field"><label for="role">Role *</label><input id="role" name="role" autocomplete="organization-title" placeholder="CFO, controller, administrator" required></div>
+      <div class="field"><label for="role">Role *</label><input id="role" name="role" autocomplete="organization-title" placeholder="CFO, COO, controller, BI lead" required></div>
       <div class="field">
         <label for="orgType">Organization type *</label>
         <select id="orgType" required>
           <option value="" disabled selected>Select...</option>
-          <option value="Pharmacy group">Pharmacy group</option>
+          <option value="Medical practice">Medical practice</option>
+          <option value="Medical group">Medical group</option>
           <option value="Physician practice">Physician practice</option>
-          <option value="ASC">Ambulatory surgery center</option>
-          <option value="Imaging">Imaging</option>
           <option value="Specialty group">Specialty group</option>
+          <option value="ASC">Ambulatory surgery center</option>
+          <option value="Pharmacy group">Pharmacy group</option>
+          <option value="Imaging">Imaging</option>
           <option value="MSO or PE group">MSO or PE group</option>
           <option value="Other healthcare organization">Other healthcare organization</option>
         </select>
@@ -92,10 +94,10 @@
         </div>
       </fieldset>
       <fieldset class="field full">
-        <legend>Do you have an in-house data team? *</legend>
+        <legend>Do you have a BI team? *</legend>
         <div class="yesno">
-          <label class="check-opt"><input type="radio" name="dataTeam" value="Yes" required> Yes</label>
-          <label class="check-opt"><input type="radio" name="dataTeam" value="No"> No</label>
+          <label class="check-opt"><input type="radio" name="biTeam" value="Yes" required> Yes</label>
+          <label class="check-opt"><input type="radio" name="biTeam" value="No"> No</label>
         </div>
       </fieldset>
       <fieldset class="field full">
@@ -118,7 +120,7 @@
   </div>
   <div class="form-success" id="applyMiss">
     <h3>Thanks. The Reporting Review may not be the best fit right now.</h3>
-    <p class="lede">The Reporting Review is for organizations whose reporting is still manual, without an in-house data team and without a billing company that already sends a full monthly package. The Health Check is yours to use on your own.</p>
+    <p class="lede">The Reporting Review is for healthcare groups that want the work kept running. Having a BI team does not rule you out. If a billing company already sends a full monthly package, or the organization sits outside the groups we serve, the Health Check is yours to use on your own.</p>
     <a class="btn btn-primary" href="/checkup.html">Take the Reporting Health Check</a>
   </div>
 </main>
@@ -143,9 +145,9 @@
     var orgType = document.getElementById("orgType").value;
     var scale = document.getElementById("scale").value.trim();
     var pain = document.getElementById("pain").value.trim();
-    var dataTeam = document.querySelector('input[name="dataTeam"]:checked');
+    var biTeam = document.querySelector('input[name="biTeam"]:checked');
     var billingPack = document.querySelector('input[name="billingPack"]:checked');
-    if (!name || !email || !role || !orgType || !scale || !pain || !dataTeam || !billingPack) {
+    if (!name || !email || !role || !orgType || !scale || !pain || !biTeam || !billingPack) {
       alert("Please fill in name, email, role, organization type, locations or providers, the two yes or no questions, and what takes your team the most time.");
       return;
     }
@@ -154,7 +156,7 @@
       return;
     }
     if (document.getElementById("companyWebsite").value) return;
-    var poorFit = orgType === "Other healthcare organization" || dataTeam.value === "Yes" || billingPack.value === "Yes";
+    var poorFit = orgType === "Other healthcare organization" || billingPack.value === "Yes";
     var systems = Array.prototype.map.call(document.querySelectorAll('input[name="systems"]:checked'), function (el) { return el.value; });
     var btn = e.target.querySelector("button");
     btn.textContent = "Sending...";
@@ -169,7 +171,7 @@
     fd.append("Role", role);
     fd.append("Organization Type", orgType);
     fd.append("Locations or Providers", scale);
-    fd.append("In-house data team", dataTeam.value);
+    fd.append("BI team", biTeam.value);
     fd.append("Billing company sends a full monthly package", billingPack.value);
     fd.append("Fit for a Review call", poorFit ? "No" : "Yes");
     fd.append("Systems", systems.length ? systems.join(", ") : "Not specified");
@@ -186,7 +188,7 @@
       })
       .catch(function () {
         showResult();
-        var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nIn-house data team: " + dataTeam.value + "\nBilling package: " + billingPack.value + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
+        var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nBI team: " + biTeam.value + "\nBilling package: " + billingPack.value + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
         window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent(poorFit ? "Outside current fit" : "Reporting Review application") + "&body=" + body;
       });
   });
