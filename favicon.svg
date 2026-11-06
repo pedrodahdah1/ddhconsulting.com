@@ -1,8 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0A2342"/>
-  <g fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
-    <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
-    <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>
+    :root { color-scheme: light dark; }
+    .tile { fill: #F4F1EA; }
+    .mark { fill: #121A24; stroke: #121A24; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #121A24; }
+      .mark { fill: #F4F1EA; stroke: #F4F1EA; }
+    }
+  </style>
+  <rect class="tile" width="16" height="16" rx="3.5"/>
+  <g class="mark" fill="none" stroke-width="2.15" stroke-linecap="round">
+    <path d="M4.1 11.4 L8 3.9"/>
+    <path d="M8 3.9 L11.9 9.9"/>
+  </g>
+  <g class="mark">
+    <circle cx="4.1" cy="11.4" r="2.35"/>
+    <circle cx="8" cy="3.9" r="2.35"/>
+    <circle cx="11.9" cy="9.9" r="2.35"/>
   </g>
 </svg>
