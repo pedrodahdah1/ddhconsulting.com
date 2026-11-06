@@ -6,7 +6,7 @@
 <title>Reporting Health Check | DDH Consulting</title>
 <meta name="description" content="Ten yes-or-no questions on whether healthcare reporting still depends on someone digging. See the gaps, then schedule a consultation. About three minutes.">
 <meta property="og:title" content="How much of reporting still depends on you? | DDH Consulting">
-<meta property="og:description" content="A short Reporting Health Check for MSOs, physician groups, ASCs, and pharmacy groups. The result recommends a consultation and, if it is a fit, a Data &amp; Reporting Diagnostic.">
+<meta property="og:description" content="A short Reporting Health Check for pharmacy groups, practices, ASCs, imaging and specialty groups, and MSOs. The result points to a Reporting Review application.">
 <meta property="og:url" content="https://ddhbiconsulting.com/checkup.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="DDH Consulting">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How much of reporting still depends on you? | DDH Consulting">
-<meta name="twitter:description" content="Ten questions for healthcare finance and operations leaders. Results point to a consultation and the Data &amp; Reporting Diagnostic.">
+<meta name="twitter:description" content="Ten questions for healthcare finance and operations leaders. Results point to a Reporting Review application.">
 <meta name="twitter:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/checkup.html">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
@@ -52,14 +52,14 @@
       <span class="brand-sub">Consulting</span>
     </a>
     <a class="fine" href="/" style="margin-left:auto">Back to site</a>
-    <a class="btn btn-primary btn-sm header-cta" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a>
+    <a class="btn btn-primary btn-sm header-cta" href="/apply.html">Apply</a>
   </div>
 </header>
 <main id="main" class="check-main">
   <section id="quiz">
     <p class="eyebrow">Reporting Health Check</p>
     <h1>How much of reporting still depends on you?</h1>
-    <p class="lede">Ten yes-or-no questions for finance and operations leaders at MSOs, physician and specialty groups, ASCs, and multi-location pharmacy groups. Answer for how reporting actually runs, including the close. One question at a time. No email is required to see the result.</p>
+    <p class="lede">Ten yes-or-no questions for finance and operations leaders at pharmacy groups, practices, ASCs, imaging and specialty groups, and MSOs. Answer for how reporting actually runs, including the close. One question at a time. No email is required to see the result. The useful next step is a Reporting Review.</p>
     <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="bar"></div></div>
     <p class="progress-label" id="progressLabel">Question 1 of 10</p>
     <div class="q-card" id="qCard" aria-live="polite"></div>
@@ -83,9 +83,9 @@
     <h2 style="font-size:1.6rem;margin:22px 0 12px">Where to start</h2>
     <div id="gapList"></div>
     <div class="next-panel">
-      <h2>Recommended next step: a consultation.</h2>
+      <h2>Recommended next step: a Reporting Review.</h2>
       <p id="nextCopy"></p>
-      <a class="btn btn-light" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Schedule a consultation</a>
+      <a class="btn btn-light" href="/apply.html">Apply for a Reporting Review</a>
       <p class="fine" style="margin-top:14px">Prefer to write first? <a href="/?from=checkup#contact">Use the contact form</a>.</p>
     </div>
     <div class="send-card" id="capture">
@@ -176,9 +176,9 @@ document.getElementById("backBtn").addEventListener("click", function () {
 });
 
 function tier(score) {
-  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A consultation is still the right next conversation if leadership wants a written view of what to tighten.", next: "Book a call to walk through what is already solid and what is still fragile. If it is a fit, the Data & Reporting Diagnostic turns that into a written scope." };
-  if (score >= 5) return { cls: "warn", label: "Some gaps", text: "The basics are there, and a few gaps are likely taking time every month. These are the gaps a Diagnostic is meant to put in order.", next: "Book a call. If the conversation confirms a fit, the Data & Reporting Diagnostic is the first step: a written view of these gaps and a recommended scope for the retainer." };
-  return { cls: "risk", label: "Reporting at risk", text: "Several core pieces are still manual, or are not in place. That is common in growing healthcare organizations. A Diagnostic is how we sort what to address first.", next: "Book a call. If it is a fit, the Data & Reporting Diagnostic is the first step, before any build: a written view of the gaps and a recommended scope for the retainer." };
+  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A Reporting Review is still the right next conversation if leadership wants a written view of what to tighten.", next: "Apply for a Reporting Review. You leave with a written read of where reporting still leaks, whether or not we work together." };
+  if (score >= 5) return { cls: "warn", label: "Some gaps", text: "The basics are there, and a few gaps are likely taking time every month. A Reporting Review puts those gaps in a written read.", next: "Apply for a Reporting Review. You leave with a written read of these gaps and which packages to connect first, whether or not we work together." };
+  return { cls: "risk", label: "Reporting at risk", text: "Several core pieces are still manual, or are not in place. That is common where the business has outgrown the workbook.", next: "Apply for a Reporting Review. You leave with a written read of the gaps before any build, whether or not we work together. If the ongoing run is not a fit, this Health Check is yours to keep." };
 }
 
 let result = null;
@@ -196,7 +196,7 @@ function showResults() {
   const list = document.getElementById("gapList");
   list.innerHTML = "";
   if (!gaps.length) {
-    list.innerHTML = '<p class="fine">Nothing on this list is open. If reporting still feels slow or fragile, the issue is often definitions or data quality, which a Diagnostic is meant to pin down.</p>';
+    list.innerHTML = '<p class="fine">Nothing on this list is open. If reporting still feels slow or fragile, the issue is often definitions or data quality, which a Reporting Review is meant to pin down.</p>';
   } else {
     gaps.forEach(function (g) {
       const d = document.createElement("article");
@@ -255,8 +255,8 @@ document.getElementById("capSend").addEventListener("click", function () {
     "Hi " + firstName + ",\n\n" +
     "Thanks for completing the Reporting Health Check. Your score was " + result.score + "/10 (" + result.tier + ").\n\n" +
     "Gaps flagged:\n" + gapText + "\n\n" +
-    "The useful next step is a consultation. If it is a fit, a Data & Reporting Diagnostic is how these gaps become a written scope for a retainer. " +
-    "Reply with a couple of times that work, or book a time at https://calendly.com/pedroodahdah/30min.\n\n" +
+    "The useful next step is a Reporting Review. You leave with a written read of where reporting leaks, whether or not we work together. " +
+    "Apply at https://ddhbiconsulting.com/apply.html. We review every application within 2 business days.\n\n" +
     "Pedro Dahdah\nDDH Consulting\nhttps://ddhbiconsulting.com");
   fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
     .then(function (r) { return r.json(); })
