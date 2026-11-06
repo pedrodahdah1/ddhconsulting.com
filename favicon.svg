@@ -1,13 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>
     :root { color-scheme: light dark; }
     .tile { fill: #F4F1EA; }
-    .mark { fill: #121A24; }
+    .mark { fill: #121A24; stroke: #121A24; }
     @media (prefers-color-scheme: dark) {
       .tile { fill: #121A24; }
-      .mark { fill: #F4F1EA; }
+      .mark { fill: #F4F1EA; stroke: #F4F1EA; }
     }
   </style>
-  <rect class="tile" width="32" height="32" rx="8"/>
-  <path class="mark" fill-rule="evenodd" d="M7.5 6.5h6.6c5.7 0 9.6 4 9.6 9.5s-3.9 9.5-9.6 9.5H7.5V6.5zm5.4 4.2h1.4c3 0 4.8 2 4.8 5.3s-1.8 5.3-4.8 5.3h-1.4V10.7z"/>
+  <rect class="tile" width="16" height="16" rx="3.5"/>
+  <g class="mark" fill="none" stroke-width="2.15" stroke-linecap="round">
+    <path d="M4.1 11.4 L8 3.9"/>
+    <path d="M8 3.9 L11.9 9.9"/>
+  </g>
+  <g class="mark">
+    <circle cx="4.1" cy="11.4" r="2.35"/>
+    <circle cx="8" cy="3.9" r="2.35"/>
+    <circle cx="11.9" cy="9.9" r="2.35"/>
+  </g>
 </svg>
