@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Favicon options | DDH Consulting</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="/">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  body { background: var(--paper); }
+  .page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 48px 0 80px; }
+  h1 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.04em; margin: 8px 0 12px; }
+  .intro { max-width: 40rem; color: var(--muted); margin-bottom: 36px; }
+  .options { display: flex; flex-direction: column; gap: 28px; }
+  .option {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px 22px 26px;
+  }
+  .option header { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 16px; }
+  .option h2 { font-size: 1.35rem; letter-spacing: -0.03em; }
+  .option p { color: var(--muted); max-width: 40rem; }
+  .ship { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .mocks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .chrome { border-radius: 14px; padding: 16px 16px 0; overflow: auto; }
+  .chrome.light { background: #DEE1E6; }
+  .chrome.dark { background: #202124; }
+  .chrome-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+  .chrome.light .chrome-label { color: #5F6368; }
+  .chrome.dark .chrome-label { color: #9AA0A6; }
+  .tabs { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
+  .tab.large { flex-basis: 100%; }
+  .tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px 10px 0 0;
+    padding: 8px 12px 9px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .light .tab { background: #fff; color: #3C4043; }
+  .dark .tab { background: #3C4043; color: #E8EAED; }
+  .tab img { display: block; }
+  .tab span { font-size: 13px; }
+  @media (max-width: 800px) {
+    .mocks { grid-template-columns: 1fr; }
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121A24; color: #F4F1EA; }
+    h1, h2 { color: #F4F1EA; }
+    .intro, .option p { color: #C5CBD1; }
+    .option { background: #1C2836; border-color: #2C3A48; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <p class="eyebrow">Brand</p>
+  <h1>Favicon options</h1>
+  <p class="intro">Three monograms, drawn as geometry, in ink #121A24 on paper #F4F1EA. The D is the one in the browser tab. It is the only mark that stays a single readable letter at 16 pixels. The other two stay here.</p>
+  <div class="options">
+    <article class="option">
+      <header>
+        <h2>D monogram</h2>
+        <span class="ship">Shipped</span>
+      </header>
+      <p>A geometric D. One counter, one stem, no second color inside the letter.</p>
+      <div class="mocks" data-light="d-monogram.svg" data-dark="d-monogram-dark.svg"></div>
+    </article>
+    <article class="option">
+      <header>
+        <h2>Connected nodes</h2>
+      </header>
+      <p>Three nodes and two links. The Cross-Check, drawn as a small constellation.</p>
+      <div class="mocks" data-light="nodes.svg" data-dark="nodes-dark.svg"></div>
+    </article>
+    <article class="option">
+      <header>
+        <h2>Bar-chart D</h2>
+      </header>
+      <p>A full stem, then three bars that rise. The group is the letter and the chart at once.</p>
+      <div class="mocks" data-light="bars.svg" data-dark="bars-dark.svg"></div>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var sizes = [16, 32, 64, 180];
+  document.querySelectorAll(".mocks").forEach(function (box) {
+    ["light", "dark"].forEach(function (theme) {
+      var file = box.getAttribute(theme === "light" ? "data-light" : "data-dark");
+      var chrome = document.createElement("div");
+      chrome.className = "chrome " + theme;
+      var label = document.createElement("div");
+      label.className = "chrome-label";
+      label.textContent = theme === "light" ? "Light tab" : "Dark tab";
+      var tabs = document.createElement("div");
+      tabs.className = "tabs";
+      sizes.forEach(function (size) {
+        var tab = document.createElement("div");
+        tab.className = size === 180 ? "tab large" : "tab";
+        var img = document.createElement("img");
+        img.src = file;
+        img.width = size;
+        img.height = size;
+        img.alt = "";
+        var name = document.createElement("span");
+        name.textContent = size + "px";
+        tab.appendChild(img);
+        tab.appendChild(name);
+        tabs.appendChild(tab);
+      });
+      chrome.appendChild(label);
+      chrome.appendChild(tabs);
+      box.appendChild(chrome);
+    });
+  });
+})();
+</script>
+</body>
+</html>
