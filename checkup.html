@@ -96,7 +96,7 @@
     <div class="send-card" id="capture">
       <div id="capForm">
         <h2>Send these results ahead of the call</h2>
-        <p class="fine">Optional. Pedro replies personally within one business day. Sending the score does not start an engagement.</p>
+        <p class="fine">Optional. We reply within one business day. Sending the score does not start an engagement.</p>
         <div class="form-grid">
           <div class="field"><label for="capName">Name *</label><input id="capName" autocomplete="name"></div>
           <div class="field"><label for="capOrg">Organization *</label><input id="capOrg" autocomplete="organization"></div>
@@ -108,7 +108,7 @@
       </div>
       <div id="capDone" style="display:none">
         <h2>Sent.</h2>
-        <p class="fine">Pedro will reply within one business day. A copy of your results is on its way to your inbox.</p>
+        <p class="fine">We will reply within one business day. A copy of your results is on its way to your inbox.</p>
       </div>
     </div>
     <p style="margin-top:16px"><button class="linkish" type="button" id="retake">Retake the health check</button></p>
@@ -262,7 +262,7 @@ document.getElementById("capSend").addEventListener("click", function () {
     "Gaps flagged:\n" + gapText + "\n\n" +
     "The useful next step is a Reporting Review. You leave with a written read of where reporting leaks, whether or not we work together. " +
     "Apply at https://ddhbiconsulting.com/apply.html. We review every application within 2 business days.\n\n" +
-    "Pedro Dahdah\nDDH Consulting\nhttps://ddhbiconsulting.com");
+    "DDH Consulting\nhttps://ddhbiconsulting.com");
   fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
     .then(function (r) { return r.json(); })
     .then(function () {
