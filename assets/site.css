@@ -623,6 +623,7 @@ section[id] { scroll-margin-top: 96px; }
 .method-card .method-stop { color: var(--ink); font-weight: 500; }
 .method-card .method-fee { color: var(--accent); font-size: 0.85rem; }
 .method-card .eyebrow { margin-bottom: 8px; color: var(--accent); font-size: 0.75rem; }
+.method-card .btn { margin-top: 16px; align-self: flex-start; max-width: 100%; white-space: normal; text-align: center; line-height: 1.25; padding-top: 10px; padding-bottom: 10px; }
 
 .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .fit-col {
