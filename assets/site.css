@@ -594,6 +594,15 @@ section[id] { scroll-margin-top: 96px; }
 }
 .method-card .method-stop { margin-top: 0; margin-bottom: 8px; }
 .run-note { margin-top: var(--s4); max-width: 42rem; color: var(--text); }
+.scope-note { margin-top: var(--s4); max-width: 42rem; color: var(--text); }
+.run-support {
+  margin-top: 10px;
+  max-width: 40rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.run-support strong { color: var(--ink); font-weight: 500; }
 .method-node {
   width: 36px;
   height: 36px;
@@ -609,11 +618,12 @@ section[id] { scroll-margin-top: 96px; }
   position: relative;
   z-index: 2;
 }
-.method-card h3 { font-family: var(--sans); font-size: 1.15rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; }
+.method-card h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 8px; color: var(--ink); }
 .method-card p { color: var(--muted); font-size: 0.95rem; }
 .method-card .method-stop { color: var(--ink); font-weight: 500; }
 .method-card .method-fee { color: var(--accent); font-size: 0.85rem; }
-.method-card .eyebrow { margin-bottom: 8px; }
+.method-card .eyebrow { margin-bottom: 8px; color: var(--accent); font-size: 0.75rem; }
+.method-card .btn { margin-top: 16px; align-self: flex-start; max-width: 100%; white-space: normal; text-align: center; line-height: 1.25; padding-top: 10px; padding-bottom: 10px; }
 
 .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .fit-col {
