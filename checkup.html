@@ -27,6 +27,7 @@
 <link rel="preload" href="/fonts/geist-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geist-sans-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/intake.js"></script>
 <script>document.documentElement.classList.add("js");</script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -104,11 +105,15 @@
           <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="capHoney">Website</label><input id="capHoney" tabindex="-1" autocomplete="off"></div>
         </div>
         <div class="form-actions"><button class="btn btn-primary" id="capSend" type="button">Send my results</button></div>
-        <p class="form-note">Answers go only to DDH Consulting at contact@ddhbiconsulting.com. They are not shared or sold. Please do not include patient information.</p>
+        <p class="form-note">Please do not include patient information. This form does not detect or remove it. Saved results go to a Google Sheet and to contact@ddhbiconsulting.com. This page uses Google Analytics. Results are not sold.</p>
       </div>
       <div id="capDone" style="display:none">
-        <h2>Sent.</h2>
-        <p class="fine">We will reply within one business day. A copy of your results is on its way to your inbox.</p>
+        <h2>Saved.</h2>
+        <p class="fine" id="capDoneCopy">Saved. We will reply within one business day.</p>
+      </div>
+      <div id="capError" style="display:none">
+        <h2>We couldn't save these results.</h2>
+        <p class="fine">Nothing was stored. Email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a> and we will reply.</p>
       </div>
     </div>
     <p style="margin-top:16px"><button class="linkish" type="button" id="retake">Retake the health check</button></p>
@@ -116,7 +121,7 @@
 </main>
 <footer>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <span>© 2026 DDH Consulting LLC · Miami, FL · This page uses Google Analytics.</span>
     <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
   </div>
 </footer>
@@ -244,38 +249,38 @@ document.getElementById("capSend").addEventListener("click", function () {
   btn.disabled = true;
   const answerLines = QUESTIONS.map(function (q, i) { return (i + 1) + ". " + (answers[i] === "yes" ? "Yes" : "No") + ": " + q.q; }).join("\n");
   const gapText = result.gaps.length ? result.gaps.map(function (g) { return "- " + g; }).join("\n") : "- None flagged";
-  const firstName = name.split(" ")[0];
-  const fd = new FormData();
-  fd.append("Name", name);
-  fd.append("Organization", org);
-  fd.append("email", email);
-  fd.append("Score", result.score + "/10 (" + result.tier + ")");
-  fd.append("Gaps", gapText);
-  fd.append("Answers", answerLines);
-  fd.append("_subject", "Health Check: " + org + " scored " + result.score + "/10");
-  fd.append("_template", "table");
-  fd.append("_captcha", "false");
-  fd.append("_honey", "");
-  fd.append("_autoresponse",
-    "Hi " + firstName + ",\n\n" +
-    "Thanks for completing the Reporting Health Check. Your score was " + result.score + "/10 (" + result.tier + ").\n\n" +
-    "Gaps flagged:\n" + gapText + "\n\n" +
-    "The useful next step is a Reporting Review. You leave with a written read of where reporting leaks, whether or not we work together. " +
-    "Apply at https://ddhbiconsulting.com/apply.html. We review every application within 2 business days.\n\n" +
-    "DDH Consulting\nhttps://ddhbiconsulting.com");
-  fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
-    .then(function (r) { return r.json(); })
-    .then(function () {
-      if (typeof gtag === "function") gtag("event", "generate_lead", { form: "health_check", score: result.score });
+  const params = new URLSearchParams(location.search);
+  Intake.post({
+    kind: "checkup",
+    submissionId: Intake.id(),
+    name: name,
+    email: email,
+    organization: org,
+    score: result.score + "/10 (" + result.tier + ")",
+    gaps: gapText,
+    answers: answerLines,
+    utmSource: params.get("utm_source") || "",
+    utmMedium: params.get("utm_medium") || "",
+    utmCampaign: params.get("utm_campaign") || "",
+    companyWebsite: ""
+  }).then(function (data) {
+    btn.textContent = "Send my results";
+    btn.disabled = false;
+    if (!data || data.persisted !== true) {
       document.getElementById("capForm").style.display = "none";
-      document.getElementById("capDone").style.display = "block";
-    })
-    .catch(function () {
-      const body = encodeURIComponent("Name: " + name + "\nOrganization: " + org + "\nScore: " + result.score + "/10\n\nGaps:\n" + gapText);
-      window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent("Health Check: " + org) + "&body=" + body;
-      btn.textContent = "Send my results";
-      btn.disabled = false;
-    });
+      document.getElementById("capDone").style.display = "none";
+      document.getElementById("capError").style.display = "block";
+      return;
+    }
+    if (typeof gtag === "function") gtag("event", "generate_lead", { form: "health_check", score: result.score });
+    var done = "Saved. We will reply within one business day.";
+    if (data.notified === false) done = "Saved. The email to DDH Consulting did not send. Email contact@ddhbiconsulting.com if you do not hear back.";
+    else if (data.notified !== true) done = "Saved. We could not confirm the notification email. Email contact@ddhbiconsulting.com if you do not hear back.";
+    document.getElementById("capDoneCopy").textContent = done;
+    document.getElementById("capForm").style.display = "none";
+    document.getElementById("capError").style.display = "none";
+    document.getElementById("capDone").style.display = "block";
+  });
 });
 
 const header = document.querySelector(".site-header");

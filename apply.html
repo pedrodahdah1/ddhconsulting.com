@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apply for a free Reporting Review | DDH Consulting</title>
-<meta name="description" content="One minute. We reply within 2 business days. You leave with a written read of where reporting is costing you time, whether or not we work together.">
+<meta name="description" content="One minute. If it's a fit, you can book your free Reporting Review now. You leave with a written read of where reporting is costing you time, whether or not we work together.">
 <meta property="og:title" content="Apply for a free Reporting Review | DDH Consulting">
-<meta property="og:description" content="One minute. We reply within 2 business days. You leave with a written read of where reporting is costing you time, whether or not we work together.">
+<meta property="og:description" content="One minute. If it's a fit, you can book your free Reporting Review now. You leave with a written read of where reporting is costing you time, whether or not we work together.">
 <meta property="og:url" content="https://ddhbiconsulting.com/apply.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ddhbiconsulting.com/social-card.png">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="DDH Consulting">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Apply for a free Reporting Review | DDH Consulting">
-<meta name="twitter:description" content="About a minute. We review every application within 2 business days.">
+<meta name="twitter:description" content="One minute. If it's a fit, you can book your free Reporting Review now.">
 <meta name="twitter:image" content="https://ddhbiconsulting.com/social-card.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/apply.html">
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48">
@@ -62,7 +62,7 @@
 <main id="main" class="check-main">
   <p class="eyebrow">Reporting Review</p>
   <h1>Apply for a free Reporting Review.</h1>
-  <p class="lede" style="margin-bottom:32px">One minute. We reply within 2 business days. You leave with a written read of where reporting is costing you time, whether or not we work together.</p>
+  <p class="lede" style="margin-bottom:32px">One minute. If it's a fit, you can book your free Reporting Review now. You leave with a written read of where reporting is costing you time, whether or not we work together.</p>
   <form id="applyForm" novalidate>
     <div class="form-grid">
       <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div>
@@ -108,14 +108,17 @@
         </div>
       </fieldset>
       <div class="field full"><label for="pain">What takes your team the most time in reporting today? *</label><textarea id="pain" required placeholder="The close is late, cash does not match what was booked, incentives are rebuilt by hand, or a question still takes a spreadsheet."></textarea></div>
+      <input type="hidden" id="utmSource" name="utm_source">
+      <input type="hidden" id="utmMedium" name="utm_medium">
+      <input type="hidden" id="utmCampaign" name="utm_campaign">
       <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
     </div>
     <div class="form-actions"><button class="btn btn-primary" type="submit">Submit application</button></div>
-    <p class="form-note">We review every application within 2 business days. Please do not include patient information. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
+    <p class="form-note">Please do not include patient information. This form does not detect or remove it. A saved application is stored in a Google Sheet and emailed to DDH Consulting. This page uses Google Analytics. Booking opens Calendly. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
   </form>
   <div class="form-success" id="applyFit">
     <h3>Application received.</h3>
-    <p class="lede">We review every application within 2 business days. Book the Reporting Review. You leave with a written read of where your reporting leaks, whether or not we work together.</p>
+    <p class="lede">You can book your free Reporting Review now. You leave with a written read of where your reporting leaks, whether or not we work together.</p>
     <a class="btn btn-primary" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book your free Reporting Review</a>
   </div>
   <div class="form-success" id="applyMiss">
@@ -123,19 +126,30 @@
     <p class="lede">The Reporting Review is for healthcare groups that want the work kept running. Having a BI team does not rule you out. If a billing company already sends a full monthly package, or the organization sits outside the groups we serve, the Health Check is yours to use on your own.</p>
     <a class="btn btn-primary" href="/checkup.html">Take the Reporting Health Check</a>
   </div>
+  <p class="lede" id="applyMailNote" style="display:none"></p>
+  <div class="form-success" id="applyError" role="alert">
+    <h3>We couldn't send your application.</h3>
+    <p class="lede">It was not saved. Nothing was booked. Email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a> with the same details and we will reply.</p>
+  </div>
 </main>
 <footer>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <span>© 2026 DDH Consulting LLC · Miami, FL · This page uses Google Analytics.</span>
     <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
   </div>
 </footer>
+<script src="/assets/intake.js"></script>
 <script>
 (function () {
   var header = document.querySelector(".site-header");
   window.addEventListener("scroll", function () {
     header.classList.toggle("is-condensed", window.scrollY > 8);
   }, { passive: true });
+
+  var params = new URLSearchParams(location.search);
+  document.getElementById("utmSource").value = params.get("utm_source") || "";
+  document.getElementById("utmMedium").value = params.get("utm_medium") || "";
+  document.getElementById("utmCampaign").value = params.get("utm_campaign") || "";
 
   document.getElementById("applyForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -161,36 +175,52 @@
     var btn = e.target.querySelector("button");
     btn.textContent = "Sending...";
     btn.disabled = true;
-    function showResult() {
+    document.getElementById("applyError").style.display = "none";
+    var payload = {
+      kind: "apply",
+      submissionId: Intake.id(),
+      name: name,
+      email: email,
+      role: role,
+      orgType: orgType,
+      scale: scale,
+      biTeam: biTeam.value,
+      billingPack: billingPack.value,
+      systems: systems.length ? systems.join(", ") : "Not specified",
+      pain: pain,
+      utmSource: document.getElementById("utmSource").value,
+      utmMedium: document.getElementById("utmMedium").value,
+      utmCampaign: document.getElementById("utmCampaign").value,
+      companyWebsite: ""
+    };
+    function showSaved(data) {
       document.getElementById("applyForm").style.display = "none";
+      document.getElementById("applyError").style.display = "none";
+      var note = document.getElementById("applyMailNote");
+      if (data.notified === true) {
+        note.style.display = "none";
+      } else if (data.notified === false) {
+        note.textContent = "Saved. The email to DDH Consulting did not send. If you do not hear back, email contact@ddhbiconsulting.com.";
+        note.style.display = "block";
+      } else {
+        note.textContent = "Saved. We could not confirm the notification email. If you do not hear back, email contact@ddhbiconsulting.com.";
+        note.style.display = "block";
+      }
       document.getElementById(poorFit ? "applyMiss" : "applyFit").style.display = "block";
+      if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review", fit: poorFit ? "no" : "yes" });
     }
-    var fd = new FormData();
-    fd.append("Name", name);
-    fd.append("email", email);
-    fd.append("Role", role);
-    fd.append("Organization Type", orgType);
-    fd.append("Locations or Providers", scale);
-    fd.append("BI team", biTeam.value);
-    fd.append("Billing company sends a full monthly package", billingPack.value);
-    fd.append("Fit for a Review call", poorFit ? "No" : "Yes");
-    fd.append("Systems", systems.length ? systems.join(", ") : "Not specified");
-    fd.append("Main Reporting Pain", pain);
-    fd.append("_subject", (poorFit ? "Outside current fit: " : "Reporting Review application: ") + orgType);
-    fd.append("_template", "table");
-    fd.append("_captcha", "false");
-    fd.append("_honey", document.getElementById("companyWebsite").value);
-    fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
-      .then(function (r) { return r.json(); })
-      .then(function () {
-        if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review", fit: poorFit ? "no" : "yes" });
-        showResult();
-      })
-      .catch(function () {
-        showResult();
-        var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nBI team: " + biTeam.value + "\nBilling package: " + billingPack.value + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
-        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent(poorFit ? "Outside current fit" : "Reporting Review application") + "&body=" + body;
-      });
+    function showError() {
+      btn.textContent = "Submit application";
+      btn.disabled = false;
+      document.getElementById("applyFit").style.display = "none";
+      document.getElementById("applyMiss").style.display = "none";
+      document.getElementById("applyForm").style.display = "none";
+      document.getElementById("applyError").style.display = "block";
+    }
+    Intake.post(payload).then(function (data) {
+      if (data && data.persisted === true) showSaved(data);
+      else showError();
+    });
   });
 })();
 </script>
