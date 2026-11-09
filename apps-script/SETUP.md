@@ -1,41 +1,40 @@
-# Application sheet setup
+# Intake web app setup
 
-The apply form emails `contact@ddhbiconsulting.com` and adds a row to a Google Sheet. Until you paste the web app URL into the site, the form tries FormSubmit for email only. A browser test on 6 Nov 2026 could not get a JSON reply from FormSubmit (Cloudflare returned a challenge page, and Chrome reported `Failed to fetch`), so the reliable path is this script. After you deploy it, the script sends the email and appends the row. The page shows the booking link only when that call returns success.
+The live site does not call this script until `SHEET_WEB_APP_URL` in `assets/intake.js` is changed from `""` to a new deployment URL. Leave it empty. The previously deployed `/exec` URL runs the older script and must not be pasted back in.
 
-## 1. Create the Sheet
+Do not send a test application, and do not point the site at the script, until Pedro explicitly authorizes that test.
 
-1. Go to [Google Sheets](https://sheets.google.com) and create a blank spreadsheet.
-2. Name it something you will recognize, such as `DDH applications`.
+## What the consent screen is asking
 
-## 2. Add the script
+`Code.gs` uses `SpreadsheetApp` and `MailApp`. It does not read Gmail.
 
-1. In the sheet, open **Extensions → Apps Script**.
-2. Replace the contents of `Code.gs` with the file `apps-script/Code.gs` from this repo.
-3. Save.
+- `https://www.googleapis.com/auth/script.send_mail` lets the script send mail as the account that authorized it. MailApp cannot read the inbox. Official reference: https://developers.google.com/apps-script/reference/mail/mail-app
+- `https://www.googleapis.com/auth/spreadsheets` is the broad scope whose consent sentence is “See, edit, create, and delete all your Google Sheets spreadsheets.” Official list: https://developers.google.com/workspace/sheets/api/scopes
+- `https://www.googleapis.com/auth/spreadsheets.currentonly` is the narrower Apps Script scope. `getActiveSpreadsheet()` is documented to accept either scope: https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app
+- `@OnlyCurrentDoc` is how Apps Script is told to request that narrower scope for an add-on or other script: https://developers.google.com/apps-script/guides/services/authorization
 
-## 3. Deploy the web app
+This project sets both the annotation and `oauthScopes` in `appsscript.json`. Google’s web-app guide does not say that an anonymous “execute as me” web app, with no spreadsheet open, will succeed on `spreadsheets.currentonly`. That part is unproven here. On the next deployment, read the consent screen:
 
-1. Click **Deploy → New deployment**.
-2. Click the gear and choose **Web app**.
-3. Set **Execute as** to **Me**.
-4. Set **Who has access** to **Anyone**.
-5. Click **Deploy** and authorize the requested Gmail and Sheets permissions.
-6. Copy the web app URL. It ends in `/exec`.
+- If it still says all spreadsheets, the narrow scope was not applied. Stop. Do not paste the URL into the site.
+- If it names only the current spreadsheet, the prompt is narrower. It is still not proven until one authorized test appends a row.
 
-If you change the script later, deploy a **new version**. An old `/exec` URL keeps running the previous code until you do.
+“Execute as me” plus “Anyone” means every caller runs as the owner. Official description: https://developers.google.com/apps-script/guides/web. The recipient is fixed at `contact@ddhbiconsulting.com`. Callers cannot choose another mailbox, so this is not an open relay to arbitrary addresses. They can still submit many times and consume the owner’s MailApp quota (100 recipients/day on a consumer account, 1,500 on Workspace): https://developers.google.com/apps-script/guides/services/quotas
 
-## 4. Paste the URL into the site
+A secret embedded in the public page is not a secret. This script does not pretend otherwise. There is no extra account or paid service in this change. A real rate limit or login wall would be a separate decision.
 
-In `apply.html`, set the empty constant:
+## Deploy this version
 
-```javascript
-var SHEET_WEB_APP_URL = "https://script.google.com/macros/s/XXXX/exec";
-```
+1. Open the intake spreadsheet. Extensions, Apps Script.
+2. Replace `Code.gs` with `apps-script/Code.gs` from this branch.
+3. Open Project Settings, show the manifest, and replace `appsscript.json` with `apps-script/appsscript.json`.
+4. Deploy, New deployment, Web app. Execute as Me. Who has access: Anyone.
+5. Authorize only if the consent sentence matches the narrower sheet access described above. Copy the new `/exec` URL.
+6. Do not put that URL in `assets/intake.js` until Pedro authorizes an end-to-end browser test.
 
-Leave it as `""` if you are not ready. The form then stays on the email-only path.
+`doGet` returning `{"success":true,"service":"ddh-apply"}` only shows that the deployment answers. It does not write a row or send mail.
 
-## 5. Check it
+## After an authorized test
 
-Open the `/exec` URL in a browser. You should see `{"success":true,"service":"ddh-apply"}`.
+Paste the new `/exec` URL into `SHEET_WEB_APP_URL` in `assets/intake.js`. Publish the site only after a browser on the site shows the booking button solely when the response says `persisted: true`, and the test row is the one you sent.
 
-Then submit a test application on `/apply.html`. A qualified application should show the Calendly button only after the script accepts it. The sheet should gain one row, and `contact@ddhbiconsulting.com` should get the email. UTM source, medium, and campaign are blank unless the visitor arrived with `?utm_source=&utm_medium=&utm_campaign=` on the link.
+If the sheet append fails, the page tells the visitor to email `contact@ddhbiconsulting.com` and does not open a mail draft. If the row is saved and the notification email is not, the booking button can still appear, with a line that the confirmation email did not send.
