@@ -114,12 +114,11 @@
       <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
     </div>
     <div class="form-actions"><button class="btn btn-primary" type="submit">Submit application</button></div>
-    <p class="form-note">Please do not include patient information. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
+    <p class="form-note">Please do not include patient information. This form does not detect or remove it. A saved application is stored in a Google Sheet and emailed to DDH Consulting. This page uses Google Analytics. Booking opens Calendly. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
   </form>
   <div class="form-success" id="applyFit">
     <h3>Application received.</h3>
     <p class="lede">You can book your free Reporting Review now. You leave with a written read of where your reporting leaks, whether or not we work together.</p>
-    <p class="lede" id="applyMailNote" style="display:none">The confirmation email did not send. If you do not hear back, email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
     <a class="btn btn-primary" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book your free Reporting Review</a>
   </div>
   <div class="form-success" id="applyMiss">
@@ -127,6 +126,7 @@
     <p class="lede">The Reporting Review is for healthcare groups that want the work kept running. Having a BI team does not rule you out. If a billing company already sends a full monthly package, or the organization sits outside the groups we serve, the Health Check is yours to use on your own.</p>
     <a class="btn btn-primary" href="/checkup.html">Take the Reporting Health Check</a>
   </div>
+  <p class="lede" id="applyMailNote" style="display:none"></p>
   <div class="form-success" id="applyError" role="alert">
     <h3>We couldn't send your application.</h3>
     <p class="lede">It was not saved. Nothing was booked. Email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a> with the same details and we will reply.</p>
@@ -134,7 +134,7 @@
 </main>
 <footer>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <span>© 2026 DDH Consulting LLC · Miami, FL · This page uses Google Analytics.</span>
     <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
   </div>
 </footer>
@@ -196,7 +196,16 @@
     function showSaved(data) {
       document.getElementById("applyForm").style.display = "none";
       document.getElementById("applyError").style.display = "none";
-      document.getElementById("applyMailNote").style.display = data.notified === false ? "block" : "none";
+      var note = document.getElementById("applyMailNote");
+      if (data.notified === true) {
+        note.style.display = "none";
+      } else if (data.notified === false) {
+        note.textContent = "Saved. The email to DDH Consulting did not send. If you do not hear back, email contact@ddhbiconsulting.com.";
+        note.style.display = "block";
+      } else {
+        note.textContent = "Saved. We could not confirm the notification email. If you do not hear back, email contact@ddhbiconsulting.com.";
+        note.style.display = "block";
+      }
       document.getElementById(poorFit ? "applyMiss" : "applyFit").style.display = "block";
       if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review", fit: poorFit ? "no" : "yes" });
     }

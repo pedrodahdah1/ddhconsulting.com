@@ -105,11 +105,11 @@
           <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="capHoney">Website</label><input id="capHoney" tabindex="-1" autocomplete="off"></div>
         </div>
         <div class="form-actions"><button class="btn btn-primary" id="capSend" type="button">Send my results</button></div>
-        <p class="form-note">Answers go only to DDH Consulting at contact@ddhbiconsulting.com. They are not shared or sold. Please do not include patient information.</p>
+        <p class="form-note">Please do not include patient information. This form does not detect or remove it. Saved results go to a Google Sheet and to contact@ddhbiconsulting.com. This page uses Google Analytics. Results are not sold.</p>
       </div>
       <div id="capDone" style="display:none">
-        <h2>Sent.</h2>
-        <p class="fine" id="capDoneCopy">We will reply within one business day. A copy of your results is on its way to your inbox.</p>
+        <h2>Saved.</h2>
+        <p class="fine" id="capDoneCopy">Saved. We will reply within one business day.</p>
       </div>
       <div id="capError" style="display:none">
         <h2>We couldn't save these results.</h2>
@@ -121,7 +121,7 @@
 </main>
 <footer>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <span>© 2026 DDH Consulting LLC · Miami, FL · This page uses Google Analytics.</span>
     <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
   </div>
 </footer>
@@ -273,9 +273,10 @@ document.getElementById("capSend").addEventListener("click", function () {
       return;
     }
     if (typeof gtag === "function") gtag("event", "generate_lead", { form: "health_check", score: result.score });
-    document.getElementById("capDoneCopy").textContent = data.notified === false
-      ? "Results saved. The confirmation email did not send. Email contact@ddhbiconsulting.com if you do not hear back."
-      : "We will reply within one business day. A copy of your results is on its way to your inbox.";
+    var done = "Saved. We will reply within one business day.";
+    if (data.notified === false) done = "Saved. The email to DDH Consulting did not send. Email contact@ddhbiconsulting.com if you do not hear back.";
+    else if (data.notified !== true) done = "Saved. We could not confirm the notification email. Email contact@ddhbiconsulting.com if you do not hear back.";
+    document.getElementById("capDoneCopy").textContent = done;
     document.getElementById("capForm").style.display = "none";
     document.getElementById("capError").style.display = "none";
     document.getElementById("capDone").style.display = "block";
