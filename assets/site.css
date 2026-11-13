@@ -1025,9 +1025,9 @@ footer a:hover { color: #E0B08A; }
 .band-soft { background: var(--paper-2); }
 #problem .section-head { max-width: none; }
 #problem .section-head h2 {
-  max-width: 36em;
+  max-width: 22em;
   margin-bottom: var(--s3);
-  font-size: clamp(1.85rem, 2.5vw, 2.35rem);
+  font-size: clamp(1.9rem, 2.8vw, 2.65rem);
   line-height: 1.12;
 }
 #problem .section-head .lede { max-width: 40rem; }
