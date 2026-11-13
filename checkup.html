@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reporting Health Check | DDH Consulting</title>
-<meta name="description" content="Ten yes-or-no questions on whether healthcare reporting still depends on someone digging. See the gaps, then apply for a free Reporting Review. About three minutes.">
-<meta property="og:title" content="How much of reporting still depends on you? | DDH Consulting">
-<meta property="og:description" content="A short Reporting Health Check for pharmacy groups, practices, ASCs, imaging and specialty groups, and MSOs. The result points to a Reporting Review application.">
+<meta name="description" content="Ten yes-or-no questions for finance and operations leaders. About three minutes. No email needed to see your result.">
+<meta property="og:title" content="Reporting Health Check | DDH Consulting">
+<meta property="og:description" content="Ten yes-or-no questions for finance and operations leaders. About three minutes. No email needed to see your result.">
 <meta property="og:url" content="https://ddhbiconsulting.com/checkup.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
@@ -14,8 +14,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="DDH Consulting">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How much of reporting still depends on you? | DDH Consulting">
-<meta name="twitter:description" content="Ten questions for healthcare finance and operations leaders. Results point to a Reporting Review application.">
+<meta name="twitter:title" content="Reporting Health Check | DDH Consulting">
+<meta name="twitter:description" content="Ten yes-or-no questions for finance and operations leaders. About three minutes. No email needed to see your result.">
 <meta name="twitter:image" content="https://ddhbiconsulting.com/social-card-checkup.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/checkup.html">
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48">
@@ -63,7 +63,7 @@
 <main id="main" class="check-main">
   <section id="quiz">
     <p class="eyebrow">Reporting Health Check</p>
-    <h1>How much of reporting still depends on you?</h1>
+    <h1>Reporting Health Check</h1>
     <p class="lede">Ten yes-or-no questions for finance and operations leaders. About three minutes. No email needed to see your result.</p>
     <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="bar"></div></div>
     <p class="progress-label" id="progressLabel">Question 1 of 10</p>
@@ -181,7 +181,7 @@ document.getElementById("backBtn").addEventListener("click", function () {
 });
 
 function tier(score) {
-  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A Reporting Review is still the right next conversation if leadership wants a written view of what to tighten.", next: "Apply for a Reporting Review. You leave with a written read of where reporting still leaks, whether or not we work together." };
+  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A Reporting Review is still the right next conversation if leadership wants a written view of what to tighten.", next: "Apply for a Reporting Review. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together." };
   if (score >= 5) return { cls: "warn", label: "Some gaps", text: "The basics are there, and a few gaps are likely taking time every month. A Reporting Review puts those gaps in a written read.", next: "Apply for a Reporting Review. You leave with a written read of these gaps and which packages to connect first, whether or not we work together." };
   return { cls: "risk", label: "Reporting at risk", text: "Several core pieces are still manual, or are not in place. That is common where the business has outgrown the workbook.", next: "Apply for a Reporting Review. You leave with a written read of the gaps before any build, whether or not we work together. If the ongoing run is not a fit, this Health Check is yours to keep." };
 }
@@ -260,7 +260,7 @@ document.getElementById("capSend").addEventListener("click", function () {
     "Hi " + firstName + ",\n\n" +
     "Thanks for completing the Reporting Health Check. Your score was " + result.score + "/10 (" + result.tier + ").\n\n" +
     "Gaps flagged:\n" + gapText + "\n\n" +
-    "The useful next step is a Reporting Review. You leave with a written read of where reporting leaks, whether or not we work together. " +
+    "The useful next step is a Reporting Review. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together. " +
     "Apply at https://ddhbiconsulting.com/apply.html. We review every application within 2 business days.\n\n" +
     "DDH Consulting\nhttps://ddhbiconsulting.com");
   fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
