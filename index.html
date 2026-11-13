@@ -26,6 +26,7 @@
 <meta name="theme-color" content="#121A24">
 <link rel="preload" href="/fonts/geist-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geist-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/assets/visuals/board-pack-hero.png">
 <link rel="stylesheet" href="/assets/site.css">
 <script>document.documentElement.classList.add("js");</script>
 <script>
@@ -63,16 +64,12 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question","name": "Retainer or project?","acceptedAnswer": {"@type": "Answer","text": "Start with a free Reporting Review or the Reporting Health Check, and a Close Diagnostic, then a package, then the Managed Financial Reporting retainer. The retainer is a set weekly commitment and a fixed month of deliverables. Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization are packages you can buy on their own. A package can roll into the retainer. The Close Diagnostic can credit into a setup package. We sort that out on the call."}},
-    {"@type": "Question","name": "What does it cost?","acceptedAnswer": {"@type": "Answer","text": "Always two blocks. Platform costs are paid by the client to Microsoft or the AI provider, in their own tenant or contract. DDH charges a fixed setup that includes the diagnosis, the build and test rounds through acceptance, then a monthly run & support fee; or the scheduled AI briefing is included if they already have the reporting retainer. A package is a fixed build, then Run and support: the pack, fixes, and the scorecard call. The monthly scope is fixed; it is not billed by the hour. We set the scope on the call."}},
-    {"@type": "Question","name": "Is this forever?","acceptedAnswer": {"@type": "Answer","text": "No. After a six-month minimum, stay month to month or take a handover: the run book, training, and your team runs it."}},
-    {"@type": "Question","name": "Do we need new software?","acceptedAnswer": {"@type": "Answer","text": "Usually not. Power BI reporting is a packaged system on the tools you already have. If something new is needed, we explain why before you buy anything."}},
-    {"@type": "Question","name": "We already have a BI team. Why would we need you?","acceptedAnswer": {"@type": "Answer","text": "Your BI team builds reports. We bring the finance lead work and a packaged Power BI reporting system — including ongoing data maintenance and reporting after close — plus the AI automations, including the scheduled briefing, working with them. DDH is not a Power BI contractor and does not provide staff augmentation."}},
-    {"@type": "Question","name": "What do you need from us?","acceptedAnswer": {"@type": "Answer","text": "One person who owns the close, access to your systems, and the definitions leadership already uses. The first call needs no patient data."}},
-    {"@type": "Question","name": "How do you handle HIPAA?","acceptedAnswer": {"@type": "Answer","text": "The product default is aggregated indicators only, with no patient-level data. Patient-level data is used only with a signed Business Associate Agreement, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. A BAA does not replace the client's own compliance program. Consumer chat tools are never used."}},
-    {"@type": "Question","name": "How does the scheduled AI briefing work?","acceptedAnswer": {"@type": "Answer","text": "At an agreed time, a scheduled job reads agreed KPIs from the client's Power BI semantic model and drafts a short email briefing, sent from their Outlook. It is built in their environment, tested until they accept the numbers and the wording, and left running there. Production never runs in a chat with an assistant. When the client has Copilot Credits, Path A keeps the query, the draft and the email in the client's Microsoft tenant, in Copilot Studio / Power Automate. Credits are required already in the test phase; the no-charge messages that come with Microsoft 365 Copilot do not cover this scheduled trigger. Otherwise, Path B keeps the query and the email in the tenant; only filtered aggregate KPIs go to an enterprise API under a signed BAA — Azure OpenAI in the client's Azure is the usual first choice, or Claude's HIPAA-ready API, or the xAI enterprise API after a BAA and only on the Zero Data Retention endpoint. A questionnaire is not a signed BAA. If the filter fails, the AI is not called and an alert is raised. A named person reviews the wording at the start, until the client chooses otherwise."}},
-    {"@type": "Question","name": "Do we need Microsoft Copilot, and who pays for the AI?","acceptedAnswer": {"@type": "Answer","text": "Copilot is not required. Path A uses the client's Copilot Credits, which must already be available in the test phase. Path B uses an approved enterprise API. Platform costs are paid by the client to Microsoft or the AI provider, in their own tenant or contract. DDH charges a fixed setup plus monthly run & support, or includes the briefing in the reporting retainer. These are confirmed on the Reporting Review call."}},
-    {"@type": "Question","name": "How is this different from hiring an analyst or a contractor?","acceptedAnswer": {"@type": "Answer","text": "DDH is a fractional finance lead: month-end close, rolling forecast, cash and runway, payer economics, a board pack, a packaged Power BI reporting system, and a scheduled AI briefing, on a fixed monthly scope, using the Cross-Check method. After six months, continue month to month or take the handover."}}
+    {"@type": "Question","name": "Retainer or project?","acceptedAnswer": {"@type": "Answer","text": "Review or Health Check, then a package or Close Diagnostic, then the retainer. A package can roll into the retainer."}},
+    {"@type": "Question","name": "What does it cost?","acceptedAnswer": {"@type": "Answer","text": "Platform costs are paid by the client to Microsoft or the AI provider, in their tenant. DDH charges a fixed setup plus monthly run & support, or includes the briefing in the retainer. Scope is set on the call. No dollar amounts."}},
+    {"@type": "Question","name": "Is this forever?","acceptedAnswer": {"@type": "Answer","text": "No. After six months, month to month or a handover."}},
+    {"@type": "Question","name": "We already have a BI team. Why would we need you?","acceptedAnswer": {"@type": "Answer","text": "Your BI team builds reports. We bring the finance-lead work and a packaged reporting system, including the scheduled briefing, working with them."}},
+    {"@type": "Question","name": "How do you handle HIPAA?","acceptedAnswer": {"@type": "Answer","text": "Aggregated indicators by default. Patient-level data only with a signed BAA, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. Consumer chat is never used."}},
+    {"@type": "Question","name": "How does the scheduled AI briefing work?","acceptedAnswer": {"@type": "Answer","text": "At an agreed time, a scheduled job reads agreed KPIs from the client's Power BI semantic model and drafts a short email, sent from their Outlook. It is built in their environment. Path A, Path B, and the two cost blocks are on https://ddhbiconsulting.com/briefing.html."}}
   ]
 }
 </script>
@@ -116,8 +113,8 @@
 
 <main id="main">
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  <div class="wrap">
+    <div class="hero-copy">
       <h1>Data lead and fractional finance<br>for healthcare operators.</h1>
       <p class="lede">Rolling forecast, cash and runway, payer economics, and a board pack, together with month-end close. Power BI is the packaged monthly reporting system, with a scheduled AI briefing on top.</p>
       <div class="cta-row">
@@ -125,20 +122,40 @@
         <a class="btn btn-secondary" href="/checkup.html">Take the Reporting Health Check</a>
       </div>
     </div>
-    <div>
-      <div class="board in" id="board" aria-hidden="true">
-        <div class="board-top"><span class="pill">Connected</span><span>Four sources, one view</span></div>
-        <div class="sources">
-          <div class="source"><i></i>Finance</div>
-          <div class="source"><i></i>Claims</div>
-          <div class="source"><i></i>Operations</div>
-          <div class="source"><i></i>Providers</div>
-        </div>
-        <svg class="spark" viewBox="0 0 320 72" aria-hidden="true">
-          <path class="area" d="M4 52 C40 50 48 28 80 30 C120 32 130 18 168 20 C210 22 220 40 260 28 C290 20 304 16 316 12 L316 68 L4 68 Z"/>
-          <path pathLength="100" d="M4 52 C40 50 48 28 80 30 C120 32 130 18 168 20 C210 22 220 40 260 28 C290 20 304 16 316 12"/>
-        </svg>
-      </div>
+  </div>
+  <div class="wrap wrap-visual">
+    <figure class="hero-visual">
+      <img src="/assets/visuals/board-pack-hero.png" width="1920" height="1080" alt="Sample Power BI board finance pack: rolling forecast, cash and runway, cash-collected variance and payer economics. Illustrative figures." fetchpriority="high">
+      <figcaption class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="visual-band" id="visuals" aria-labelledby="visuals-title">
+  <div class="wrap wrap-visual">
+    <h2 id="visuals-title" class="sr-only">Illustrative product views</h2>
+    <div class="gallery">
+      <figure class="gallery-card reveal">
+        <button type="button" class="gallery-open">
+          <img src="/assets/visuals/board-pack.png" width="1920" height="1080" alt="Sample Power BI board finance pack: rolling forecast, cash and runway, cash-collected variance and payer economics. Illustrative figures." loading="lazy">
+          <span class="sr-only">Enlarge</span>
+        </button>
+        <figcaption class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</figcaption>
+      </figure>
+      <figure class="gallery-card reveal">
+        <button type="button" class="gallery-open">
+          <img src="/assets/visuals/pipeline.png" width="1920" height="1080" alt="Monthly reporting pipeline in Fabric: ingest, transform and validate, semantic model, board pack, scheduled briefing. Illustrative." loading="lazy">
+          <span class="sr-only">Enlarge</span>
+        </button>
+        <figcaption class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</figcaption>
+      </figure>
+      <figure class="gallery-card reveal">
+        <button type="button" class="gallery-open">
+          <img src="/assets/visuals/source-to-model.png" width="1920" height="1080" alt="Finance sources (Excel, QuickBooks, NetSuite, payroll, practice management, 835 remittances, bank) feeding Azure SQL and a Power BI semantic model. Illustrative." loading="lazy">
+          <span class="sr-only">Enlarge</span>
+        </button>
+        <figcaption class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -147,69 +164,27 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="reveal">What DDH delivers</h2>
-      <p class="lede reveal">DDH Consulting provides fractional finance and data leadership for healthcare operators. Work is delivered in the client's own accounts, by connecting systems, payers, and the general ledger to a monthly reporting system.</p>
+      <p class="lede reveal">DDH Consulting provides fractional finance and data leadership for healthcare operators, in the client's own accounts.</p>
+      <p class="deliver-kicker reveal">Each month, clients receive:</p>
     </div>
-    <p class="reveal" style="margin-bottom:8px;font-weight:500;color:var(--ink)">Each month, clients receive:</p>
-    <ol class="index-list reveal">
-      <li>
-        <span class="index-num">01</span>
-        <div>
-          <h3>Month-end close</h3>
-          <p>The P&amp;L is tied to the general ledger after close, with the variance explained.</p>
-        </div>
-      </li>
-      <li>
-        <span class="index-num">02</span>
-        <div>
-          <h3>Rolling forecast</h3>
-          <p>The budget, the rolling forecast, and the variance, kept current through the year.</p>
-        </div>
-      </li>
-      <li>
-        <span class="index-num">03</span>
-        <div>
-          <h3>Cash and runway</h3>
-          <p>Cash on hand, collections, and runway in one view, updated as money arrives.</p>
-        </div>
-      </li>
-      <li>
-        <span class="index-num">04</span>
-        <div>
-          <h3>Payer economics</h3>
-          <p>835 remittances matched to deposits and the ledger, with what is still owed by payer. This includes revenue recovery: denials, underpayments, and billing and AR leakage.</p>
-        </div>
-      </li>
-      <li>
-        <span class="index-num">05</span>
-        <div>
-          <h3>Board pack</h3>
-          <p>The monthly pack and the board deck, from the same definitions, produced on a fixed schedule.</p>
-        </div>
-      </li>
-    </ol>
-    <p class="scope-note reveal">Power BI is a packaged monthly reporting system: ongoing data maintenance and reporting after close, sitting under the finance-lead offer. DDH is not a Power BI contractor and does not provide staff augmentation.</p>
-    <p class="scope-note reveal">A scheduled AI briefing is delivered from that model at the time agreed with the client. It can stand alone as a fixed-scope package, or sit inside the monthly reporting retainer.</p>
+    <ul class="proof-list reveal">
+      <li><strong>Month-end close.</strong> The P&amp;L is tied to the general ledger after close, with the variance explained.</li>
+      <li><strong>Rolling forecast.</strong> The budget, the rolling forecast, and the variance, kept current through the year.</li>
+      <li><strong>Cash and runway.</strong> Cash on hand, collections, and runway in one view.</li>
+      <li><strong>Payer economics.</strong> Remittances matched to the ledger, including denials, underpayments, and billing and AR leakage.</li>
+      <li><strong>Board pack.</strong> The monthly pack and the board deck, from the same definitions.</li>
+    </ul>
+    <p class="scope-note reveal">Power BI is a packaged monthly reporting system — data maintenance and reporting after close — under the finance-lead offer. A scheduled AI briefing is delivered from that model at the agreed time.</p>
   </div>
 </section>
 
 <section class="section" id="retainer" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow reveal">The retainer</p>
-      <h2 class="reveal">Managed Financial Reporting: a fractional finance lead, on a fixed month.</h2>
-      <p class="lede reveal">The monthly reporting retainer, Managed Financial Reporting, is a set weekly commitment and a fixed monthly scope, run in the client's own accounts: month-end close, the rolling forecast, cash and runway, payer economics, the board pack, Power BI reporting, and the scheduled AI briefing.</p>
+      <h2 class="reveal">Managed Financial Reporting</h2>
+      <p class="lede reveal">The monthly reporting retainer is a set weekly commitment and a fixed monthly scope, run in the client's accounts: the close, the four leadership views, Power BI reporting, and the scheduled AI briefing.</p>
     </div>
-    <ul class="proof-list reveal">
-      <li><strong>Month-end close.</strong> The P&amp;L tied to the general ledger after close, plus variance.</li>
-      <li><strong>Rolling forecast.</strong> Budget and forecast brought forward, with the variance explained.</li>
-      <li><strong>Cash and runway.</strong> Cash on hand and a view of how long it lasts.</li>
-      <li><strong>Payer economics.</strong> Collections, outstanding balances, denials, underpayments, and billing and AR leakage, with remittances tied to the bank and the ledger.</li>
-      <li><strong>Board pack.</strong> The monthly pack and the board deck, from the same definitions.</li>
-      <li><strong>Power BI reporting.</strong> A packaged monthly system — data maintenance and reporting after close — on the client's Microsoft stack.</li>
-      <li><strong>Scheduled AI briefing.</strong> An email briefing, written by AI from the Power BI semantic model, sent from the client's Outlook at the agreed time. Included when the client already has this retainer; also available as a standalone package.</li>
-    </ul>
-    <p class="scope-note reveal">Inside the retainer, DDH builds Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization. Those are the systems. The retainer is how clients get them, together with ongoing finance-lead work.</p>
-    <p class="fine reveal" style="margin-top:10px">After a six-month minimum, continue month to month, or take a handover: the run book, training, and the client's team runs the system.</p>
+    <p class="prose reveal">Inside the retainer, DDH builds Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization. After a six-month minimum, continue month to month, or take a handover: the run book, training, and the client's team runs the system.</p>
     <div class="cta-row reveal" style="margin-top:24px">
       <a class="btn btn-primary" href="/apply.html">Apply for a free Reporting Review</a>
     </div>
@@ -220,31 +195,15 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="reveal">Scheduled AI briefing</h2>
-      <p class="lede reveal">At an agreed time, a scheduled job reads agreed KPIs from the client's Power BI semantic model and drafts a short email briefing, sent from their Outlook. It is built in their environment, tested until they accept the numbers and the wording, and left running there. It is a fixed-scope package, not hours and not a hire. Production never runs in a chat with an assistant. It can stand alone or sit inside the Managed Financial Reporting retainer.</p>
+      <p class="lede reveal">At an agreed time, a scheduled job reads agreed KPIs from the client's Power BI semantic model and drafts a short email, sent from their Outlook. It is built in their environment, tested until they accept the numbers and the wording, and left running there. It can stand alone or sit inside the retainer. Production never runs in a chat with an assistant.</p>
     </div>
+    <figure class="briefing-visual reveal">
+      <img src="/assets/visuals/briefing-flow.png" width="1920" height="1080" alt="Scheduled briefing flow: query the Power BI semantic model, AI agent drafts the briefing, email sent in Outlook. Illustrative." loading="lazy">
+      <figcaption class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</figcaption>
+    </figure>
     <p class="fit-note reveal">DDH helps healthcare operators modernize their technology infrastructure, strengthen their enterprise applications, improve operational efficiency and support growth — while meeting HIPAA, their contracts and the rules of their tenant.</p>
-    <p class="lede reveal" style="margin-top:28px">The product default is aggregated indicators only, with no patient-level data. Patient-level data is used only with a signed Business Associate Agreement, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. A BAA does not replace the client's own compliance program.</p>
-    <p class="reveal" style="margin-top:20px;max-width:40rem;color:var(--text)">Two delivery paths are chosen in a short diagnosis on the Reporting Review call, not as a self-serve purchase.</p>
-    <div class="streams reveal">
-      <article class="stream" style="grid-template-columns:72px 1fr">
-        <span class="stream-no">A</span>
-        <div>
-          <h3>Path A — everything in the client's Microsoft tenant</h3>
-          <p>The query, the AI draft and the email run in Copilot Studio / Power Automate. Data stays in the tenant. This path needs Copilot Credits already in the test phase, not only at go-live: without credits the flow can be designed, but it will not publish and will not run. The no-charge messages that come with Microsoft 365 Copilot do not cover this scheduled trigger. Path A does not go live without Copilot Credits.</p>
-        </div>
-      </article>
-      <article class="stream" style="grid-template-columns:72px 1fr">
-        <span class="stream-no">B</span>
-        <div>
-          <h3>Path B — enterprise AI API, with a compliance filter in the middle</h3>
-          <p>The query and the outbound email stay in the client's tenant. Only a minimal extract of aggregated KPIs, after a compliance filter, is sent to an enterprise AI API that has a signed BAA. The draft comes back and is sent from their Outlook. DDH does not keep the numbers. Execution logs stay in their tenant. The usual first choice for healthcare clients already on Microsoft is Azure OpenAI in their own Azure subscription. The other eligible options are Claude's HIPAA-ready API with a BAA, or the xAI enterprise API after a BAA, and only on the Zero Data Retention endpoint. A questionnaire is not a signed BAA. Never Claude Free, Pro or Console for patient-level data; never grok.com, the consumer app, or Grok on X. The filter allowlists measures; strips names, medical record numbers, NPIs, claim IDs and addresses; and suppresses small cells that could identify a person. If the filter fails, the AI is not called and an alert is raised. A named person reviews the wording at the start, until the client chooses otherwise. Path B does not go live with patient-level data without a signed BAA and an eligible API.</p>
-        </div>
-      </article>
-    </div>
-    <ul class="proof-list reveal" style="margin-top:28px">
-      <li><strong>Platform costs.</strong> The client pays Microsoft or the AI provider, in their own tenant or contract.</li>
-      <li><strong>DDH.</strong> A fixed setup that includes the diagnosis, the build and test rounds through acceptance, then a monthly run &amp; support fee; or the briefing is included if they already have the reporting retainer. After a minimum term they can continue month to month or take a handover and run it themselves.</li>
-    </ul>
+    <p class="prose reveal" style="margin-top:20px">The standard briefing uses aggregated indicators only. The design is HIPAA-eligible with a signed BAA and the correct configuration.</p>
+    <p class="path-line reveal">Two delivery paths — everything in the client's Microsoft tenant, or an enterprise API with a compliance filter. <a href="/briefing.html">How Path A and Path B work</a>.</p>
     <div class="cta-row reveal" style="margin-top:24px">
       <a class="btn btn-primary" href="/apply.html">Apply for a free Reporting Review</a>
     </div>
@@ -256,7 +215,7 @@
     <div class="section-head">
       <p class="eyebrow reveal">Packages</p>
       <h2 class="reveal">A review, a diagnostic, a package, or the retainer.</h2>
-      <p class="lede reveal">Start with a free Reporting Review or the Reporting Health Check, and a Close Diagnostic. Then a setup package, when the need is a defined system. Then the Managed Financial Reporting retainer, when the operator wants a finance lead every month. A package can roll into the retainer. The Close Diagnostic is a focused review of the close and the P&amp;L-to-ledger tie; it can credit into a setup package.</p>
+      <p class="lede reveal">Start with a free Reporting Review or the Reporting Health Check, and a Close Diagnostic. Then a setup package. Then the retainer. A package can roll into the retainer. The Close Diagnostic can credit into a setup package.</p>
     </div>
     <div class="method reveal" aria-label="Four packages">
       <ol class="method-grid">
@@ -266,8 +225,7 @@
             <p class="eyebrow">Month-End Autopilot</p>
             <h3>Built and live in 6 weeks.</h3>
             <p>Extracts run on schedule, tie to the ledger, and an alert names the file that is late.</p>
-            <p>Run &amp; support is a fixed monthly scope: the pack, fixes, and the scorecard call. After six months, continue month to month or take the handover.</p>
-            <a class="btn btn-secondary" href="/apply.html">Start with a free Reporting Review</a>
+            <a class="btn btn-secondary" href="/apply.html">Apply for a free Reporting Review</a>
           </div>
         </li>
         <li class="method-card">
@@ -275,9 +233,8 @@
           <div class="method-body">
             <p class="eyebrow">Cash Truth</p>
             <h3>Built and live in 6 weeks.</h3>
-            <p>See what is collected, what is still owed by payer, and a cash view that updates as money arrives. The work includes denials, underpayments, and billing and AR leakage.</p>
-            <p>Run &amp; support is a fixed monthly scope: the pack, fixes, and the scorecard call. After six months, continue month to month or take the handover.</p>
-            <a class="btn btn-secondary" href="/apply.html">Start with a free Reporting Review</a>
+            <p>See what is collected, what is still owed by payer, and a cash view that updates as money arrives — including denials, underpayments, and AR leakage.</p>
+            <a class="btn btn-secondary" href="/apply.html">Apply for a free Reporting Review</a>
           </div>
         </li>
         <li class="method-card">
@@ -286,8 +243,7 @@
             <p class="eyebrow">Commission Engine</p>
             <h3>Built and live in 4 weeks.</h3>
             <p>Provider pay and commissions run from one formula, with a statement each person can check.</p>
-            <p>Run &amp; support is a fixed monthly scope: the pack, fixes, and the scorecard call. After six months, continue month to month or take the handover.</p>
-            <a class="btn btn-secondary" href="/apply.html">Start with a free Reporting Review</a>
+            <a class="btn btn-secondary" href="/apply.html">Apply for a free Reporting Review</a>
           </div>
         </li>
         <li class="method-card">
@@ -295,13 +251,13 @@
           <div class="method-body">
             <p class="eyebrow">BI Modernization</p>
             <h3>Built and live in 10 weeks.</h3>
-            <p>Keep Power BI or Microsoft Fabric. DDH feeds it clean, connected data and adds the alerts. Ongoing data maintenance and reporting after close sit under the finance-lead offer.</p>
-            <p>Run &amp; support is a fixed monthly scope: the pack, fixes, and the scorecard call. After six months, continue month to month or take the handover.</p>
-            <a class="btn btn-secondary" href="/apply.html">Start with a free Reporting Review</a>
+            <p>Keep Power BI or Microsoft Fabric. DDH feeds it clean, connected data and adds the alerts.</p>
+            <a class="btn btn-secondary" href="/apply.html">Apply for a free Reporting Review</a>
           </div>
         </li>
       </ol>
     </div>
+    <p class="run-note reveal">Run &amp; support is a fixed monthly scope. After six months, continue month to month or take the handover.</p>
   </div>
 </section>
 
@@ -311,10 +267,10 @@
       <h2 class="reveal">How it works</h2>
     </div>
     <ol class="timeline reveal" id="timeline">
-      <li class="step-row is-key"><span class="node" aria-hidden="true"></span><div><h3>Reporting Review</h3><p class="step-meta">Free</p><p>A written assessment of the forecast, cash, close, and reporting. The Reporting Health Check is a shorter, self-serve starting point. The Close Diagnostic is available when the close itself is the starting point. The path (A or B) and the license checklist are confirmed on the Review call, not as a self-serve purchase.</p></div></li>
-      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Scope the month</h3><p class="step-meta">Fixed deliverables</p><p>We agree the weekly commitment and the monthly pack: month-end close, rolling forecast, cash and runway, payer economics, board pack, and automations, including the scheduled briefing.</p></div></li>
-      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Build the systems</h3><p>In the client's accounts. Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization, tested against a closed month. Delivery is on Power BI, Power Automate, Copilot Studio, Microsoft Fabric, and SQL/Azure. Data sources typically include Excel, QuickBooks, and NetSuite.</p></div></li>
-      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Run the retainer</h3><p>After a six-month minimum, continue month to month or take the handover and run it with your team.</p></div></li>
+      <li class="step-row is-key"><span class="node" aria-hidden="true"></span><div><h3>Reporting Review</h3><p class="step-meta">Free</p><p>A written assessment of the forecast, cash, close, and reporting. The path and license checklist are confirmed on that call.</p></div></li>
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Scope the month</h3><p>Fixed monthly deliverables, agreed up front.</p></div></li>
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Build the systems</h3><p>In the client's accounts, on Power BI, Power Automate, Copilot Studio, Fabric, and SQL/Azure.</p></div></li>
+      <li class="step-row"><span class="node" aria-hidden="true"></span><div><h3>Run the retainer</h3><p>After six months, continue month to month or take the handover.</p></div></li>
     </ol>
   </div>
 </section>
@@ -322,67 +278,20 @@
 <section class="section" id="who" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow reveal">Who it's for</p>
-      <h2 class="reveal">Healthcare operators who need a finance lead.</h2>
+      <h2 class="reveal">Who it's for</h2>
     </div>
-    <div class="fit-grid">
-      <article class="fit-col reveal">
-        <h3>This is a fit if</h3>
-        <ul>
-          <li>You run an independent or specialty pharmacy, a physician practice, an ASC, or an MSO — or another healthcare operator, including a behavioral health group or a healthtech or medtech company.</li>
-          <li>You need month-end close, a rolling forecast, cash and runway, payer economics, and a board pack, and you do not have a full-time finance lead for that work.</li>
-          <li>You have a BI team. DDH still fits. We bring the finance judgment and the automation on top of the reports.</li>
-        </ul>
-      </article>
-      <article class="fit-col out reveal">
-        <h3>This is probably not a fit if</h3>
-        <ul>
-          <li>You want a one-off dashboard and no run after it goes live.</li>
-          <li>Nobody on your side can own the numbers with us.</li>
-        </ul>
-      </article>
-    </div>
-    <p class="fit-note reveal">What DDH adds: a finance lead on a fixed month, and a reporting system that keeps the close, the rolling forecast, the cash view, and the board pack current, with a scheduled AI briefing on top. The mechanism is connecting systems, payers, and the general ledger to those deliverables.</p>
-    <p class="fine reveal" style="margin-top:24px">DDH typically works with CFOs, COOs, CEOs, practice administrators, controllers, and BI leads.</p>
+    <p class="prose reveal">This is a fit if you run an independent or specialty pharmacy, a physician practice, an ASC, or an MSO — or another healthcare operator — and you need a finance lead for the close, the forecast, cash, payer economics, and the board pack. A BI team is still a fit.</p>
+    <p class="prose reveal" style="margin-top:16px">Probably not a fit if you want a one-off dashboard with no run after it goes live, or if nobody on your side can own the numbers with us.</p>
+    <p class="fine reveal" style="margin-top:20px">DDH typically works with CFOs, COOs, CEOs, and practice administrators.</p>
   </div>
 </section>
 
-<section class="section" id="why">
-  <div class="wrap proof">
-    <div>
-      <p class="eyebrow reveal">Why DDH</p>
-      <h2 class="reveal">Healthcare finance know-how, with an engineered system behind it.</h2>
-      <p class="lede reveal">Every DDH engagement runs on the same Cross-Check method, tested templates, and an AI-assisted build process, so clients receive senior finance judgment and a system that continues after handover.</p>
-      <p class="lede reveal">A BI team builds the dashboards. DDH organizes the data so it is clean, connected and AI-ready, then builds the automations and alerts on top.</p>
-      <ul class="proof-list reveal">
-        <li><strong>Healthcare finance and data.</strong> Close, cash, claims, payer and provider data on SQL Server, Power BI and Microsoft Fabric.</li>
-        <li><strong>Your stack, your code.</strong> Documented, and the client owns it.</li>
-        <li><strong>Delivery on Power BI, Power Automate, Copilot Studio, Microsoft Fabric, and SQL/Azure.</strong> Data sources include Excel, QuickBooks, and NetSuite.</li>
-        <li><strong>HIPAA.</strong> Most financial reporting uses aggregated indicators and needs no patient-level data. When patient-level data is required, DDH signs a Business Associate Agreement first and uses a design that is HIPAA-eligible with a signed BAA and the correct configuration. A BAA does not replace the client's own compliance program.</li>
-      </ul>
+<section class="section" id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="reveal">Method</h2>
     </div>
-    <figure class="sample reveal" aria-label="Sample data. Illustrative monthly reporting pack.">
-      <div class="board in" aria-hidden="true">
-        <div class="board-top"><span class="pill">Sample data</span><span>Monthly pack</span></div>
-        <div class="kpis">
-          <div class="kpi"><span>Close</span><strong>Watch</strong></div>
-          <div class="kpi"><span>Sites in pack</span><strong>4</strong></div>
-          <div class="kpi"><span>Open items</span><strong>3</strong></div>
-        </div>
-        <div class="score-rows">
-          <div class="score-row-line"><span>Example North</span><em class="tag ok">On time</em></div>
-          <div class="score-row-line"><span>Example South</span><em class="tag">Cash view</em></div>
-          <div class="score-row-line"><span>Example Central</span><em class="tag">Exception</em></div>
-        </div>
-        <div class="alert-card" style="opacity:1">
-          <span class="alert-dot"></span>
-          <div>
-            <strong>Exception</strong>
-            <p>Remittance and the ledger for Example Central no longer agree.</p>
-          </div>
-        </div>
-      </div>
-    </figure>
+    <p class="prose reveal">Every engagement runs on the Cross-Check method. Delivery is on Power BI, Power Automate, Copilot Studio, Microsoft Fabric, and SQL/Azure. Data sources typically include Excel, QuickBooks, and NetSuite. The client owns the code. Most financial reporting uses aggregated indicators; when patient-level data is required, DDH signs a BAA first and uses a design that is HIPAA-eligible with a signed BAA and the correct configuration.</p>
   </div>
 </section>
 
@@ -393,31 +302,32 @@
         <p class="eyebrow reveal">FAQ</p>
         <h2 class="reveal">Questions</h2>
       </div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Retainer or project?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Start with a free Reporting Review or the Reporting Health Check, and a Close Diagnostic, then a package, then the Managed Financial Reporting retainer. The retainer is a set weekly commitment and a fixed month of deliverables. Month-End Autopilot, Cash Truth, the Commission Engine, and BI Modernization are packages you can buy on their own. A package can roll into the retainer. The Close Diagnostic can credit into a setup package. We sort that out on the call.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">What does it cost?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Always two blocks. Platform costs are paid by the client to Microsoft or the AI provider, in their own tenant or contract. DDH charges a fixed setup that includes the diagnosis, the build and test rounds through acceptance, then a monthly run &amp; support fee; or the scheduled AI briefing is included if they already have the reporting retainer. A package is a fixed build, then Run and support: the pack, fixes, and the scorecard call. The monthly scope is fixed; it is not billed by the hour. We set the scope on the call.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Is this forever?<span aria-hidden="true">+</span></button><div class="faq-a"><div>No. After a six-month minimum, stay month to month or take a handover: the run book, training, and your team runs it.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Do we need new software?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Usually not. Power BI reporting is a packaged system on the tools you already have. If something new is needed, we explain why before you buy anything.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">We already have a BI team. Why would we need you?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Your BI team builds reports. We bring the finance lead work and a packaged Power BI reporting system — including ongoing data maintenance and reporting after close — plus the AI automations, including the scheduled briefing, working with them. DDH is not a Power BI contractor and does not provide staff augmentation.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">What do you need from us?<span aria-hidden="true">+</span></button><div class="faq-a"><div>One person who owns the close, access to your systems, and the definitions leadership already uses. The first call needs no patient data.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How do you handle HIPAA?<span aria-hidden="true">+</span></button><div class="faq-a"><div>The product default is aggregated indicators only, with no patient-level data. Patient-level data is used only with a signed Business Associate Agreement, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. A BAA does not replace the client's own compliance program. Consumer chat tools are never used.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How does the scheduled AI briefing work?<span aria-hidden="true">+</span></button><div class="faq-a"><div>At an agreed time, a scheduled job reads agreed KPIs from the client's Power BI semantic model and drafts a short email briefing, sent from their Outlook. It is built in their environment, tested until they accept the numbers and the wording, and left running there. Production never runs in a chat with an assistant. When the client has Copilot Credits, Path A keeps the query, the draft and the email in the client's Microsoft tenant, in Copilot Studio / Power Automate. Credits are required already in the test phase; the no-charge messages that come with Microsoft 365 Copilot do not cover this scheduled trigger. Otherwise, Path B keeps the query and the email in the tenant; only filtered aggregate KPIs go to an enterprise API under a signed BAA — Azure OpenAI in the client's Azure is the usual first choice, or Claude's HIPAA-ready API, or the xAI enterprise API after a BAA and only on the Zero Data Retention endpoint. A questionnaire is not a signed BAA. If the filter fails, the AI is not called and an alert is raised. A named person reviews the wording at the start, until the client chooses otherwise.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Do we need Microsoft Copilot, and who pays for the AI?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Copilot is not required. Path A uses the client's Copilot Credits, which must already be available in the test phase. Path B uses an approved enterprise API. Platform costs are paid by the client to Microsoft or the AI provider, in their own tenant or contract. DDH charges a fixed setup plus monthly run &amp; support, or includes the briefing in the reporting retainer. These are confirmed on the Reporting Review call.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How is this different from hiring an analyst or a contractor?<span aria-hidden="true">+</span></button><div class="faq-a"><div>DDH is a fractional finance lead: month-end close, rolling forecast, cash and runway, payer economics, a board pack, a packaged Power BI reporting system, and a scheduled AI briefing, on a fixed monthly scope, using the Cross-Check method. After six months, continue month to month or take the handover.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Retainer or project?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Review or Health Check, then a package or Close Diagnostic, then the retainer. A package can roll into the retainer.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">What does it cost?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Platform costs are paid by the client to Microsoft or the AI provider, in their tenant. DDH charges a fixed setup plus monthly run &amp; support, or includes the briefing in the retainer. Scope is set on the call. No dollar amounts.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Is this forever?<span aria-hidden="true">+</span></button><div class="faq-a"><div>No. After six months, month to month or a handover.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">We already have a BI team. Why would we need you?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Your BI team builds reports. We bring the finance-lead work and a packaged reporting system, including the scheduled briefing, working with them.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How do you handle HIPAA?<span aria-hidden="true">+</span></button><div class="faq-a"><div>Aggregated indicators by default. Patient-level data only with a signed BAA, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. Consumer chat is never used.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">How does the scheduled AI briefing work?<span aria-hidden="true">+</span></button><div class="faq-a"><div>At an agreed time, a scheduled job reads agreed KPIs from the client's Power BI semantic model and drafts a short email, sent from their Outlook. It is built in their environment. <a href="/briefing.html">How Path A and Path B work</a>, including the two cost blocks.</div></div></div>
     </div>
   </div>
   <div class="cta-band">
     <div class="wrap">
-      <h2 class="reveal" style="max-width:22ch">Apply for a Reporting Review.</h2>
-      <p class="lede reveal">Start with a free Reporting Review. You leave with a written assessment of the forecast, cash, close, and reporting, whether or not we work together. The path (A or B) and the license checklist are confirmed on that call, not as a self-serve purchase.</p>
+      <h2 class="reveal">Apply for a Reporting Review.</h2>
+      <p class="lede reveal">Start with a free Reporting Review. You leave with a written assessment of the forecast, cash, close, and reporting, whether or not we work together.</p>
       <div class="cta-row reveal">
         <a class="btn btn-light" href="/apply.html">Apply for a free Reporting Review</a>
         <a class="btn btn-ghost" href="/checkup.html">Take the Reporting Health Check</a>
       </div>
       <p class="fine reveal">Not ready for a call? <a href="/checkup.html">Take the 3-minute Reporting Health Check</a>.</p>
-      <p class="fine reveal">Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>. We reply within one business day.</p>
+      <p class="fine reveal">Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
     </div>
   </div>
 </section>
+<dialog id="visual-dialog" class="visual-dialog">
+  <form method="dialog"><button class="btn btn-secondary btn-sm" type="submit">Close</button></form>
+  <img alt="" width="1920" height="1080">
+  <p class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</p>
+</dialog>
 </main>
 
 <footer>
@@ -502,6 +412,20 @@
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { menuBtn.setAttribute("aria-expanded", "false"); panel.hidden = true; }
+  });
+
+  var dialog = document.getElementById("visual-dialog");
+  var dialogImg = dialog.querySelector("img");
+  document.querySelectorAll(".gallery-open").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var img = btn.querySelector("img");
+      dialogImg.src = img.src;
+      dialogImg.alt = img.alt;
+      dialog.showModal();
+    });
+  });
+  dialog.addEventListener("click", function (e) {
+    if (e.target === dialog) dialog.close();
   });
 
   document.querySelectorAll(".faq-q").forEach(function (q) {
