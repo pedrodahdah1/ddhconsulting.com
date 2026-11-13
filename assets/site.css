@@ -159,6 +159,11 @@ section[id] { scroll-margin-top: 96px; }
 .btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
 .btn-sm { min-height: 40px; padding: 0 16px; font-size: 0.875rem; }
 .header-cta { white-space: nowrap; }
+.header-cta .cta-short { display: none; }
+@media (max-width: 1040px) {
+  .header-cta .cta-full { display: none; }
+  .header-cta .cta-short { display: inline; }
+}
 
 /* Hero */
 .hero { position: relative; padding: var(--s7) 0 var(--s6); overflow: hidden; }
