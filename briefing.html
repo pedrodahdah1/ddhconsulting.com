@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scheduled AI briefing | DDH Consulting</title>
-<meta name="description" content="On a schedule the client sets, a job reads the KPIs from their Power BI model and drafts a short email briefing, sent from their Outlook.">
+<meta name="description" content="On a schedule you set, a job reads your Power BI model and drafts a short email, sent from your Outlook.">
 <meta property="og:title" content="Scheduled AI briefing | DDH Consulting">
-<meta property="og:description" content="On a schedule the client sets, a job reads the KPIs from their Power BI model and drafts a short email briefing, sent from their Outlook.">
+<meta property="og:description" content="On a schedule you set, a job reads your Power BI model and drafts a short email, sent from your Outlook.">
 <meta property="og:url" content="https://ddhbiconsulting.com/briefing.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ddhbiconsulting.com/social-card.png">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="DDH Consulting">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Scheduled AI briefing | DDH Consulting">
-<meta name="twitter:description" content="On a schedule the client sets, a job reads the KPIs from their Power BI model and drafts a short email briefing, sent from their Outlook.">
+<meta name="twitter:description" content="On a schedule you set, a job reads your Power BI model and drafts a short email, sent from your Outlook.">
 <meta name="twitter:image" content="https://ddhbiconsulting.com/social-card.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/briefing.html">
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48">
@@ -57,8 +57,8 @@
       <span class="brand-sub">Consulting</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/#deliver">What we deliver</a>
-      <a href="/#offer">Offer</a>
+      <a href="/#problem">What we fix</a>
+      <a href="/#monthly">Monthly work</a>
       <a href="/#how">How it works</a>
       <a href="/#about">About</a>
       <a href="/#faq">FAQ</a>
@@ -67,11 +67,12 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
   </div>
   <div id="menu-panel" class="menu-panel" hidden>
-    <a href="/#deliver">What we deliver</a>
-    <a href="/#offer">Offer</a>
+    <a href="/#problem">What we fix</a>
+    <a href="/#monthly">Monthly work</a>
     <a href="/#how">How it works</a>
     <a href="/#about">About</a>
     <a href="/#faq">FAQ</a>
+    <a href="/briefing.html">Scheduled AI briefing</a>
     <a href="/checkup.html">Reporting Health Check</a>
     <a href="/apply.html">Start a free Reporting Review</a>
   </div>
@@ -80,38 +81,32 @@
 <main id="main">
 <section class="section" id="briefing">
   <div class="wrap">
-    <div class="section-head">
-      <h1 class="reveal" style="font-size:clamp(2rem, 3.4vw, 3.15rem);margin-bottom:var(--s2)">Scheduled AI briefing</h1>
-      <p class="lede reveal">On a schedule the client sets, a job reads the KPIs from their Power BI model and drafts a short email briefing, sent from their Outlook. We build it in their environment, work through the numbers and the wording with them, and leave it running there. It is a fixed-scope package, not hours and not a hire. Once it is live, it is a scheduled job, not a chat with an assistant. They can take just the briefing, or include it in the Managed Financial Reporting retainer.</p>
+    <div class="briefing-intro">
+      <h1>Scheduled AI&nbsp;briefing</h1>
+      <p class="lede">On a schedule you set, a job reads the key numbers from your Power BI model and drafts a short email, sent from your Outlook. We build it in your environment, work through the numbers and the wording with you, and leave it running there. It's a fixed-scope project. Once it's live, it runs on its own schedule. You can have the briefing on its own, or include it in the monthly retainer.</p>
     </div>
-    <figure class="briefing-visual reveal">
-      <img src="/assets/visuals/briefing-flow.png" width="1920" height="1080" alt="Scheduled briefing flow: query the Power BI semantic model, AI agent drafts the briefing, email sent in Outlook. Illustrative." loading="lazy">
-      <figcaption class="visual-caption">SAMPLE. Illustrative figures, not a client and not results DDH has achieved.</figcaption>
-    </figure>
-    <p class="fit-note reveal">The briefing runs in the client's Microsoft environment, under HIPAA, their contracts, and the rules of their tenant.</p>
-    <p class="lede reveal" style="margin-top:28px">By default, the briefing uses aggregated indicators only, with no patient-level data. Patient-level data is used only with a signed Business Associate Agreement, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. A BAA does not replace the client's own compliance program.</p>
-    <p class="reveal" style="margin-top:20px;max-width:40rem;color:var(--text)">Which path we use is decided in a short diagnosis on the Reporting Review call. It is not a self-serve purchase.</p>
-    <div class="streams reveal">
-      <article class="stream" style="grid-template-columns:72px 1fr">
-        <span class="stream-no">A</span>
-        <div>
-          <h3>Path A — everything in the client's Microsoft tenant</h3>
-          <p>The query, the AI draft and the email run in Copilot Studio / Power Automate. Data stays in the tenant. This path needs Copilot Credits already in the test phase, not only at go-live: without credits the flow can be designed, but it will not publish and will not run. The no-charge messages that come with Microsoft 365 Copilot do not cover this scheduled trigger. Path A does not go live without Copilot Credits.</p>
-        </div>
-      </article>
-      <article class="stream" style="grid-template-columns:72px 1fr">
-        <span class="stream-no">B</span>
-        <div>
-          <h3>Path B — enterprise AI API, with a compliance filter in the middle</h3>
-          <p>The query and the outbound email stay in the client's tenant. Only a minimal extract of aggregated KPIs, after a compliance filter, is sent to an enterprise AI API that has a signed BAA. The draft comes back and is sent from their Outlook. DDH does not keep the numbers. Execution logs stay in their tenant. The usual first choice for healthcare clients already on Microsoft is Azure OpenAI in their own Azure subscription. The other eligible options are Claude's HIPAA-ready API with a BAA, or the xAI enterprise API after a BAA, and only on the Zero Data Retention endpoint. A questionnaire is not a signed BAA. Never Claude Free, Pro or Console for patient-level data; never grok.com, the consumer app, or Grok on X. The filter allowlists measures; strips names, medical record numbers, NPIs, claim IDs and addresses; and suppresses small cells that could identify a person. If the filter fails, the AI is not called and an alert is raised. A named person reviews the wording at the start, until the client chooses otherwise. Path B does not go live with patient-level data without a signed BAA and an eligible API.</p>
-        </div>
-      </article>
+    <ol class="flow">
+      <li><strong>Query.</strong> A scheduled job reads your Power BI model.</li>
+      <li><strong>Draft.</strong> The AI service writes a short email from those numbers.</li>
+      <li><strong>Send.</strong> The email goes out from your Outlook.</li>
+    </ol>
+    <div class="briefing-intro">
+      <p>By default, the briefing uses aggregated indicators only. Patient-level data is used only with a signed Business Associate Agreement, an explicit need, and an eligible API. The design is HIPAA-eligible with a signed BAA and the correct configuration. A BAA does not replace your own compliance program. The briefing runs in your Microsoft environment, under your contracts and the rules of your tenant.</p>
+      <p>We choose the path on the Reporting Review call.</p>
     </div>
-    <ul class="proof-list reveal" style="margin-top:28px">
-      <li><strong>Platform costs.</strong> The client pays Microsoft or the AI provider, in their own tenant or contract.</li>
-      <li><strong>DDH.</strong> A fixed setup that includes the diagnosis, the build and test rounds through acceptance, then a monthly run &amp; support fee; or the briefing is included if they already have the reporting retainer. After a minimum term they can continue month to month or take a handover and run it themselves.</li>
-    </ul>
-    <div class="cta-row reveal" style="margin-top:24px">
+    <article class="path">
+      <h2>Path A. Everything in your Microsoft tenant.</h2>
+      <p>The query, the AI draft, and the email run in Copilot Studio and Power Automate. Data stays in your tenant. This path needs Copilot Credits during testing and at go-live. Without credits, the flow can be designed. It will not publish, and it will not run. The no-charge messages that come with Microsoft 365 Copilot do not cover this scheduled trigger. Path A goes live only when Copilot Credits are in place.</p>
+    </article>
+    <article class="path">
+      <h2>Path B. An enterprise AI API, with a compliance filter in the middle.</h2>
+      <p>The query and the outbound email stay in your tenant. Only a minimal extract of aggregated measures, after a compliance filter, goes to an enterprise AI API that has a signed BAA. The draft comes back and is sent from your Outlook. We do not keep your numbers. Execution logs stay in your tenant. If you are already on Microsoft, the usual first choice is Azure OpenAI in your own Azure subscription. The other eligible options are Claude's enterprise API with a signed BAA, or the xAI enterprise API after a BAA, and only on the Zero Data Retention endpoint. We only use enterprise AI services that sign a BAA. Consumer AI apps are never used. The filter allowlists measures. It strips names, medical record numbers, NPIs, claim IDs, and addresses. It suppresses small cells that could identify a person. If the filter fails, the AI is not called and an alert is raised. A named person reviews the wording at the start, until you choose otherwise. Path B goes live with patient-level data only when there is a signed BAA and an eligible API.</p>
+    </article>
+    <div class="cost-lines">
+      <p><strong>Platform costs.</strong> You pay Microsoft or the AI provider, on your own contract.</p>
+      <p><strong>DDH.</strong> A fixed setup covers the review, the build, and test rounds through acceptance. Then there is a monthly fee. If you already have the monthly retainer, the briefing is included. After a minimum term, you can continue month to month or take a handover and run it yourself.</p>
+    </div>
+    <div class="cta-row">
       <a class="btn btn-primary" href="/apply.html">Start a free Reporting Review</a>
     </div>
   </div>
@@ -119,88 +114,35 @@
 </main>
 
 <footer>
-  <div class="wrap footer-grid">
+  <div class="wrap footer-grid footer-slim">
     <div>
-      <div class="brand" style="margin-bottom:12px">
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1A2733"/><g fill="none" stroke="#E0B08A" stroke-width="1.7" stroke-linecap="round"><ellipse cx="16" cy="9.5" rx="7" ry="2.8"/><path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/><path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/></g></svg>
+      <a class="brand footer-brand" href="/" aria-label="DDH Consulting home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1A2733"/>
+          <g fill="none" stroke="#E0B08A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+            <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+            <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+          </g>
+        </svg>
         <span class="brand-name">DDH Consulting</span>
-      </div>
-      <p>Data lead and fractional finance for healthcare operators. Miami, FL.</p>
+      </a>
+      <p>Fractional data lead for healthcare.</p>
     </div>
-    <div class="footer-col">
-      <h3>Firm</h3>
-      <ul>
-        <li><a href="/#deliver">What we deliver</a></li>
-        <li><a href="/#offer">Offer</a></li>
-        <li><a href="/briefing.html">Scheduled AI briefing</a></li>
-        <li><a href="/#how">How it works</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#faq">FAQ</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <ul>
-        <li><a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a></li>
-        <li><a href="/apply.html">Start a free Reporting Review</a></li>
-        <li><a href="/checkup.html">Reporting Health Check</a></li>
-        <li><a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/briefing.html">Scheduled AI briefing</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/checkup.html">Reporting Health Check</a>
+      <a href="/apply.html">Free Reporting Review</a>
+      <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
+      <a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
   </div>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
-    <span>Managed Financial Reporting · Scheduled AI briefing</span>
+    <span>© 2026 DDH Consulting LLC</span>
+    <span>Miami, FL</span>
   </div>
 </footer>
-<script>
-(function () {
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var header = document.querySelector(".site-header");
-  var onScroll = function () { header.classList.toggle("is-condensed", window.scrollY > 8); };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  var reveals = document.querySelectorAll(".reveal");
-  if (reduce || !("IntersectionObserver" in window)) {
-    reveals.forEach(function (el) { el.classList.add("in"); });
-  } else {
-    var groups = new Map();
-    reveals.forEach(function (el) {
-      var parent = el.parentElement;
-      if (!groups.has(parent)) groups.set(parent, []);
-      groups.get(parent).push(el);
-    });
-    groups.forEach(function (list) {
-      list.forEach(function (el, i) { el.style.transitionDelay = Math.min(i, 6) * 70 + "ms"; });
-    });
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("in");
-        io.unobserve(entry.target);
-      });
-    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
-    reveals.forEach(function (el) { io.observe(el); });
-  }
-
-  var menuBtn = document.querySelector(".menu-btn");
-  var panel = document.getElementById("menu-panel");
-  menuBtn.addEventListener("click", function () {
-    var open = menuBtn.getAttribute("aria-expanded") === "true";
-    menuBtn.setAttribute("aria-expanded", String(!open));
-    panel.hidden = open;
-  });
-  panel.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      menuBtn.setAttribute("aria-expanded", "false");
-      panel.hidden = true;
-    });
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") { menuBtn.setAttribute("aria-expanded", "false"); panel.hidden = true; }
-  });
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

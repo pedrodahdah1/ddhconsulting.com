@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Start a free Reporting Review | DDH Consulting</title>
-<meta name="description" content="One minute. We reply within 2 business days. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together.">
-<meta property="og:title" content="Start a free Reporting Review | DDH Consulting">
-<meta property="og:description" content="One minute. We reply within 2 business days. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together.">
+<title>Request a free Reporting Review | DDH Consulting</title>
+<meta name="description" content="Request a free Reporting Review. We reply within 2 business days. You leave with a written assessment of your close, cash, and reports.">
+<meta property="og:title" content="Request a free Reporting Review | DDH Consulting">
+<meta property="og:description" content="Request a free Reporting Review. We reply within 2 business days. You leave with a written assessment of your close, cash, and reports.">
 <meta property="og:url" content="https://ddhbiconsulting.com/apply.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ddhbiconsulting.com/social-card.png">
@@ -14,8 +14,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="DDH Consulting">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Start a free Reporting Review | DDH Consulting">
-<meta name="twitter:description" content="One minute. We reply within 2 business days. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together.">
+<meta name="twitter:title" content="Request a free Reporting Review | DDH Consulting">
+<meta name="twitter:description" content="Request a free Reporting Review. We reply within 2 business days. You leave with a written assessment of your close, cash, and reports.">
 <meta name="twitter:image" content="https://ddhbiconsulting.com/social-card.png">
 <link rel="canonical" href="https://ddhbiconsulting.com/apply.html">
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48">
@@ -56,13 +56,30 @@
       <span class="brand-name">DDH</span>
       <span class="brand-sub">Consulting</span>
     </a>
-    <a class="fine" href="/" style="margin-left:auto">← Back</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#problem">What we fix</a>
+      <a href="/#monthly">Monthly work</a>
+      <a href="/#how">How it works</a>
+      <a href="/#about">About</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="/apply.html" aria-label="Start a free Reporting Review"><span class="cta-full">Start a free Reporting Review</span><span class="cta-short">Start</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+  </div>
+  <div id="menu-panel" class="menu-panel" hidden>
+    <a href="/#problem">What we fix</a>
+    <a href="/#monthly">Monthly work</a>
+    <a href="/#how">How it works</a>
+    <a href="/#about">About</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/briefing.html">Scheduled AI briefing</a>
+    <a href="/checkup.html">Reporting Health Check</a>
+    <a href="/apply.html">Start a free Reporting Review</a>
   </div>
 </header>
 <main id="main" class="check-main">
-  <p class="eyebrow">Reporting Review</p>
-  <h1>Start a free Reporting Review.</h1>
-  <p class="lede" style="margin-bottom:32px">One minute. We reply within 2 business days. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together.</p>
+  <h1>Request a free Reporting&nbsp;Review.</h1>
+  <p class="lede">This takes about a minute. We reply within 2 business days. You leave with a written assessment of your close, cash, and reports, whether or not we work together.</p>
   <form id="applyForm" novalidate>
     <div class="form-grid">
       <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required></div>
@@ -71,7 +88,7 @@
       <div class="field">
         <label for="orgType">Organization type *</label>
         <select id="orgType" required>
-          <option value="" disabled selected>Select...</option>
+          <option value="" disabled selected>Choose one</option>
           <option value="Medical practice">Medical practice</option>
           <option value="Medical group">Medical group</option>
           <option value="Physician practice">Physician practice</option>
@@ -84,8 +101,8 @@
         </select>
       </div>
       <div class="field full"><label for="scale">Locations or providers *</label><input id="scale" name="scale" placeholder="4 locations, or 12 providers" required></div>
-      <fieldset class="field full" style="border:0">
-        <legend style="font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:8px">Systems you already use</legend>
+      <fieldset class="field full">
+        <legend>Systems you already use</legend>
         <div class="checks">
           <label class="check-opt"><input type="checkbox" name="systems" value="EHR / PMS"> EHR / PMS</label>
           <label class="check-opt"><input type="checkbox" name="systems" value="Pharmacy system"> Pharmacy system</label>
@@ -107,36 +124,60 @@
           <label class="check-opt"><input type="radio" name="billingPack" value="No"> No</label>
         </div>
       </fieldset>
-      <div class="field full"><label for="pain">What takes your team the most time in reporting today? *</label><textarea id="pain" required placeholder="The close is late, cash does not match what was booked, incentives are rebuilt by hand, or a question still takes a spreadsheet."></textarea></div>
-      <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
+      <div class="field full"><label for="pain">What takes the most time in reporting today? *</label><textarea id="pain" required placeholder="Where the close, the cash, or the reports take the most time."></textarea></div>
+      <div class="field hp" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
     </div>
-    <div class="form-actions"><button class="btn btn-primary" type="submit">Submit application</button></div>
-    <p class="form-note">We review every application within 2 business days. Please do not include patient information. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
+    <div class="form-actions"><button class="btn btn-primary" type="submit">Request my free review</button></div>
+    <p class="form-note">We review every request. We reply within 2 business days. Please do not include patient information. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
   </form>
   <div class="form-success" id="applyFit">
-    <h3>Application received.</h3>
-    <p class="lede">We review every application within 2 business days. Book the Reporting Review. You leave with a written assessment of the rolling forecast, cash, close, and reporting, whether or not we work together.</p>
+    <h3>Request received.</h3>
+    <p class="lede">We review every request. We reply within 2 business days. Book the Reporting Review. You leave with a written assessment of your close, cash, and reports, whether or not we work together.</p>
     <a class="btn btn-primary" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book your free Reporting Review</a>
   </div>
   <div class="form-success" id="applyMiss">
-    <h3>Thanks. The Reporting Review may not be the best fit right now.</h3>
-    <p class="lede">The Reporting Review is for healthcare groups that want the work kept running. Having a BI team does not rule you out. If a billing company already sends a full monthly package, or the organization sits outside the groups we serve, the Health Check is yours to use on your own.</p>
+    <h3>Thanks. A Reporting Review is unlikely to help right now.</h3>
+    <p class="lede">The review is for healthcare groups that want this work kept running. Having a BI team is fine. If your billing company already sends a full monthly package, or your organization is outside the groups we serve, use the Health Check on your own.</p>
     <a class="btn btn-primary" href="/checkup.html">Take the Reporting Health Check</a>
   </div>
 </main>
 <footer>
+  <div class="wrap footer-grid footer-slim">
+    <div>
+      <a class="brand footer-brand" href="/" aria-label="DDH Consulting home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1A2733"/>
+          <g fill="none" stroke="#E0B08A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+            <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+            <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+          </g>
+        </svg>
+        <span class="brand-name">DDH Consulting</span>
+      </a>
+      <p>Fractional data lead for healthcare.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/briefing.html">Scheduled AI briefing</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/checkup.html">Reporting Health Check</a>
+      <a href="/apply.html">Free Reporting Review</a>
+      <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
+      <a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
-    <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
+    <span>© 2026 DDH Consulting LLC</span>
+    <span>Miami, FL</span>
   </div>
 </footer>
+<script src="/assets/site.js"></script>
 <script>
 (function () {
-  var header = document.querySelector(".site-header");
-  window.addEventListener("scroll", function () {
-    header.classList.toggle("is-condensed", window.scrollY > 8);
-  }, { passive: true });
-
+  function validEmail(email) {
+    var match = email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+/);
+    return !!match && match[0] === email;
+  }
   document.getElementById("applyForm").addEventListener("submit", function (e) {
     e.preventDefault();
     var name = document.getElementById("name").value.trim();
@@ -148,10 +189,10 @@
     var biTeam = document.querySelector('input[name="biTeam"]:checked');
     var billingPack = document.querySelector('input[name="billingPack"]:checked');
     if (!name || !email || !role || !orgType || !scale || !pain || !biTeam || !billingPack) {
-      alert("Please fill in name, email, role, organization type, locations or providers, the two yes or no questions, and what takes your team the most time.");
+      alert("Please fill in name, email, role, organization type, locations or providers, the two yes or no questions, and what takes the most time.");
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!validEmail(email)) {
       alert("Please enter a valid email address.");
       return;
     }
@@ -176,7 +217,7 @@
     fd.append("Fit for a Review call", poorFit ? "No" : "Yes");
     fd.append("Systems", systems.length ? systems.join(", ") : "Not specified");
     fd.append("Main Reporting Pain", pain);
-    fd.append("_subject", (poorFit ? "Outside current fit: " : "Reporting Review application: ") + orgType);
+    fd.append("_subject", (poorFit ? "Outside current fit: " : "Reporting Review request: ") + orgType);
     fd.append("_template", "table");
     fd.append("_captcha", "false");
     fd.append("_honey", document.getElementById("companyWebsite").value);
@@ -189,7 +230,7 @@
       .catch(function () {
         showResult();
         var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nBI team: " + biTeam.value + "\nBilling package: " + billingPack.value + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
-        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent(poorFit ? "Outside current fit" : "Reporting Review application") + "&body=" + body;
+        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent(poorFit ? "Outside current fit" : "Reporting Review request") + "&body=" + body;
       });
   });
 })();
