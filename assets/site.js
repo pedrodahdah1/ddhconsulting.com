@@ -59,6 +59,22 @@
     });
   });
 
+  var dialog = document.getElementById("visual-dialog");
+  if (dialog && dialog.showModal) {
+    var dialogImg = dialog.querySelector("img");
+    document.querySelectorAll(".gallery-open").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var img = btn.querySelector("img");
+        dialogImg.src = img.currentSrc || img.src;
+        dialogImg.alt = img.alt;
+        dialog.showModal();
+      });
+    });
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+  }
+
   var calc = document.getElementById("arCalc");
   if (!calc) return;
   var collectionsInput = document.getElementById("collections");
