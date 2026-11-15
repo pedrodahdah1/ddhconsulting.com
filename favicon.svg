@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>
     :root { color-scheme: light dark; }
-    .tile { fill: #F4F1EA; }
-    .mark { fill: #121A24; stroke: #121A24; }
+    .tile { fill: #0C2C30; }
+    .mark { fill: #F4F8F8; stroke: #F4F8F8; }
     @media (prefers-color-scheme: dark) {
-      .tile { fill: #121A24; }
-      .mark { fill: #F4F1EA; stroke: #F4F1EA; }
+      .tile { fill: #F4F8F8; }
+      .mark { fill: #0C2C30; stroke: #0C2C30; }
     }
   </style>
   <rect class="tile" width="16" height="16" rx="3.5"/>

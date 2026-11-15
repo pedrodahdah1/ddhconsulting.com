@@ -75,6 +75,12 @@
     });
   }
 
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (typeof gtag === "function") gtag("event", "book_call_click");
+    });
+  });
+
   var calc = document.getElementById("arCalc");
   if (!calc) return;
   var collectionsInput = document.getElementById("collections");
