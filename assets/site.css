@@ -279,7 +279,7 @@ section[id] { scroll-margin-top: 96px; }
 .visual-band { padding: var(--s4) 0 var(--s6); }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
   align-items: start;
 }
