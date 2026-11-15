@@ -61,16 +61,23 @@
 </header>
 <main id="main" class="check-main">
   <h1>Request a free Reporting&nbsp;Review.</h1>
-  <p class="lede">This takes a few minutes. We reply the same day. You leave with a written assessment of your close, cash, and reports, whether or not we work together.</p>
+  <p class="lede" id="applyLede">This takes under a minute. We reply the same day. You leave with a written assessment of your close, cash, and reports, whether or not we work together.</p>
   <form id="applyForm" class="form-stack" novalidate>
     <div class="form-grid">
       <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-error"><p class="field-error" id="name-error" hidden></p></div>
       <div class="field"><label for="email">Work email *</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p class="field-error" id="email-error" hidden></p></div>
-      <div class="field"><label for="role">Role *</label><input id="role" name="role" autocomplete="organization-title" placeholder="CFO, COO, controller, BI lead" required aria-describedby="role-error"><p class="field-error" id="role-error" hidden></p></div>
+      <div class="field"><label for="organization">Organization name *</label><input id="organization" name="organization" autocomplete="organization" required aria-describedby="organization-error"><p class="field-error" id="organization-error" hidden></p></div>
+      <div class="field"><label for="fix">What do you want to fix first? *</label><textarea id="fix" name="fix" class="short" rows="3" required placeholder="The close, the cash, or a report." aria-describedby="fix-error"></textarea><p class="field-error" id="fix-error" hidden></p></div>
+      <div class="field hp" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
+    </div>
+    <fieldset class="optional-block">
+      <legend>Help us prepare <span class="optional-mark">(optional)</span></legend>
+      <p class="optional-note">Leave any of these blank.</p>
+      <div class="field"><label for="role">Role</label><input id="role" name="role" autocomplete="organization-title" placeholder="CFO, COO, controller, BI lead"></div>
       <div class="field">
-        <label for="orgType">Organization type *</label>
-        <select id="orgType" required aria-describedby="orgType-error">
-          <option value="" disabled selected>Choose one</option>
+        <label for="orgType">Organization type</label>
+        <select id="orgType" name="orgType">
+          <option value="">Choose one</option>
           <option value="Medical practice">Medical practice</option>
           <option value="Medical group">Medical group</option>
           <option value="Physician practice">Physician practice</option>
@@ -80,10 +87,10 @@
           <option value="Imaging">Imaging</option>
           <option value="MSO or PE group">MSO or PE group</option>
           <option value="Other healthcare organization">Other healthcare organization</option>
-        </select><p class="field-error" id="orgType-error" hidden></p>
+        </select>
       </div>
-      <div class="field full"><label for="scale">Locations or providers *</label><input id="scale" name="scale" placeholder="4 locations, or 12 providers" required aria-describedby="scale-error"><p class="field-error" id="scale-error" hidden></p></div>
-      <fieldset class="field full">
+      <div class="field"><label for="scale">Locations or providers</label><input id="scale" name="scale" placeholder="4 locations, or 12 providers"></div>
+      <fieldset class="field">
         <legend>Systems you already use</legend>
         <div class="checks">
           <label class="check-opt"><input type="checkbox" name="systems" value="EHR / PMS"> EHR / PMS</label>
@@ -92,37 +99,15 @@
           <label class="check-opt"><input type="checkbox" name="systems" value="BI tool"> BI tool</label>
         </div>
       </fieldset>
-      <fieldset class="field full" id="biTeam-field" aria-describedby="biTeam-field-error">
-        <legend>Do you have a BI team? *</legend>
-        <div class="yesno">
-          <label class="check-opt"><input type="radio" name="biTeam" value="Yes" required> Yes</label>
-          <label class="check-opt"><input type="radio" name="biTeam" value="No"> No</label>
-        </div>
-        <p class="field-error" id="biTeam-field-error" hidden></p>
-      </fieldset>
-      <fieldset class="field full" id="billingPack-field" aria-describedby="billingPack-field-error">
-        <legend>Does your billing company already send you a full monthly reporting package? *</legend>
-        <div class="yesno">
-          <label class="check-opt"><input type="radio" name="billingPack" value="Yes" required> Yes</label>
-          <label class="check-opt"><input type="radio" name="billingPack" value="No"> No</label>
-        </div>
-        <p class="field-error" id="billingPack-field-error" hidden></p>
-      </fieldset>
-      <div class="field full"><label for="pain">What takes the most time in reporting today? *</label><textarea id="pain" required placeholder="Where the close, the cash, or the reports take the most time." aria-describedby="pain-error"></textarea><p class="field-error" id="pain-error" hidden></p></div>
-      <div class="field hp" aria-hidden="true"><label for="companyWebsite">Website</label><input id="companyWebsite" tabindex="-1" autocomplete="off"></div>
-    </div>
+    </fieldset>
     <div class="form-actions"><button class="btn btn-primary" type="submit">Request my free review</button></div>
     <p class="form-note">We review every request. We reply the same day. Please do not include patient information. <a href="/privacy.html">Privacy</a>. Or email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
   </form>
-  <div class="form-success" id="applyFit">
-    <h3>Request received.</h3>
-    <p class="lede">We reply the same day. Book a time now.</p>
+  <div class="form-success" id="applyDone" role="status">
+    <h3 tabindex="-1">Thanks.</h3>
+    <p class="lede">We reply the same day.</p>
     <a class="btn btn-primary" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a time</a>
-  </div>
-  <div class="form-success" id="applyMiss">
-    <h3>Thanks. A Reporting Review is unlikely to help right now.</h3>
-    <p class="lede">The review is for healthcare groups that want this work kept running. Having a BI team is fine. If your billing company already sends a full monthly package, or your organization is outside the groups we serve, use the Health Check on your own.</p>
-    <a class="btn btn-primary" href="/checkup.html">Take the Reporting Health Check</a>
+    <p class="success-secondary"><a class="text-link" href="/checkup.html">Take the free Reporting Health Check</a></p>
   </div>
 </main>
 <footer>
@@ -162,19 +147,23 @@
     var match = email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+/);
     return !!match && match[0] === email;
   }
+  function fieldValue(id) {
+    var el = document.getElementById(id);
+    return el ? el.value.trim() : "";
+  }
   document.getElementById("applyForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    var name = document.getElementById("name").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var role = document.getElementById("role").value.trim();
-    var orgType = document.getElementById("orgType").value;
-    var scale = document.getElementById("scale").value.trim();
-    var pain = document.getElementById("pain").value.trim();
-    var biTeam = document.querySelector('input[name="biTeam"]:checked');
-    var billingPack = document.querySelector('input[name="billingPack"]:checked');
+    var name = fieldValue("name");
+    var email = fieldValue("email");
+    var organization = fieldValue("organization");
+    var fix = fieldValue("fix");
+    var role = fieldValue("role");
+    var orgType = fieldValue("orgType");
+    var scale = fieldValue("scale");
     function setField(id, message) {
       var input = document.getElementById(id);
       var err = document.getElementById(id + "-error");
+      if (!err) return;
       if (message) {
         err.hidden = false;
         err.textContent = message;
@@ -185,85 +174,71 @@
         if (input) input.removeAttribute("aria-invalid");
       }
     }
-    function setGroup(id, message) {
-      var group = document.getElementById(id);
-      var err = document.getElementById(id + "-error");
-      if (message) {
-        err.hidden = false;
-        err.textContent = message;
-        if (group) group.setAttribute("aria-invalid", "true");
-      } else {
-        err.hidden = true;
-        err.textContent = "";
-        if (group) group.removeAttribute("aria-invalid");
-      }
-    }
     var firstBad = null;
-    function bad(el, kind, id, message) {
-      if (kind === "field") setField(id, message);
-      else setGroup(id, message);
-      if (!firstBad && el) firstBad = el;
+    function bad(id, message) {
+      setField(id, message);
+      if (!firstBad) firstBad = document.getElementById(id);
     }
-    function clear(kind, id) {
-      if (kind === "field") setField(id, "");
-      else setGroup(id, "");
-    }
-    if (!name) bad(document.getElementById("name"), "field", "name", "Enter your name.");
-    else clear("field", "name");
-    if (!email) bad(document.getElementById("email"), "field", "email", "Enter your work email.");
-    else if (!validEmail(email)) bad(document.getElementById("email"), "field", "email", "Enter a valid work email.");
-    else clear("field", "email");
-    if (!role) bad(document.getElementById("role"), "field", "role", "Enter your role.");
-    else clear("field", "role");
-    if (!orgType) bad(document.getElementById("orgType"), "field", "orgType", "Choose an organization type.");
-    else clear("field", "orgType");
-    if (!scale) bad(document.getElementById("scale"), "field", "scale", "Enter locations or providers.");
-    else clear("field", "scale");
-    if (!biTeam) bad(document.querySelector("#biTeam-field input"), "group", "biTeam-field", "Choose yes or no.");
-    else clear("group", "biTeam-field");
-    if (!billingPack) bad(document.querySelector("#billingPack-field input"), "group", "billingPack-field", "Choose yes or no.");
-    else clear("group", "billingPack-field");
-    if (!pain) bad(document.getElementById("pain"), "field", "pain", "Tell us what takes the most time.");
-    else clear("field", "pain");
+    if (!name) bad("name", "Enter your name.");
+    else setField("name", "");
+    if (!email) bad("email", "Enter your work email.");
+    else if (!validEmail(email)) bad("email", "Enter a valid work email.");
+    else setField("email", "");
+    if (!organization) bad("organization", "Enter your organization name.");
+    else setField("organization", "");
+    if (!fix) bad("fix", "Tell us what you want to fix first.");
+    else setField("fix", "");
     if (firstBad) {
       firstBad.focus();
       return;
     }
-    if (document.getElementById("companyWebsite").value) return;
-    var poorFit = orgType === "Other healthcare organization" || billingPack.value === "Yes";
+    var honey = document.getElementById("companyWebsite");
+    if (honey && honey.value) return;
     var systems = Array.prototype.map.call(document.querySelectorAll('input[name="systems"]:checked'), function (el) { return el.value; });
     var btn = e.target.querySelector("button");
     btn.textContent = "Sending...";
     btn.disabled = true;
     function showResult() {
       document.getElementById("applyForm").style.display = "none";
-      document.getElementById(poorFit ? "applyMiss" : "applyFit").style.display = "block";
+      var lede = document.getElementById("applyLede");
+      if (lede) lede.style.display = "none";
+      var done = document.getElementById("applyDone");
+      done.style.display = "block";
+      var heading = done.querySelector("h3");
+      if (heading) heading.focus();
     }
     var fd = new FormData();
     fd.append("Name", name);
     fd.append("email", email);
-    fd.append("Role", role);
-    fd.append("Organization Type", orgType);
-    fd.append("Locations or Providers", scale);
-    fd.append("BI team", biTeam.value);
-    fd.append("Billing company sends a full monthly package", billingPack.value);
-    fd.append("Fit for a Review call", poorFit ? "No" : "Yes");
+    fd.append("Organization", organization);
+    fd.append("What to fix first", fix);
+    fd.append("Role", role || "Not specified");
+    fd.append("Organization Type", orgType || "Not specified");
+    fd.append("Locations or Providers", scale || "Not specified");
     fd.append("Systems", systems.length ? systems.join(", ") : "Not specified");
-    fd.append("Main Reporting Pain", pain);
-    fd.append("_subject", (poorFit ? "Outside current fit: " : "Reporting Review request: ") + orgType);
+    fd.append("_subject", "Reporting Review request: " + organization);
     fd.append("_template", "table");
     fd.append("_captcha", "false");
-    fd.append("_honey", document.getElementById("companyWebsite").value);
+    fd.append("_honey", honey ? honey.value : "");
     fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
       .then(function () {
-        if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review", fit: poorFit ? "no" : "yes" });
+        if (typeof gtag === "function") gtag("event", "generate_lead", { form: "reporting_review" });
         showResult();
       })
       .catch(function () {
         showResult();
-        var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nRole: " + role + "\nOrganization: " + orgType + "\nLocations or providers: " + scale + "\nBI team: " + biTeam.value + "\nBilling package: " + billingPack.value + "\nSystems: " + (systems.join(", ") || "Not specified") + "\nPain: " + pain);
-        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent(poorFit ? "Outside current fit" : "Reporting Review request") + "&body=" + body;
+        var body = encodeURIComponent(
+          "Name: " + name +
+          "\nEmail: " + email +
+          "\nOrganization: " + organization +
+          "\nWhat to fix first: " + fix +
+          "\nRole: " + (role || "Not specified") +
+          "\nOrganization type: " + (orgType || "Not specified") +
+          "\nLocations or providers: " + (scale || "Not specified") +
+          "\nSystems: " + (systems.join(", ") || "Not specified")
+        );
+        window.location.href = "mailto:contact@ddhbiconsulting.com?subject=" + encodeURIComponent("Reporting Review request") + "&body=" + body;
       });
   });
 })();

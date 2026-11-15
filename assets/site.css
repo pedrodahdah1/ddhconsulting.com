@@ -1587,6 +1587,33 @@ fieldset[aria-invalid="true"] .check-opt { border-color: var(--danger); }
 .field-error { color: var(--danger); font-size: 0.875rem; font-weight: 600; line-height: 1.4; }
 .field-error[hidden] { display: none; }
 .form-stack .form-grid { grid-template-columns: 1fr; }
+.field textarea.short { min-height: 76px; }
+.optional-block {
+  margin-top: 18px;
+  padding: 8px 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.optional-block > legend {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  padding: 0 8px;
+  color: var(--ink);
+}
+.optional-mark {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: -0.011em;
+  color: var(--muted);
+}
+.optional-note { color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
+.optional-block .field { margin-top: 14px; }
+.form-success h3 { width: fit-content; }
+.form-success .lede { margin-bottom: 0; }
+.form-success .success-secondary { margin-top: 16px; font-size: 1rem; }
 .back-link {
   margin-left: auto;
   color: var(--accent);
