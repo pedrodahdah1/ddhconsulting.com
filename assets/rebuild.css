@@ -270,6 +270,16 @@ h3 { font-weight: 600; letter-spacing: -0.02em; }
   display: block;
 }
 .who-card .photo img { border-radius: 5px 5px 0 0; }
+.photo-band { margin: 36px 0 28px; }
+.photo-band img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 393;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
 .who-card .who-body, .audience .copy { padding: 16px 16px 18px; }
 .who-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
 .who-card p { color: var(--text); font-size: 0.98rem; }
