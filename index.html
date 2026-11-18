@@ -117,19 +117,6 @@
     <div class="hero-copy">
       <p class="audience">For pharmacies, practices, ASCs, and MSOs.</p>
       <h1>Fractional data&nbsp;lead<br>for&nbsp;healthcare.</h1>
-      <p class="service-row">
-        <span class="service-line">
-          <span>FP&amp;A</span>
-          <span class="sr-only">, </span>
-          <span class="dot" aria-hidden="true"></span>
-          <span>Business Intelligence</span>
-          <span class="dot dot-join" aria-hidden="true"></span>
-        </span>
-        <span class="sr-only">, and </span>
-        <span class="service-line">
-          <span>AI &amp; Automation</span>
-        </span>
-      </p>
       <p class="lede">We connect your EHR or practice management system, billing, bank, and general ledger with data pipelines, a Power BI model, and scheduled reports. The close, the forecast, and the board pack run from that model.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="/apply.html">Start a free Reporting Review</a>
@@ -210,7 +197,7 @@
       </li>
       <li class="has-example">
           <h3>Reconciliation and accounts receivable</h3>
-          <p>Bank deposits, remittance files, and the general ledger, matched every month. A weekly view of accounts receivable past 90 days, underpayments checked against the contract, and a denials list with an owner.</p>
+          <p>Bank deposits, remittance files, and the general ledger, matched every month. A weekly view of accounts receivable past 90 days, underpayments checked against the contract, and a denials list with an owner. You can <a class="text-link" id="estimate" href="/checkup.html#estimate">estimate the cash in accounts receivable</a> from your own figures.</p>
         <figure class="recon-figure">
           <div class="recon">
             <div class="recon-head">
@@ -253,8 +240,8 @@
 <section class="section" id="monthly">
   <div class="wrap">
     <div class="section-head">
-      <h2 class="reveal">Your data lead, every&nbsp;month.</h2>
-      <p class="lede">Each month the model is refreshed and the close is finished. You receive the forecast, cash, and the payer view from that model.</p>
+      <h2 class="reveal">Each month</h2>
+      <p class="lede">The model is refreshed and the close is finished. You receive the forecast, cash, and the payer view from that model.</p>
     </div>
     <ul class="deliver-list">
       <li><strong>Refresh.</strong> Source files come in on a schedule. You hear if a file is late.</li>
@@ -275,7 +262,9 @@
         <span class="step-index">1</span>
         <div>
           <h3>Free Reporting Review</h3>
-          <p>We look at your close, cash, and reports and send a written assessment.</p>
+          <p>After you send the form, we reply the same day by email and set a short call.</p>
+          <p>On the call we look at your close, your cash, and your reporting. We ask which reports you produce, how long they take, where the numbers come from, and where they disagree.</p>
+          <p>You get a written assessment after that. It covers what is working, what is slowing you down, and the first fixes we would make, with a rough sense of the effort.</p>
           <p class="step-links">
             <a class="text-link" href="/apply.html">Start a free Reporting Review</a>
             <a class="text-link" href="/checkup.html">Reporting Health Check</a>
@@ -287,6 +276,7 @@
         <div>
           <h3>Setup</h3>
           <p>We build the pipelines, the model, and the reports. It takes a few weeks, and the scope is fixed.</p>
+          <p class="step-links" id="setup"><a class="text-link" href="/briefing.html#setup">What a setup can include</a></p>
         </div>
       </li>
       <li>
@@ -297,72 +287,6 @@
         </div>
       </li>
     </ol>
-    <div class="setup" id="setup">
-      <h3 class="setup-title">What a setup can include</h3>
-      <ul class="setup-grid">
-        <li>
-          <h3>Data model and Power BI</h3>
-          <p class="weeks">10 weeks</p>
-          <p>EHR or practice management, billing, bank, and the general ledger land in one model. You keep Power BI or Microsoft Fabric, and an alert names any file that is late.</p>
-        </li>
-        <li>
-          <h3>Month-end close setup</h3>
-          <p class="weeks">6 weeks</p>
-          <p>A close checklist, the P&amp;L matched to the general ledger, and the variance explained.</p>
-        </li>
-        <li>
-          <h3>Cash and collections by payer</h3>
-          <p class="weeks">6 weeks</p>
-          <p>You see what has been collected, what each payer still owes, and cash as it arrives.</p>
-        </li>
-        <li>
-          <h3>Provider pay and commissions</h3>
-          <p class="weeks">4 weeks</p>
-          <p>Provider pay and commissions run from one formula, with a statement each person can check.</p>
-        </li>
-      </ul>
-      <p class="run-note">After setup, running and supporting the work is a fixed monthly scope.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section band-soft" id="estimate">
-  <div class="wrap">
-    <div class="calc">
-      <div>
-        <h2 class="h-tool reveal">Estimate cash in accounts&nbsp;receivable.</h2>
-        <p class="estimate-lead">Use your own figures. This is an estimate.</p>
-        <form class="calc-form" id="arCalc">
-          <div class="field">
-            <label for="collections">Annual collections</label>
-            <input id="collections" name="collections" inputmode="decimal" autocomplete="off" spellcheck="false">
-          </div>
-          <div class="field">
-            <label for="daysAr">Days in accounts receivable</label>
-            <input id="daysAr" name="daysAr" inputmode="decimal" autocomplete="off" spellcheck="false">
-          </div>
-          <div class="field">
-            <label for="leakRate">Payments missed or underpaid</label>
-            <input id="leakRate" name="leakRate" inputmode="decimal" autocomplete="off" spellcheck="false">
-            <span class="field-hint">Percent of annual collections.</span>
-          </div>
-        </form>
-      </div>
-      <div class="calc-results" aria-live="polite">
-        <article>
-          <h3>Cash sitting in accounts receivable</h3>
-          <p class="calc-math" id="cashMath">Annual collections divided by 365, times days in accounts receivable.</p>
-          <p class="calc-figure calc-pending" id="cashOut">Enter your figures</p>
-          <span class="calc-unit">estimated balance</span>
-        </article>
-        <article>
-          <h3>Payments missed or underpaid</h3>
-          <p class="calc-math" id="leakMath">Annual collections times the share missed or underpaid.</p>
-          <p class="calc-figure calc-pending" id="leakOut"></p>
-          <span class="calc-unit">per year</span>
-        </article>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -413,8 +337,8 @@
 
 <section class="cta-band" id="start">
   <div class="wrap">
-    <h2 class="reveal">Start a free Reporting&nbsp;Review.</h2>
-    <p class="lede">You leave with a written assessment of your data, your close, and your reports, whether or not we work together. We reply the same day.</p>
+    <h2 class="reveal">Ask for the review</h2>
+    <p class="lede">Tell us what you want to look at first. The form is short.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="/apply.html">Start a free Reporting Review</a>
       <a class="btn btn-ghost" href="/checkup.html">Take the 3-minute Reporting Health Check</a>

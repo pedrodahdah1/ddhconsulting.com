@@ -104,7 +104,7 @@
     <h2 class="results-title">Where to start</h2>
     <div id="gapList"></div>
     <div class="next-panel">
-      <h2>Recommended next step: a Reporting Review.</h2>
+      <h2>The Reporting Review</h2>
       <p id="nextCopy"></p>
       <a class="btn btn-primary" href="/apply.html">Start a free Reporting Review</a>
       <p class="fine">Prefer to write first? Email <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>.</p>
@@ -112,7 +112,7 @@
     <div class="send-card" id="capture">
       <div id="capForm">
         <h2>Send these results ahead of the call</h2>
-        <p class="fine">Optional. We reply the same day. Sending the score does not start an engagement.</p>
+        <p class="fine">Optional. Sending the score does not start an engagement. You will get an email back the same day.</p>
         <div class="form-grid">
           <div class="field"><label for="capName">Name *</label><input id="capName" autocomplete="name"></div>
           <div class="field"><label for="capOrg">Organization *</label><input id="capOrg" autocomplete="organization"></div>
@@ -124,12 +124,51 @@
       </div>
       <div id="capDone" style="display:none">
         <h2>Sent.</h2>
-        <p class="fine">A copy of your results is on its way to your inbox. We reply the same day.</p>
+        <p class="fine">A copy of your results is on its way to your inbox. We will follow up the same day.</p>
       </div>
     </div>
     <p class="retake"><button class="linkish" type="button" id="retake">Retake the health check</button></p>
   </section>
 </main>
+<section class="section band-soft" id="estimate">
+  <div class="wrap">
+    <div class="calc">
+      <div>
+        <h2 class="h-tool">Estimate from your figures</h2>
+        <p class="estimate-lead">Use your own figures. This is an estimate. Nothing you type here is sent.</p>
+        <form class="calc-form" id="arCalc">
+          <div class="field">
+            <label for="collections">Annual collections</label>
+            <input id="collections" name="collections" inputmode="decimal" autocomplete="off" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="daysAr">Days in accounts receivable</label>
+            <input id="daysAr" name="daysAr" inputmode="decimal" autocomplete="off" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="leakRate">Payments missed or underpaid</label>
+            <input id="leakRate" name="leakRate" inputmode="decimal" autocomplete="off" spellcheck="false">
+            <span class="field-hint">Percent of annual collections.</span>
+          </div>
+        </form>
+      </div>
+      <div class="calc-results" aria-live="polite">
+        <article>
+          <h3>Cash sitting in accounts receivable</h3>
+          <p class="calc-math" id="cashMath">Annual collections divided by 365, times days in accounts receivable.</p>
+          <p class="calc-figure calc-pending" id="cashOut">Enter your figures</p>
+          <span class="calc-unit">estimated balance</span>
+        </article>
+        <article>
+          <h3>Payments missed or underpaid</h3>
+          <p class="calc-math" id="leakMath">Annual collections times the share missed or underpaid.</p>
+          <p class="calc-figure calc-pending" id="leakOut"></p>
+          <span class="calc-unit">per year</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="wrap footer-grid footer-slim">
     <div>
@@ -222,9 +261,9 @@ document.getElementById("backBtn").addEventListener("click", function () {
 });
 
 function tier(score) {
-  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A Reporting Review is the right next conversation if you want a written view of what to tighten.", next: "Request a free Reporting Review. You leave with a written assessment of your close, cash, and reports, whether or not we work together." };
-  if (score >= 5) return { cls: "warn", label: "Some gaps", text: "The basics are in place, and a few gaps are likely taking time every month. A Reporting Review puts those gaps in writing.", next: "Request a free Reporting Review. You leave with a written read of these gaps and what to set up first, whether or not we work together." };
-  return { cls: "risk", label: "Reporting at risk", text: "Several core pieces are still manual. That is common where the operation has outgrown the workbook.", next: "Request a free Reporting Review. You leave with a written read of the gaps before any build, whether or not we work together. If you want to keep the questions and stop there, this Health Check is yours." };
+  if (score >= 8) return { cls: "good", label: "Solid foundation", text: "The fundamentals are in place. A Reporting Review is the right next conversation if you want a written view of what to tighten.", next: "If you want to go further, ask for a Reporting Review. We look at the close, the cash, and the reports with you on a short call." };
+  if (score >= 5) return { cls: "warn", label: "Some gaps", text: "The basics are in place, and a few gaps are likely taking time every month. A Reporting Review puts those gaps in writing.", next: "The review is a short call. We say what to fix first, and give a rough sense of the effort." };
+  return { cls: "risk", label: "Reporting at risk", text: "Several core pieces are still manual. That is common where the operation has outgrown the workbook.", next: "A Reporting Review looks at the close, the cash, and the reports before any build. You can also stop here. This Health Check is yours." };
 }
 
 let result = null;
@@ -320,8 +359,8 @@ document.getElementById("capSend").addEventListener("click", function () {
     "Hi " + firstName + ",\n\n" +
     "Thanks for completing the Reporting Health Check. Your score was " + result.score + "/10 (" + result.tier + ").\n\n" +
     "Gaps flagged:\n" + gapText + "\n\n" +
-    "The useful next step is a Reporting Review. You leave with a written assessment of your close, cash, and reports, whether or not we work together. " +
-    "Request a review at https://ddhbiconsulting.com/apply.html. We review every request. We reply the same day.\n\n" +
+    "The useful next step is a Reporting Review: a short call about the close, the cash, and the reports, then a written view of what is working and what to fix first. " +
+    "Request one at https://ddhbiconsulting.com/apply.html. We email you the same day.\n\n" +
     "DDH Consulting\nhttps://ddhbiconsulting.com");
   fetch("https://formsubmit.co/ajax/contact@ddhbiconsulting.com", { method: "POST", body: fd })
     .then(function (r) { return r.json(); })
