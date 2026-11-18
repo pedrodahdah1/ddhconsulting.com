@@ -28,6 +28,8 @@
 <link rel="preload" href="/fonts/source-sans-3-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/source-serif-4-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="preload" href="/fonts/ibm-plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/rebuild.css">
 <script>document.documentElement.classList.add("js");</script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -39,6 +41,39 @@
     s.onload = function () { gtag("js", new Date()); gtag("config", "G-J5QVLV1G6C"); };
     document.head.appendChild(s);
   });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ddhbiconsulting.com/#organization",
+      "name": "DDH Consulting",
+      "url": "https://ddhbiconsulting.com",
+      "logo": "https://ddhbiconsulting.com/icon-512.png",
+      "email": "contact@ddhbiconsulting.com",
+      "sameAs": [
+        "https://www.linkedin.com/company/ddhconsulting/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ddhbiconsulting.com/#website",
+      "url": "https://ddhbiconsulting.com",
+      "name": "DDH Consulting",
+      "publisher": {
+        "@id": "https://ddhbiconsulting.com/#organization"
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
@@ -57,24 +92,28 @@
       <span class="brand-name">DDH Consulting</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/#build">What we build</a>
-      <a href="/#services">What we do</a>
-      <a href="/#monthly">Monthly work</a>
-      <a href="/#how">How it works</a>
-      <a href="/#faq">FAQ</a>
+      <a href="/services.html">Services</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/who-we-work-with.html">Who we work with</a>
+      <a href="/samples.html">Samples</a>
+      <a href="/briefing.html" aria-current="page">AI briefing</a>
     </nav>
-    <a class="btn btn-primary btn-sm header-cta" href="/apply.html" aria-label="Start a free Reporting Review"><span class="cta-full">Start a free Reporting Review</span><span class="cta-short">Start</span></a>
+    <div class="header-actions">
+      <a class="header-book" href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-outline header-health" href="/checkup.html">Health Check</a>
+      <a class="btn btn-primary" href="/apply.html" aria-label="Free Reporting Review"><span class="cta-full">Free Reporting Review</span><span class="cta-short">Free review</span></a>
+    </div>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
   </div>
   <div id="menu-panel" class="menu-panel" hidden>
-    <a href="/#build">What we build</a>
-    <a href="/#services">What we do</a>
-    <a href="/#monthly">Monthly work</a>
-    <a href="/#how">How it works</a>
-    <a href="/#faq">FAQ</a>
-    <a href="/briefing.html">Scheduled AI briefing</a>
-    <a href="/checkup.html">Reporting Health Check</a>
-    <a href="/apply.html">Start a free Reporting Review</a>
+    <a href="/services.html">Services</a>
+    <a href="/how-it-works.html">How it works</a>
+    <a href="/who-we-work-with.html">Who we work with</a>
+    <a href="/samples.html">Samples</a>
+    <a href="/briefing.html">AI briefing</a>
+    <a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a>
+    <a class="btn btn-outline" href="/checkup.html">Health Check</a>
+    <a class="btn btn-primary" href="/apply.html">Free Reporting Review</a>
   </div>
 </header>
 
@@ -140,35 +179,73 @@
 </section>
 </main>
 
-<footer>
-  <div class="wrap footer-grid footer-slim">
+<section class="close-band" id="start">
+  <div class="wrap">
+    <h2>Start with the free Reporting Review</h2>
+    <p class="lede">Send the short form. We reply the same day, find a time for a call, and send you a written assessment of your reporting. It costs nothing, and you keep it whether or not we work together.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/apply.html">Start a free Reporting Review</a>
+      <a class="btn btn-outline" href="/checkup.html">Take the 3-minute Health Check</a>
+    </div>
+    <ul class="ticks" aria-label="What the review includes">
+      <li>Free</li>
+      <li>We reply the same day</li>
+      <li>Works with the systems you already have</li>
+    </ul>
+    <p class="alt">Prefer email? <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a> · <a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Or book a call</a></p>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
     <div>
       <a class="brand footer-brand" href="/" aria-label="DDH Consulting home">
         <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#F4F8F8"/>
-          <g fill="none" stroke="#0C2C30" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
-            <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
-            <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
-          </g>
-        </svg>
+        <rect width="32" height="32" rx="8" fill="#F4F8F8"/>
+        <g fill="none" stroke="#0C2C30" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="16" cy="9.5" rx="7" ry="2.8"/>
+          <path d="M9 9.5 V22.5 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8 V9.5"/>
+          <path d="M9 16 c0 1.55 3.13 2.8 7 2.8 s7 -1.25 7 -2.8"/>
+        </g>
+      </svg>
         <span class="brand-name">DDH Consulting</span>
       </a>
-      <p>Fractional data lead for healthcare.</p>
+      <p>Fractional data lead for healthcare operators. Pipelines, Power BI, the monthly close and automation, run for you every month.</p>
+      <p class="label place">Miami, FL<br>Working with teams<br>across the US</p>
     </div>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="/briefing.html">Scheduled AI briefing</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/checkup.html">Reporting Health Check</a>
-      <a href="/apply.html">Free Reporting Review</a>
-      <a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a>
-      <a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a>
-    </nav>
+    <div>
+      <h2>Work with us</h2>
+      <ul>
+        <li><a href="/apply.html">Free Reporting Review</a></li>
+        <li><a href="/checkup.html">Reporting Health Check</a></li>
+        <li><a href="https://calendly.com/pedroodahdah/30min" target="_blank" rel="noopener">Book a call</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Learn</h2>
+      <ul>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/how-it-works.html">How it works</a></li>
+        <li><a href="/who-we-work-with.html">Who we work with</a></li>
+        <li><a href="/samples.html">Samples</a></li>
+        <li><a href="/briefing.html">Scheduled AI briefing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:contact@ddhbiconsulting.com">contact@ddhbiconsulting.com</a></li>
+        <li><a href="https://www.linkedin.com/company/ddhconsulting/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
   </div>
   <div class="wrap footer-base">
-    <span>© 2026 DDH Consulting LLC</span>
-    <span>Miami, FL</span>
+    <span>© 2026 DDH Consulting LLC · Miami, FL</span>
+    <a href="/privacy.html">Privacy</a>
   </div>
+  <div class="wrap">
+    <p class="disclaimer">Visuals on this site are samples with made-up numbers. Our setup is HIPAA-eligible with a signed BAA and the correct configuration.</p>
+  </div>
+</footer>
 </footer>
 <script src="/assets/site.js"></script>
 </body>
