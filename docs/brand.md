@@ -26,11 +26,11 @@ Tokens live in `:root` in `assets/site.css`. Do not introduce a second accent.
 | Danger | `#8B1E2D` | Form errors only. |
 | Good | `#0D5C3D` | Positive status text, such as a solid Health Check result. |
 
-Brass does not appear in headings, links, or rules. The monogram's short rule is brass `#D29A62`. Petrol is the working color. Brass `#8A3F12` is the one action color, so the primary button is obvious on a cool page.
+Brass does not appear in headings, links, rules, or the logo. Petrol is the working color. Brass is the one action color, so the primary button is obvious on a cool page.
 
 Why these colors: healthcare guidance in the design references leans teal and blue (`#0077B6`, `#00A896`) and tells you to avoid aggressive red. Finance leans deep navy and teal (`#003366`, `#0F766E`) and a traditional, stable palette. Consulting leans a dark neutral with a clear professional accent. Ocean Depths, the calm professional theme in the theme set, uses deep water and teal. This palette takes the petrol from that overlap and puts it on a cool paper field, darker than a generic medical cyan, and it does not use the cream and terracotta pair the previous site used.
 
-The logo mark is the DDH monogram. Source Serif 4 semibold, near-white `#F4F8F8`, sits on a petrol tile `#0C2C30`, with a short brass rule `#D29A62` underneath. The header and the footer use that same tile. The browser icon is the same monogram, with the rule thickened so it stays legible at 16px.
+The logo mark keeps its shape. On paper, the tile is ink `#0C2C30` and the cylinder is `#F4F8F8`. In the footer, the tile is `#F4F8F8` and the cylinder is ink, so the same mark reads on the dark band. The browser icon keeps the three-node mark, in the same two colors.
 
 ## Type
 
