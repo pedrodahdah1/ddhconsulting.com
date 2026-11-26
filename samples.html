@@ -367,19 +367,19 @@
             <h3 id="assess-title">Reporting assessment</h3>
             <p class="doc-kicker">Prepared after the review call</p>
             <h4>Reports today and hours spent</h4>
-            <p>11 recurring reports take about 25 staff hours a month. Seven are built by hand from dispensing and PBM remittance files.</p>
+            <p>11 recurring reports take about 25 staff hours a month. Seven are built by hand from pharmacy system exports, PBM remittances, and payroll files.</p>
             <h4>Where each number comes from</h4>
-            <p>Scripts come from the dispensing system, reimbursement from PBM remits, and cash from the bank. Nothing ties the three together.</p>
+            <p>Scripts and patients come from the pharmacy management system (EHR). Reimbursement comes from PBM 835 remittances. Labor comes from the HR and payroll system, costs and the P&amp;L from the ERP and general ledger, and cash from the bank. Nothing ties the five together.</p>
             <h4>Where numbers disagree</h4>
-            <p>The gross profit report and the general ledger are 2 to 4% apart every month, because of DIR fees and when reversals post.</p>
+            <p>The gross profit report and the general ledger are 2 to 4% apart every month, because of DIR fees and when reversals post. Labor cost per script differs between payroll and the ERP, because of how hours are coded by store.</p>
             <h4>First three fixes and rough effort</h4>
             <ol>
-              <li>A margin by store view, about 1 week.</li>
-              <li>Automated remit reconciliation, about 2 weeks.</li>
-              <li>A weekly underpaid claims list for MAC appeals, about 1 week.</li>
+              <li>One model linking the pharmacy system, remittances, and the ledger, about 2 weeks.</li>
+              <li>Automated remittance-to-ledger reconciliation, about 1 week.</li>
+              <li>Margin and labor cost by store, plus a weekly underpaid claims list, about 1 week.</li>
             </ol>
             <h4>What a setup would include</h4>
-            <p>Dispensing, PBM remits, and the bank in one model. Margin by store, remit reconciliation, and a weekly underpaid claims list come out of it.</p>
+            <p>The EHR, PBM remittances, HR and payroll, the ERP and ledger, and the bank in one Power BI model, refreshed on a schedule and run every month.</p>
           </article>
         </div>
       </section>
